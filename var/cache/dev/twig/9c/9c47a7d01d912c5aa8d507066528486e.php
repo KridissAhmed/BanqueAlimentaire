@@ -85,7 +85,39 @@ class __TwigTemplate_8538404e408e974422558f22498b9f64 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
+        echo " <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Dashboard</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <h4 class=\"card-title\">Input Style</h4>
+                                <p class=\"text-muted m-b-15 f-s-12\">Use the input classes on an <code>.input-default, input-flat, .input-rounded</code> for Default input.</p>
+                                <div class=\"basic-form\">
+                                    <form>
+                                        <div class=\"form-group\">
+                                            <input type=\"text\" class=\"form-control input-default\" placeholder=\"Input Default\">
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -117,6 +149,38 @@ class __TwigTemplate_8538404e408e974422558f22498b9f64 extends Template
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
+ <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Dashboard</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <h4 class=\"card-title\">Input Style</h4>
+                                <p class=\"text-muted m-b-15 f-s-12\">Use the input classes on an <code>.input-default, input-flat, .input-rounded</code> for Default input.</p>
+                                <div class=\"basic-form\">
+                                    <form>
+                                        <div class=\"form-group\">
+                                            <input type=\"text\" class=\"form-control input-default\" placeholder=\"Input Default\">
+                                        </div>
+                                        
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
 
 {% endblock %}", "backend/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\index.html.twig");
     }

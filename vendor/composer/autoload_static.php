@@ -589,6 +589,8 @@ class ComposerStaticInit814c5f17eddada2c3c09e9fd0ce5cb84
 
     public static $classMap = array (
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
+        'App\\Controller\\UtilisateurController' => __DIR__ . '/../..' . '/src/Controller/UtilisateurController.php',
         'App\\Entity\\Article' => __DIR__ . '/../..' . '/src/Entity/Article.php',
         'App\\Entity\\Classification' => __DIR__ . '/../..' . '/src/Entity/Classification.php',
         'App\\Entity\\Commande' => __DIR__ . '/../..' . '/src/Entity/Commande.php',
@@ -596,6 +598,7 @@ class ComposerStaticInit814c5f17eddada2c3c09e9fd0ce5cb84
         'App\\Entity\\Famille' => __DIR__ . '/../..' . '/src/Entity/Famille.php',
         'App\\Entity\\SousFamille' => __DIR__ . '/../..' . '/src/Entity/SousFamille.php',
         'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
+        'App\\Form\\UtilisateurType' => __DIR__ . '/../..' . '/src/Form/UtilisateurType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArticleRepository' => __DIR__ . '/../..' . '/src/Repository/ArticleRepository.php',
         'App\\Repository\\ClassificationRepository' => __DIR__ . '/../..' . '/src/Repository/ClassificationRepository.php',
@@ -604,6 +607,7 @@ class ComposerStaticInit814c5f17eddada2c3c09e9fd0ce5cb84
         'App\\Repository\\FamilleRepository' => __DIR__ . '/../..' . '/src/Repository/FamilleRepository.php',
         'App\\Repository\\SousFamilleRepository' => __DIR__ . '/../..' . '/src/Repository/SousFamilleRepository.php',
         'App\\Repository\\UtilisateurRepository' => __DIR__ . '/../..' . '/src/Repository/UtilisateurRepository.php',
+        'App\\Security\\UtilisateurAuthenticator' => __DIR__ . '/../..' . '/src/Security/UtilisateurAuthenticator.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

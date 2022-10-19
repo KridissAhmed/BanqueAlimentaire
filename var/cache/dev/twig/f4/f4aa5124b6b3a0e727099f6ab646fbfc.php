@@ -53,12 +53,24 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <!-- Favicon icon -->
     <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"images/favicon.png\">
     <!-- Pignose Calender -->
-    <link href=\"./plugins/pg-calendar/css/pignose.calendar.min.css\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/css/pignose.calendar.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
     <!-- Chartist -->
-    <link rel=\"stylesheet\" href=\"./plugins/chartist/css/chartist.min.css\">
-    <link rel=\"stylesheet\" href=\"./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/css/chartist.min.css"), "html", null, true);
+        echo "\" >
+    <link rel=\"stylesheet\"  href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css"), "html", null, true);
+        echo "\">
     <!-- Custom Stylesheet -->
-    <link href=\"css/style.css\" rel=\"stylesheet\">
+    <link href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
 
 </head>
     <body>
@@ -88,10 +100,19 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         <div class=\"nav-header\">
             <div class=\"brand-logo\">
                 <a href=\"index.html\">
-                    <b class=\"logo-abbr\"><img src=\"images/logo.png\" alt=\"\"> </b>
-                    <span class=\"logo-compact\"><img src=\"./images/logo-compact.png\" alt=\"\"></span>
+                    <b class=\"logo-abbr\"><img src=\"";
+        // line 47
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
+        echo "\" alt=\"\"> </b>
+                    <span class=\"logo-compact\"><img src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-compact.png"), "html", null, true);
+        echo "\" alt=\"\"></span>
                     <span class=\"brand-title\">
-                        <img src=\"images/logo-text.png\" alt=\"\">
+                        <img src=\"";
+        // line 50
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-text.png"), "html", null, true);
+        echo "\" alt=\"\">
                     </span>
                 </a>
             </div>
@@ -141,7 +162,10 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                                     <ul>
                                         <li class=\"notification-unread\">
                                             <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/1.jpg\" alt=\"\">
+                                                <img class=\"float-left mr-3 avatar-img\" src=\"";
+        // line 100
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/avatar/1.jpg"), "html", null, true);
+        echo "\" alt=\"\">
                                                 <div class=\"notification-content\">
                                                     <div class=\"notification-heading\">Saiful Islam</div>
                                                     <div class=\"notification-timestamp\">08 Hours ago</div>
@@ -149,36 +173,8 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                                                 </div>
                                             </a>
                                         </li>
-                                        <li class=\"notification-unread\">
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/2.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Adam Smith</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Can you do me a favour?</div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/3.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Barak Obama</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/4.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Hilari Clinton</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Hello</div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                        
+                                       
                                     </ul>
                                     
                                 </div>
@@ -254,7 +250,10 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                         <li class=\"icons dropdown\">
                             <div class=\"user-img c-pointer position-relative\"   data-toggle=\"dropdown\">
                                 <span class=\"activity active\"></span>
-                                <img src=\"images/user/1.png\" height=\"40\" width=\"40\" alt=\"\">
+                                <img src=\"";
+        // line 185
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/1.png"), "html", null, true);
+        echo "\" height=\"40\" width=\"40\" alt=\"\">
                             </div>
                             <div class=\"drop-down dropdown-profile animated fadeIn dropdown-menu\">
                                 <div class=\"dropdown-content-body\">
@@ -320,7 +319,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             <li><a href=\"layout-fixed-sidebar.html\">Fixed Sidebar</a></li>
                         </ul>
                     </li>
-                    <li class=\"nav-label\">Apps</li>
+                    <li class=\"nav-label\">Gestion Utilisateur</li>
                     <li>
                         <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
                             <i class=\"icon-envelope menu-icon\"></i> <span class=\"nav-text\">Email</span>
@@ -353,89 +352,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             <li><a href=\"./chart-peity.html\">Peity</a></li>
                         </ul>
                     </li>
-                    <li class=\"nav-label\">UI Components</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-grid menu-icon\"></i><span class=\"nav-text\">UI Components</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./ui-accordion.html\">Accordion</a></li>
-                            <li><a href=\"./ui-alert.html\">Alert</a></li>
-                            <li><a href=\"./ui-badge.html\">Badge</a></li>
-                            <li><a href=\"./ui-button.html\">Button</a></li>
-                            <li><a href=\"./ui-button-group.html\">Button Group</a></li>
-                            <li><a href=\"./ui-cards.html\">Cards</a></li>
-                            <li><a href=\"./ui-carousel.html\">Carousel</a></li>
-                            <li><a href=\"./ui-dropdown.html\">Dropdown</a></li>
-                            <li><a href=\"./ui-list-group.html\">List Group</a></li>
-                            <li><a href=\"./ui-media-object.html\">Media Object</a></li>
-                            <li><a href=\"./ui-modal.html\">Modal</a></li>
-                            <li><a href=\"./ui-pagination.html\">Pagination</a></li>
-                            <li><a href=\"./ui-popover.html\">Popover</a></li>
-                            <li><a href=\"./ui-progressbar.html\">Progressbar</a></li>
-                            <li><a href=\"./ui-tab.html\">Tab</a></li>
-                            <li><a href=\"./ui-typography.html\">Typography</a></li>
-                        <!-- </ul>
-                    </li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-layers menu-icon\"></i><span class=\"nav-text\">Components</span>
-                        </a>
-                        <ul aria-expanded=\"false\"> -->
-                            <li><a href=\"./uc-nestedable.html\">Nestedable</a></li>
-                            <li><a href=\"./uc-noui-slider.html\">Noui Slider</a></li>
-                            <li><a href=\"./uc-sweetalert.html\">Sweet Alert</a></li>
-                            <li><a href=\"./uc-toastr.html\">Toastr</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=\"widgets.html\" aria-expanded=\"false\">
-                            <i class=\"icon-badge menu-icon\"></i><span class=\"nav-text\">Widget</span>
-                        </a>
-                    </li>
-                    <li class=\"nav-label\">Forms</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-note menu-icon\"></i><span class=\"nav-text\">Forms</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./form-basic.html\">Basic Form</a></li>
-                            <li><a href=\"./form-validation.html\">Form Validation</a></li>
-                            <li><a href=\"./form-step.html\">Step Form</a></li>
-                            <li><a href=\"./form-editor.html\">Editor</a></li>
-                            <li><a href=\"./form-picker.html\">Picker</a></li>
-                        </ul>
-                    </li>
-                    <li class=\"nav-label\">Table</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Table</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./table-basic.html\" aria-expanded=\"false\">Basic Table</a></li>
-                            <li><a href=\"./table-datatable.html\" aria-expanded=\"false\">Data Table</a></li>
-                        </ul>
-                    </li>
-                    <li class=\"nav-label\">Pages</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-notebook menu-icon\"></i><span class=\"nav-text\">Pages</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./page-login.html\">Login</a></li>
-                            <li><a href=\"./page-register.html\">Register</a></li>
-                            <li><a href=\"./page-lock.html\">Lock Screen</a></li>
-                            <li><a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">Error</a>
-                                <ul aria-expanded=\"false\">
-                                    <li><a href=\"./page-error-404.html\">Error 404</a></li>
-                                    <li><a href=\"./page-error-403.html\">Error 403</a></li>
-                                    <li><a href=\"./page-error-400.html\">Error 400</a></li>
-                                    <li><a href=\"./page-error-500.html\">Error 500</a></li>
-                                    <li><a href=\"./page-error-503.html\">Error 503</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -448,9 +365,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"content-body\">
             ";
-        // line 406
+        // line 296
         $this->displayBlock('body', $context, $blocks);
-        // line 407
+        // line 297
         echo "          
         </div>
         <!--**********************************
@@ -462,9 +379,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Footer start
         ***********************************-->
         <div class=\"footer\">
-            <div class=\"copyright\">
-                <p>Copyright &copy; Designed & Developed by <a href=\"https://themeforest.net/user/quixlab\">Quixlab</a> 2018</p>
-            </div>
+          
         </div>
         <!--**********************************
             Footer end
@@ -475,9 +390,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     ***********************************-->
         
         ";
-        // line 430
+        // line 318
         $this->displayBlock('Js', $context, $blocks);
-        // line 462
+        // line 350
         echo "    </body>
 </html>
 ";
@@ -489,7 +404,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 406
+    // line 296
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -507,7 +422,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 430
+    // line 318
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -517,37 +432,88 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 431
+        // line 319
         echo "  <!--**********************************
         Scripts
     ***********************************-->
-    <script src=\"plugins/common/common.min.js\"></script>
-    <script src=\"js/custom.min.js\"></script>
-    <script src=\"js/settings.js\"></script>
-    <script src=\"js/gleek.js\"></script>
-    <script src=\"js/styleSwitcher.js\"></script>
+    <script src=\"";
+        // line 322
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 323
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 324
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 325
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 326
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
+        echo "\"></\"></script>
 
     <!-- Chartjs -->
-    <script src=\"./plugins/chart.js/Chart.bundle.min.js\"></script>
+    <script src=\"";
+        // line 329
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
+        echo "\"></script>
     <!-- Circle progress -->
-    <script src=\"./plugins/circle-progress/circle-progress.min.js\"></script>
+    <script src=\"";
+        // line 331
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
+        echo "\"></script>
     <!-- Datamap -->
-    <script src=\"./plugins/d3v3/index.js\"></script>
-    <script src=\"./plugins/topojson/topojson.min.js\"></script>
-    <script src=\"./plugins/datamaps/datamaps.world.min.js\"></script>
+    <script src=\"";
+        // line 333
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 334
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 335
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
+        echo "\"></script>
     <!-- Morrisjs -->
-    <script src=\"./plugins/raphael/raphael.min.js\"></script>
-    <script src=\"./plugins/morris/morris.min.js\"></script>
+    <script src=\"";
+        // line 337
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 338
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
+        echo "\"></script>
     <!-- Pignose Calender -->
-    <script src=\"./plugins/moment/moment.min.js\"></script>
-    <script src=\"./plugins/pg-calendar/js/pignose.calendar.min.js\"></script>
+    <script src=\"";
+        // line 340
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 341
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
+        echo "\"></script>
     <!-- ChartistJS -->
-    <script src=\"./plugins/chartist/js/chartist.min.js\"></script>
-    <script src=\"./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js\"></script>
+    <script src=\"";
+        // line 343
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 344
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
+        echo "\"></script>
 
 
 
-    <script src=\"./js/dashboard/dashboard-1.js\"></script>
+    <script src=\"";
+        // line 348
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
+        echo "\"></script>
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -562,9 +528,14 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         return "backend/base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  521 => 431,  511 => 430,  493 => 406,  481 => 462,  479 => 430,  454 => 407,  452 => 406,  45 => 1,);
+        return array (  515 => 348,  508 => 344,  504 => 343,  499 => 341,  495 => 340,  490 => 338,  486 => 337,  481 => 335,  477 => 334,  473 => 333,  468 => 331,  463 => 329,  457 => 326,  453 => 325,  449 => 324,  445 => 323,  441 => 322,  436 => 319,  426 => 318,  408 => 296,  396 => 350,  394 => 318,  371 => 297,  369 => 296,  255 => 185,  167 => 100,  114 => 50,  109 => 48,  105 => 47,  72 => 17,  67 => 15,  63 => 14,  58 => 12,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -580,12 +551,12 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <!-- Favicon icon -->
     <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"images/favicon.png\">
     <!-- Pignose Calender -->
-    <link href=\"./plugins/pg-calendar/css/pignose.calendar.min.css\" rel=\"stylesheet\">
+    <link href=\"{{ asset('plugins/pg-calendar/css/pignose.calendar.min.css')}}\" rel=\"stylesheet\">
     <!-- Chartist -->
-    <link rel=\"stylesheet\" href=\"./plugins/chartist/css/chartist.min.css\">
-    <link rel=\"stylesheet\" href=\"./plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css\">
+    <link rel=\"stylesheet\" href=\"{{ asset('plugins/chartist/css/chartist.min.css') }}\" >
+    <link rel=\"stylesheet\"  href=\"{{ asset('plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css') }}\">
     <!-- Custom Stylesheet -->
-    <link href=\"css/style.css\" rel=\"stylesheet\">
+    <link href=\"{{ asset('css/style.css') }}\" rel=\"stylesheet\">
 
 </head>
     <body>
@@ -615,10 +586,10 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         <div class=\"nav-header\">
             <div class=\"brand-logo\">
                 <a href=\"index.html\">
-                    <b class=\"logo-abbr\"><img src=\"images/logo.png\" alt=\"\"> </b>
-                    <span class=\"logo-compact\"><img src=\"./images/logo-compact.png\" alt=\"\"></span>
+                    <b class=\"logo-abbr\"><img src=\"{{ asset('images/logo.png') }}\" alt=\"\"> </b>
+                    <span class=\"logo-compact\"><img src=\"{{ asset('images/logo-compact.png') }}\" alt=\"\"></span>
                     <span class=\"brand-title\">
-                        <img src=\"images/logo-text.png\" alt=\"\">
+                        <img src=\"{{ asset('images/logo-text.png') }}\" alt=\"\">
                     </span>
                 </a>
             </div>
@@ -668,7 +639,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                                     <ul>
                                         <li class=\"notification-unread\">
                                             <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/1.jpg\" alt=\"\">
+                                                <img class=\"float-left mr-3 avatar-img\" src=\"{{asset('images/avatar/1.jpg')}}\" alt=\"\">
                                                 <div class=\"notification-content\">
                                                     <div class=\"notification-heading\">Saiful Islam</div>
                                                     <div class=\"notification-timestamp\">08 Hours ago</div>
@@ -676,36 +647,8 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                                                 </div>
                                             </a>
                                         </li>
-                                        <li class=\"notification-unread\">
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/2.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Adam Smith</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Can you do me a favour?</div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/3.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Barak Obama</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Hi Teddy, Just wanted to let you ...</div>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href=\"javascript:void()\">
-                                                <img class=\"float-left mr-3 avatar-img\" src=\"images/avatar/4.jpg\" alt=\"\">
-                                                <div class=\"notification-content\">
-                                                    <div class=\"notification-heading\">Hilari Clinton</div>
-                                                    <div class=\"notification-timestamp\">08 Hours ago</div>
-                                                    <div class=\"notification-text\">Hello</div>
-                                                </div>
-                                            </a>
-                                        </li>
+                                        
+                                       
                                     </ul>
                                     
                                 </div>
@@ -781,7 +724,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                         <li class=\"icons dropdown\">
                             <div class=\"user-img c-pointer position-relative\"   data-toggle=\"dropdown\">
                                 <span class=\"activity active\"></span>
-                                <img src=\"images/user/1.png\" height=\"40\" width=\"40\" alt=\"\">
+                                <img src=\"{{asset('images/user/1.png')}}\" height=\"40\" width=\"40\" alt=\"\">
                             </div>
                             <div class=\"drop-down dropdown-profile animated fadeIn dropdown-menu\">
                                 <div class=\"dropdown-content-body\">
@@ -847,7 +790,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             <li><a href=\"layout-fixed-sidebar.html\">Fixed Sidebar</a></li>
                         </ul>
                     </li>
-                    <li class=\"nav-label\">Apps</li>
+                    <li class=\"nav-label\">Gestion Utilisateur</li>
                     <li>
                         <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
                             <i class=\"icon-envelope menu-icon\"></i> <span class=\"nav-text\">Email</span>
@@ -880,89 +823,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             <li><a href=\"./chart-peity.html\">Peity</a></li>
                         </ul>
                     </li>
-                    <li class=\"nav-label\">UI Components</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-grid menu-icon\"></i><span class=\"nav-text\">UI Components</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./ui-accordion.html\">Accordion</a></li>
-                            <li><a href=\"./ui-alert.html\">Alert</a></li>
-                            <li><a href=\"./ui-badge.html\">Badge</a></li>
-                            <li><a href=\"./ui-button.html\">Button</a></li>
-                            <li><a href=\"./ui-button-group.html\">Button Group</a></li>
-                            <li><a href=\"./ui-cards.html\">Cards</a></li>
-                            <li><a href=\"./ui-carousel.html\">Carousel</a></li>
-                            <li><a href=\"./ui-dropdown.html\">Dropdown</a></li>
-                            <li><a href=\"./ui-list-group.html\">List Group</a></li>
-                            <li><a href=\"./ui-media-object.html\">Media Object</a></li>
-                            <li><a href=\"./ui-modal.html\">Modal</a></li>
-                            <li><a href=\"./ui-pagination.html\">Pagination</a></li>
-                            <li><a href=\"./ui-popover.html\">Popover</a></li>
-                            <li><a href=\"./ui-progressbar.html\">Progressbar</a></li>
-                            <li><a href=\"./ui-tab.html\">Tab</a></li>
-                            <li><a href=\"./ui-typography.html\">Typography</a></li>
-                        <!-- </ul>
-                    </li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-layers menu-icon\"></i><span class=\"nav-text\">Components</span>
-                        </a>
-                        <ul aria-expanded=\"false\"> -->
-                            <li><a href=\"./uc-nestedable.html\">Nestedable</a></li>
-                            <li><a href=\"./uc-noui-slider.html\">Noui Slider</a></li>
-                            <li><a href=\"./uc-sweetalert.html\">Sweet Alert</a></li>
-                            <li><a href=\"./uc-toastr.html\">Toastr</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href=\"widgets.html\" aria-expanded=\"false\">
-                            <i class=\"icon-badge menu-icon\"></i><span class=\"nav-text\">Widget</span>
-                        </a>
-                    </li>
-                    <li class=\"nav-label\">Forms</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-note menu-icon\"></i><span class=\"nav-text\">Forms</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./form-basic.html\">Basic Form</a></li>
-                            <li><a href=\"./form-validation.html\">Form Validation</a></li>
-                            <li><a href=\"./form-step.html\">Step Form</a></li>
-                            <li><a href=\"./form-editor.html\">Editor</a></li>
-                            <li><a href=\"./form-picker.html\">Picker</a></li>
-                        </ul>
-                    </li>
-                    <li class=\"nav-label\">Table</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Table</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./table-basic.html\" aria-expanded=\"false\">Basic Table</a></li>
-                            <li><a href=\"./table-datatable.html\" aria-expanded=\"false\">Data Table</a></li>
-                        </ul>
-                    </li>
-                    <li class=\"nav-label\">Pages</li>
-                    <li>
-                        <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-notebook menu-icon\"></i><span class=\"nav-text\">Pages</span>
-                        </a>
-                        <ul aria-expanded=\"false\">
-                            <li><a href=\"./page-login.html\">Login</a></li>
-                            <li><a href=\"./page-register.html\">Register</a></li>
-                            <li><a href=\"./page-lock.html\">Lock Screen</a></li>
-                            <li><a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">Error</a>
-                                <ul aria-expanded=\"false\">
-                                    <li><a href=\"./page-error-404.html\">Error 404</a></li>
-                                    <li><a href=\"./page-error-403.html\">Error 403</a></li>
-                                    <li><a href=\"./page-error-400.html\">Error 400</a></li>
-                                    <li><a href=\"./page-error-500.html\">Error 500</a></li>
-                                    <li><a href=\"./page-error-503.html\">Error 503</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -986,9 +847,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Footer start
         ***********************************-->
         <div class=\"footer\">
-            <div class=\"copyright\">
-                <p>Copyright &copy; Designed & Developed by <a href=\"https://themeforest.net/user/quixlab\">Quixlab</a> 2018</p>
-            </div>
+          
         </div>
         <!--**********************************
             Footer end
@@ -1002,33 +861,33 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
   <!--**********************************
         Scripts
     ***********************************-->
-    <script src=\"plugins/common/common.min.js\"></script>
-    <script src=\"js/custom.min.js\"></script>
-    <script src=\"js/settings.js\"></script>
-    <script src=\"js/gleek.js\"></script>
-    <script src=\"js/styleSwitcher.js\"></script>
+    <script src=\"{{asset('plugins/common/common.min.js')}}\"></script>
+    <script src=\"{{asset('js/custom.min.js')}}\"></script>
+    <script src=\"{{asset('js/settings.js')}}\"></script>
+    <script src=\"{{asset('js/gleek.js')}}\"></script>
+    <script src=\"{{asset('js/styleSwitcher.js')}}\"></\"></script>
 
     <!-- Chartjs -->
-    <script src=\"./plugins/chart.js/Chart.bundle.min.js\"></script>
+    <script src=\"{{asset('plugins/chart.js/Chart.bundle.min.js')}}\"></script>
     <!-- Circle progress -->
-    <script src=\"./plugins/circle-progress/circle-progress.min.js\"></script>
+    <script src=\"{{asset('plugins/circle-progress/circle-progress.min.js')}}\"></script>
     <!-- Datamap -->
-    <script src=\"./plugins/d3v3/index.js\"></script>
-    <script src=\"./plugins/topojson/topojson.min.js\"></script>
-    <script src=\"./plugins/datamaps/datamaps.world.min.js\"></script>
+    <script src=\"{{asset('plugins/d3v3/index.js')}}\"></script>
+    <script src=\"{{asset('plugins/topojson/topojson.min.js')}}\"></script>
+    <script src=\"{{asset('plugins/datamaps/datamaps.world.min.js')}}\"></script>
     <!-- Morrisjs -->
-    <script src=\"./plugins/raphael/raphael.min.js\"></script>
-    <script src=\"./plugins/morris/morris.min.js\"></script>
+    <script src=\"{{asset('plugins/raphael/raphael.min.js')}}\"></script>
+    <script src=\"{{asset('plugins/morris/morris.min.js')}}\"></script>
     <!-- Pignose Calender -->
-    <script src=\"./plugins/moment/moment.min.js\"></script>
-    <script src=\"./plugins/pg-calendar/js/pignose.calendar.min.js\"></script>
+    <script src=\"{{asset('plugins/moment/moment.min.js')}}\"></script>
+    <script src=\"{{asset('plugins/pg-calendar/js/pignose.calendar.min.js')}}\"></script>
     <!-- ChartistJS -->
-    <script src=\"./plugins/chartist/js/chartist.min.js\"></script>
-    <script src=\"./plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js\"></script>
+    <script src=\"{{asset('plugins/chartist/js/chartist.min.js')}}\"></script>
+    <script src=\"{{asset('plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js')}}\"></script>
 
 
 
-    <script src=\"./js/dashboard/dashboard-1.js\"></script>
+    <script src=\"{{asset('js/dashboard/dashboard-1.js')}}\"></script>
         {% endblock %}
     </body>
 </html>

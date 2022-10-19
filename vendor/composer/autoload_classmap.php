@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\HomeController' => $baseDir . '/src/Controller/HomeController.php',
+    'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
+    'App\\Controller\\UtilisateurController' => $baseDir . '/src/Controller/UtilisateurController.php',
     'App\\Entity\\Article' => $baseDir . '/src/Entity/Article.php',
     'App\\Entity\\Classification' => $baseDir . '/src/Entity/Classification.php',
     'App\\Entity\\Commande' => $baseDir . '/src/Entity/Commande.php',
@@ -14,6 +16,7 @@ return array(
     'App\\Entity\\Famille' => $baseDir . '/src/Entity/Famille.php',
     'App\\Entity\\SousFamille' => $baseDir . '/src/Entity/SousFamille.php',
     'App\\Entity\\Utilisateur' => $baseDir . '/src/Entity/Utilisateur.php',
+    'App\\Form\\UtilisateurType' => $baseDir . '/src/Form/UtilisateurType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ArticleRepository' => $baseDir . '/src/Repository/ArticleRepository.php',
     'App\\Repository\\ClassificationRepository' => $baseDir . '/src/Repository/ClassificationRepository.php',
@@ -22,6 +25,7 @@ return array(
     'App\\Repository\\FamilleRepository' => $baseDir . '/src/Repository/FamilleRepository.php',
     'App\\Repository\\SousFamilleRepository' => $baseDir . '/src/Repository/SousFamilleRepository.php',
     'App\\Repository\\UtilisateurRepository' => $baseDir . '/src/Repository/UtilisateurRepository.php',
+    'App\\Security\\UtilisateurAuthenticator' => $baseDir . '/src/Security/UtilisateurAuthenticator.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
