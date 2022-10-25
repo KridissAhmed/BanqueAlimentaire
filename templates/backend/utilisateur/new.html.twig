@@ -71,10 +71,13 @@
                                             </div>
                                           
                                           {% endfor %}  #}
-                                           {{ form_widget(form.classifications) }} 
+                                          <div class = "fff ">
+                                                {{ form_widget(form.classifications  )}} 
+
+                                            </div>
                                         </div>
                                          
-                                       {{ form_widget(form.submit) }}
+                                       {{ form_widget(form.submit, {'attr': {'class':"btn mb-1 btn-primary" }}) }}
                                         
                                         {{ form_end(form) }}
 

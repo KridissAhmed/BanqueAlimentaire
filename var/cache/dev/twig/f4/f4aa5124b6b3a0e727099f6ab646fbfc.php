@@ -71,6 +71,11 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
+        <link href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/fy.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+
 
 </head>
     <body>
@@ -101,16 +106,16 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             <div class=\"brand-logo\">
                 <a href=\"index.html\">
                     <b class=\"logo-abbr\"><img src=\"";
-        // line 47
+        // line 49
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
         echo "\" alt=\"\"> </b>
                     <span class=\"logo-compact\"><img src=\"";
-        // line 48
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-compact.png"), "html", null, true);
         echo "\" alt=\"\"></span>
                     <span class=\"brand-title\">
                         <img src=\"";
-        // line 50
+        // line 52
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-text.png"), "html", null, true);
         echo "\" alt=\"\">
                     </span>
@@ -163,7 +168,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                                         <li class=\"notification-unread\">
                                             <a href=\"javascript:void()\">
                                                 <img class=\"float-left mr-3 avatar-img\" src=\"";
-        // line 100
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/avatar/1.jpg"), "html", null, true);
         echo "\" alt=\"\">
                                                 <div class=\"notification-content\">
@@ -251,7 +256,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             <div class=\"user-img c-pointer position-relative\"   data-toggle=\"dropdown\">
                                 <span class=\"activity active\"></span>
                                 <img src=\"";
-        // line 185
+        // line 187
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/1.png"), "html", null, true);
         echo "\" height=\"40\" width=\"40\" alt=\"\">
                             </div>
@@ -365,9 +370,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"content-body\">
             ";
-        // line 296
+        // line 298
         $this->displayBlock('body', $context, $blocks);
-        // line 297
+        // line 299
         echo "          
         </div>
         <!--**********************************
@@ -390,9 +395,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     ***********************************-->
         
         ";
-        // line 318
+        // line 320
         $this->displayBlock('Js', $context, $blocks);
-        // line 350
+        // line 352
         echo "    </body>
 </html>
 ";
@@ -404,7 +409,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 296
+    // line 298
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -422,7 +427,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 318
+    // line 320
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -432,86 +437,86 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 319
+        // line 321
         echo "  <!--**********************************
         Scripts
     ***********************************-->
     <script src=\"";
-        // line 322
+        // line 324
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 323
+        // line 325
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 324
+        // line 326
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 325
+        // line 327
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 326
+        // line 328
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
         echo "\"></\"></script>
 
     <!-- Chartjs -->
     <script src=\"";
-        // line 329
+        // line 331
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Circle progress -->
     <script src=\"";
-        // line 331
+        // line 333
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Datamap -->
     <script src=\"";
-        // line 333
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 334
+        // line 336
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 335
+        // line 337
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Morrisjs -->
     <script src=\"";
-        // line 337
+        // line 339
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 338
+        // line 340
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Pignose Calender -->
     <script src=\"";
-        // line 340
+        // line 342
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 341
+        // line 343
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
         echo "\"></script>
     <!-- ChartistJS -->
     <script src=\"";
-        // line 343
+        // line 345
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 344
+        // line 346
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
     <script src=\"";
-        // line 348
+        // line 350
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -535,7 +540,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     public function getDebugInfo()
     {
-        return array (  515 => 348,  508 => 344,  504 => 343,  499 => 341,  495 => 340,  490 => 338,  486 => 337,  481 => 335,  477 => 334,  473 => 333,  468 => 331,  463 => 329,  457 => 326,  453 => 325,  449 => 324,  445 => 323,  441 => 322,  436 => 319,  426 => 318,  408 => 296,  396 => 350,  394 => 318,  371 => 297,  369 => 296,  255 => 185,  167 => 100,  114 => 50,  109 => 48,  105 => 47,  72 => 17,  67 => 15,  63 => 14,  58 => 12,  45 => 1,);
+        return array (  520 => 350,  513 => 346,  509 => 345,  504 => 343,  500 => 342,  495 => 340,  491 => 339,  486 => 337,  482 => 336,  478 => 335,  473 => 333,  468 => 331,  462 => 328,  458 => 327,  454 => 326,  450 => 325,  446 => 324,  441 => 321,  431 => 320,  413 => 298,  401 => 352,  399 => 320,  376 => 299,  374 => 298,  260 => 187,  172 => 102,  119 => 52,  114 => 50,  110 => 49,  76 => 18,  72 => 17,  67 => 15,  63 => 14,  58 => 12,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -557,6 +562,8 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <link rel=\"stylesheet\"  href=\"{{ asset('plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css') }}\">
     <!-- Custom Stylesheet -->
     <link href=\"{{ asset('css/style.css') }}\" rel=\"stylesheet\">
+        <link href=\"{{ asset('css/fy.css') }}\" rel=\"stylesheet\">
+
 
 </head>
     <body>

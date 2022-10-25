@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}SousFamille index{% endblock %}
+
+{% block body %}
+    <h1>SousFamille index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CodeSF</th>
+                <th>LibelleSF</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for sous_famille in sous_familles %}
+            <tr>
+                <td>{{ sous_famille.id }}</td>
+                <td>{{ sous_famille.codeSF }}</td>
+                <td>{{ sous_famille.libelleSF }}</td>
+                <td>
+                    <a href="{{ path('app_sous_famille_show', {'id': sous_famille.id}) }}">show</a>
+                    <a href="{{ path('app_sous_famille_edit', {'id': sous_famille.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_sous_famille_new') }}">Create new</a>
+{% endblock %}

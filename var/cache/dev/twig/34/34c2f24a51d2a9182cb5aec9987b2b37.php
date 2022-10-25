@@ -33,7 +33,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "backend/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "backend/utilisateur/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "backend/utilisateur/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("backend/base.html.twig", "backend/utilisateur/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -85,95 +85,145 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Utilisateur index</h1>
+        echo " 
+            <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Utilisateur</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter un utilisateur</a></li>
+                    </ol>
+                </div>
+            </div>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Username</th>
-                <th>Roles</th>
-                <th>Password</th>
-                <th>Email</th>
-                <th>Adresse</th>
-                <th>NomAssociation</th>
-                <th>Telephone</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 23
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    
+                    <!-- /# column -->
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"card-title\">
+                                    <h4>Table Hover</h4>
+                                </div>
+                                <div class=\"table-responsive\">
+                                    <table class=\"table table-hover\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Association</th>
+                                                <th>Identifiant</th>
+                                                
+                                                <th>email</th>
+                                                <th>Adresse</th>
+                                                <th>Telephone</th>
+                                                <th>Supprimer</th>
+                                                <th>Mofifier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        ";
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 23, $this->source); })()));
-        $context['_iterated'] = false;
+        $context['_seq'] = twig_ensure_traversable((isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 41, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["utilisateur"]) {
-            // line 24
-            echo "            <tr>
-                <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 25), "html", null, true);
+            // line 42
+            echo "                                            <tr>
+                                                <td>";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "nomAssociation", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
-                <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "username", [], "any", false, false, false, 26), "html", null, true);
+                                                <td>";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "username", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>
-                <td>";
-            // line 27
-            ((twig_get_attribute($this->env, $this->source, $context["utilisateur"], "roles", [], "any", false, false, false, 27)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, $context["utilisateur"], "roles", [], "any", false, false, false, 27)), "html", null, true))) : (print ("")));
+                                                <td>";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "email", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
-                <td>";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "password", [], "any", false, false, false, 28), "html", null, true);
+                                                <td>";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "adresse", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
-                <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "email", [], "any", false, false, false, 29), "html", null, true);
+                                                 <td>";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "telephone", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
-                <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "adresse", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "nomAssociation", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "telephone", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-                <td>
-                    <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_show", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 35)]), "html", null, true);
-            echo "\">edit</a>
-                </td>
-            </tr>
-        ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 39
-            echo "            <tr>
-                <td colspan=\"9\">no records found</td>
-            </tr>
-        ";
+                                                <td>
+                                                 <form method=\"post\" action=\"";
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+                                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                                <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 51
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 51))), "html", null, true);
+            echo "\">
+                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                            </form>
+                                                
+                                                </td>
+
+                                                
+                                                 
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+            // line 59
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 59)]), "html", null, true);
+            echo "\">modifier</a>
+                                                </td>
+                                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['utilisateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
-        echo "        </tbody>
-    </table>
-
-    <a href=\"";
-        // line 46
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_new");
-        echo "\">Create new</a>
+        // line 62
+        echo "                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"card\" >
+                            <div class=\"card-body\" >
+                                 <div class=\"bootstrap-pagination\">
+                                    <nav>
+                                        <ul class=\"pagination\">
+                                            <li class=\"page-item\">  ";
+        // line 73
+        if (((isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 73, $this->source); })()) >= 0)) {
+            // line 74
+            echo "            <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => (isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 74, $this->source); })())]), "html", null, true);
+            echo "\" class=\"page-link\">Previous</a>
+       ";
+        }
+        // line 76
+        echo "                                            </li>
+                                            ";
+        // line 83
+        echo "                                            <li class=\"page-item\">";
+        if (((isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 83, $this->source); })()) < twig_length_filter($this->env, (isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 83, $this->source); })())))) {
+            // line 84
+            echo "           <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 84, $this->source); })())]), "html", null, true);
+            echo "\"  class=\"page-link\" >Next</a>
+       ";
+        }
+        // line 86
+        echo "                                            </li>
+                                        </ul> 
+                                        
+       
+          
+                                     </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- #/ container -->
+ 
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -195,17 +245,119 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
 
     public function getDebugInfo()
     {
-        return array (  175 => 46,  170 => 43,  161 => 39,  152 => 35,  148 => 34,  143 => 32,  139 => 31,  135 => 30,  131 => 29,  127 => 28,  123 => 27,  119 => 26,  115 => 25,  112 => 24,  107 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  211 => 86,  205 => 84,  202 => 83,  199 => 76,  193 => 74,  191 => 73,  178 => 62,  169 => 59,  158 => 51,  153 => 49,  148 => 47,  144 => 46,  140 => 45,  136 => 44,  132 => 43,  129 => 42,  125 => 41,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'backend/base.html.twig' %}
 
 {% block title %}Utilisateur index{% endblock %}
 
 {% block body %}
-    <h1>Utilisateur index</h1>
+ 
+            <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Utilisateur</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter un utilisateur</a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    
+                    <!-- /# column -->
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"card-title\">
+                                    <h4>Table Hover</h4>
+                                </div>
+                                <div class=\"table-responsive\">
+                                    <table class=\"table table-hover\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Association</th>
+                                                <th>Identifiant</th>
+                                                
+                                                <th>email</th>
+                                                <th>Adresse</th>
+                                                <th>Telephone</th>
+                                                <th>Supprimer</th>
+                                                <th>Mofifier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for utilisateur in utilisateurs %}
+                                            <tr>
+                                                <td>{{ utilisateur.nomAssociation }}</td>
+                                                <td>{{ utilisateur.username }}</td>
+                                                <td>{{ utilisateur.email }}</td>
+                                                <td>{{ utilisateur.adresse }}</td>
+                                                 <td>{{ utilisateur.telephone }}</td>
+                                                <td>
+                                                 <form method=\"post\" action=\"{{ path('app_utilisateur_delete', {'id': utilisateur.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+                                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                                <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ utilisateur.id) }}\">
+                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                            </form>
+                                                
+                                                </td>
+
+                                                
+                                                 
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}\">modifier</a>
+                                                </td>
+                                                {% endfor %}
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=\"card\" >
+                            <div class=\"card-body\" >
+                                 <div class=\"bootstrap-pagination\">
+                                    <nav>
+                                        <ul class=\"pagination\">
+                                            <li class=\"page-item\">  {% if previous >= 0 %}
+            <a href=\"{{ path('app_utilisateur_index', {  offset: previous }) }}\" class=\"page-link\">Previous</a>
+       {% endif %}
+                                            </li>
+                                            {# <li class=\"page-item\"><a class=\"page-link\" href=\"#\">1</a>
+                                            </li>
+                                            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a>
+                                            </li>
+                                            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a>
+                                            </li> #}
+                                            <li class=\"page-item\">{% if next < utilisateurs|length %}
+           <a href=\"{{ path('app_utilisateur_index', {   offset: next }) }}\"  class=\"page-link\" >Next</a>
+       {% endif %}
+                                            </li>
+                                        </ul> 
+                                        
+       
+          
+                                     </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /# card -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- #/ container -->
+ 
+{% endblock %}
+
+
+
+
+
+            {# <h1>Utilisateur index</h1>
 
     <table class=\"table\">
         <thead>
@@ -245,8 +397,6 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_utilisateur_new') }}\">Create new</a>
-{% endblock %}
-", "backend/utilisateur/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\utilisateur\\index.html.twig");
+    <a href=\"{{ path('app_utilisateur_new') }}\">Create new</a> #}", "backend/utilisateur/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\utilisateur\\index.html.twig");
     }
 }

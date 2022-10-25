@@ -154,19 +154,23 @@ class __TwigTemplate_bc13efca468899b59046f9fd0e1859d8 extends Template
                                          <label>Classification</label>
                                           ";
         // line 74
-        echo "                                           ";
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 74, $this->source); })()), "classifications", [], "any", false, false, false, 74), 'widget');
+        echo "                                          <div class = \"fff \">
+                                                ";
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 75, $this->source); })()), "classifications", [], "any", false, false, false, 75), 'widget');
         echo " 
+
+                                            </div>
                                         </div>
                                          
                                        ";
-        // line 77
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 77, $this->source); })()), "submit", [], "any", false, false, false, 77), 'widget');
+        // line 80
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 80, $this->source); })()), "submit", [], "any", false, false, false, 80), 'widget', ["attr" => ["class" => "btn mb-1 btn-primary"]]);
         echo "
                                         
                                         ";
-        // line 79
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 79, $this->source); })()), 'form_end');
+        // line 82
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 82, $this->source); })()), 'form_end');
         echo "
 
                                     </form>
@@ -203,7 +207,7 @@ class __TwigTemplate_bc13efca468899b59046f9fd0e1859d8 extends Template
 
     public function getDebugInfo()
     {
-        return array (  169 => 79,  164 => 77,  157 => 74,  149 => 62,  142 => 58,  134 => 53,  124 => 47,  116 => 42,  109 => 36,  104 => 33,  97 => 29,  88 => 23,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  173 => 82,  168 => 80,  160 => 75,  157 => 74,  149 => 62,  142 => 58,  134 => 53,  124 => 47,  116 => 42,  109 => 36,  104 => 33,  97 => 29,  88 => 23,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -281,10 +285,13 @@ class __TwigTemplate_bc13efca468899b59046f9fd0e1859d8 extends Template
                                             </div>
                                           
                                           {% endfor %}  #}
-                                           {{ form_widget(form.classifications) }} 
+                                          <div class = \"fff \">
+                                                {{ form_widget(form.classifications  )}} 
+
+                                            </div>
                                         </div>
                                          
-                                       {{ form_widget(form.submit) }}
+                                       {{ form_widget(form.submit, {'attr': {'class':\"btn mb-1 btn-primary\" }}) }}
                                         
                                         {{ form_end(form) }}
 

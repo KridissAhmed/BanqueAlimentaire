@@ -31,7 +31,9 @@ class UtilisateurType extends AbstractType
 
             // used to render a select box, check boxes or radios
              'multiple' => true,
-             //'expanded' => true,
+             'expanded' => true,
+             
+              
         ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,

@@ -350,6 +350,20 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\ArticleController" class="App\Controller\ArticleController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\ArticleController"/>
+      </call>
+    </service>
+    <service id="App\Controller\FamilleController" class="App\Controller\FamilleController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\FamilleController"/>
+      </call>
+    </service>
     <service id="App\Controller\HomeController" class="App\Controller\HomeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -364,12 +378,28 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\SecurityController"/>
       </call>
     </service>
+    <service id="App\Controller\SousFamilleController" class="App\Controller\SousFamilleController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\SousFamilleController"/>
+      </call>
+    </service>
     <service id="App\Controller\UtilisateurController" class="App\Controller\UtilisateurController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\UtilisateurController"/>
       </call>
+    </service>
+    <service id="App\Form\ArticleType" class="App\Form\ArticleType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\FamilleType" class="App\Form\FamilleType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\SousFamilleType" class="App\Form\SousFamilleType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Form\UtilisateurType" class="App\Form\UtilisateurType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -1194,6 +1224,9 @@
         <argument>EasyCorp\Bundle\EasyAdminBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ArticleType</argument>
+        <argument>App\Form\FamilleType</argument>
+        <argument>App\Form\SousFamilleType</argument>
         <argument>App\Form\UtilisateurType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -3271,7 +3304,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.UBzQeyu"/>
+      <argument type="service" id=".service_locator.0WEqK.m"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -6366,15 +6399,30 @@
       <tag name="assets.package" package="easyadmin.assets.package"/>
       <argument type="service" id="request_stack"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ArticleController" class="App\Controller\ArticleController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FamilleController" class="App\Controller\FamilleController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FamilleController" class="App\Controller\FamilleController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\FamilleController" class="App\Controller\FamilleController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SousFamilleController" class="App\Controller\SousFamilleController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SousFamilleController" class="App\Controller\SousFamilleController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SousFamilleController" class="App\Controller\SousFamilleController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UtilisateurController" class="App\Controller\UtilisateurController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UtilisateurController" class="App\Controller\UtilisateurController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UtilisateurController" class="App\Controller\UtilisateurController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ArticleType" class="App\Form\ArticleType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ArticleType" class="App\Form\ArticleType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\FamilleType" class="App\Form\FamilleType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\FamilleType" class="App\Form\FamilleType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SousFamilleType" class="App\Form\SousFamilleType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SousFamilleType" class="App\Form\SousFamilleType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UtilisateurType" class="App\Form\UtilisateurType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UtilisateurType" class="App\Form\UtilisateurType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" autowire="true" abstract="true"/>
@@ -6804,22 +6852,81 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.i9Y0h6B" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="articleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.NyLbAvG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="article" type="service_closure" id=".errored..service_locator.NyLbAvG.App\Entity\Article"/>
+      </argument>
+    </service>
+    <service id=".service_locator.S51ENsP" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="article" type="service_closure" id=".errored..service_locator.S51ENsP.App\Entity\Article"/>
+        <argument key="articleRepository" type="service_closure" id="App\Repository\ArticleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.nschQn0" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="familleRepository" type="service_closure" id="App\Repository\FamilleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.QvxxghZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="famille" type="service_closure" id=".errored..service_locator.QvxxghZ.App\Entity\Famille"/>
+      </argument>
+    </service>
+    <service id=".service_locator.DmfMTkQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="famille" type="service_closure" id=".errored..service_locator.DmfMTkQ.App\Entity\Famille"/>
+        <argument key="familleRepository" type="service_closure" id="App\Repository\FamilleRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.zFcJjKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.JMejbpE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ZOOfiqb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="sousFamilleRepository" type="service_closure" id="App\Repository\SousFamilleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.koswnwz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="sousFamille" type="service_closure" id=".errored..service_locator.koswnwz.App\Entity\SousFamille"/>
+      </argument>
+    </service>
+    <service id=".service_locator.tCjhayM" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="sousFamille" type="service_closure" id=".errored..service_locator.tCjhayM.App\Entity\SousFamille"/>
+        <argument key="sousFamilleRepository" type="service_closure" id="App\Repository\SousFamilleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.VtuKRVc" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="twig" type="service_closure" id="twig"/>
         <argument key="utilisateurRepository" type="service_closure" id="App\Repository\UtilisateurRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.1RhB0LO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IA2o2s2" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="classificationrepo" type="service_closure" id="App\Repository\ClassificationRepository"/>
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
         <argument key="utilisateurRepository" type="service_closure" id="App\Repository\UtilisateurRepository"/>
       </argument>
     </service>
@@ -6829,6 +6936,14 @@
         <argument key="utilisateur" type="service_closure" id=".errored..service_locator.r5W7ygF.App\Entity\Utilisateur"/>
       </argument>
     </service>
+    <service id=".service_locator.Qbz1V9E" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
+        <argument key="utilisateur" type="service_closure" id=".errored..service_locator.Qbz1V9E.App\Entity\Utilisateur"/>
+        <argument key="utilisateurRepository" type="service_closure" id="App\Repository\UtilisateurRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.KzL3gdR" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6836,14 +6951,29 @@
         <argument key="utilisateurRepository" type="service_closure" id="App\Repository\UtilisateurRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.IsRIZLm" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.sOBJtr2" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\ArticleController::delete" type="service_closure" id=".service_locator.S51ENsP"/>
+        <argument key="App\Controller\ArticleController::edit" type="service_closure" id=".service_locator.S51ENsP"/>
+        <argument key="App\Controller\ArticleController::index" type="service_closure" id=".service_locator.i9Y0h6B"/>
+        <argument key="App\Controller\ArticleController::new" type="service_closure" id=".service_locator.i9Y0h6B"/>
+        <argument key="App\Controller\ArticleController::show" type="service_closure" id=".service_locator.NyLbAvG"/>
+        <argument key="App\Controller\FamilleController::delete" type="service_closure" id=".service_locator.DmfMTkQ"/>
+        <argument key="App\Controller\FamilleController::edit" type="service_closure" id=".service_locator.DmfMTkQ"/>
+        <argument key="App\Controller\FamilleController::index" type="service_closure" id=".service_locator.nschQn0"/>
+        <argument key="App\Controller\FamilleController::new" type="service_closure" id=".service_locator.nschQn0"/>
+        <argument key="App\Controller\FamilleController::show" type="service_closure" id=".service_locator.QvxxghZ"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
+        <argument key="App\Controller\SousFamilleController::delete" type="service_closure" id=".service_locator.tCjhayM"/>
+        <argument key="App\Controller\SousFamilleController::edit" type="service_closure" id=".service_locator.tCjhayM"/>
+        <argument key="App\Controller\SousFamilleController::index" type="service_closure" id=".service_locator.ZOOfiqb"/>
+        <argument key="App\Controller\SousFamilleController::new" type="service_closure" id=".service_locator.ZOOfiqb"/>
+        <argument key="App\Controller\SousFamilleController::show" type="service_closure" id=".service_locator.koswnwz"/>
         <argument key="App\Controller\UtilisateurController::delete" type="service_closure" id=".service_locator.KzL3gdR"/>
-        <argument key="App\Controller\UtilisateurController::edit" type="service_closure" id=".service_locator.KzL3gdR"/>
-        <argument key="App\Controller\UtilisateurController::index" type="service_closure" id=".service_locator.JMejbpE"/>
-        <argument key="App\Controller\UtilisateurController::new" type="service_closure" id=".service_locator.1RhB0LO"/>
+        <argument key="App\Controller\UtilisateurController::edit" type="service_closure" id=".service_locator.Qbz1V9E"/>
+        <argument key="App\Controller\UtilisateurController::index" type="service_closure" id=".service_locator.VtuKRVc"/>
+        <argument key="App\Controller\UtilisateurController::new" type="service_closure" id=".service_locator.IA2o2s2"/>
         <argument key="App\Controller\UtilisateurController::show" type="service_closure" id=".service_locator.r5W7ygF"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -6851,11 +6981,26 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
+        <argument key="App\Controller\ArticleController:delete" type="service_closure" id=".service_locator.S51ENsP"/>
+        <argument key="App\Controller\ArticleController:edit" type="service_closure" id=".service_locator.S51ENsP"/>
+        <argument key="App\Controller\ArticleController:index" type="service_closure" id=".service_locator.i9Y0h6B"/>
+        <argument key="App\Controller\ArticleController:new" type="service_closure" id=".service_locator.i9Y0h6B"/>
+        <argument key="App\Controller\ArticleController:show" type="service_closure" id=".service_locator.NyLbAvG"/>
+        <argument key="App\Controller\FamilleController:delete" type="service_closure" id=".service_locator.DmfMTkQ"/>
+        <argument key="App\Controller\FamilleController:edit" type="service_closure" id=".service_locator.DmfMTkQ"/>
+        <argument key="App\Controller\FamilleController:index" type="service_closure" id=".service_locator.nschQn0"/>
+        <argument key="App\Controller\FamilleController:new" type="service_closure" id=".service_locator.nschQn0"/>
+        <argument key="App\Controller\FamilleController:show" type="service_closure" id=".service_locator.QvxxghZ"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
+        <argument key="App\Controller\SousFamilleController:delete" type="service_closure" id=".service_locator.tCjhayM"/>
+        <argument key="App\Controller\SousFamilleController:edit" type="service_closure" id=".service_locator.tCjhayM"/>
+        <argument key="App\Controller\SousFamilleController:index" type="service_closure" id=".service_locator.ZOOfiqb"/>
+        <argument key="App\Controller\SousFamilleController:new" type="service_closure" id=".service_locator.ZOOfiqb"/>
+        <argument key="App\Controller\SousFamilleController:show" type="service_closure" id=".service_locator.koswnwz"/>
         <argument key="App\Controller\UtilisateurController:delete" type="service_closure" id=".service_locator.KzL3gdR"/>
-        <argument key="App\Controller\UtilisateurController:edit" type="service_closure" id=".service_locator.KzL3gdR"/>
-        <argument key="App\Controller\UtilisateurController:index" type="service_closure" id=".service_locator.JMejbpE"/>
-        <argument key="App\Controller\UtilisateurController:new" type="service_closure" id=".service_locator.1RhB0LO"/>
+        <argument key="App\Controller\UtilisateurController:edit" type="service_closure" id=".service_locator.Qbz1V9E"/>
+        <argument key="App\Controller\UtilisateurController:index" type="service_closure" id=".service_locator.VtuKRVc"/>
+        <argument key="App\Controller\UtilisateurController:new" type="service_closure" id=".service_locator.IA2o2s2"/>
         <argument key="App\Controller\UtilisateurController:show" type="service_closure" id=".service_locator.r5W7ygF"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -7041,9 +7186,12 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.UBzQeyu" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.0WEqK.m" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ArticleType" type="service_closure" id="App\Form\ArticleType"/>
+        <argument key="App\Form\FamilleType" type="service_closure" id="App\Form\FamilleType"/>
+        <argument key="App\Form\SousFamilleType" type="service_closure" id="App\Form\SousFamilleType"/>
         <argument key="App\Form\UtilisateurType" type="service_closure" id="App\Form\UtilisateurType"/>
         <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\CrudFormType" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Form\Type\CrudFormType"/>
         <argument key="EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType" type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\Form\Type\FileUploadType"/>
@@ -7419,6 +7567,18 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\ArticleController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ArticleController"/>
+      <argument>App\Controller\ArticleController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\FamilleController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\FamilleController"/>
+      <argument>App\Controller\FamilleController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
     <service id=".service_locator.jIxfAsi.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
       <argument>App\Controller\HomeController</argument>
@@ -7428,6 +7588,12 @@
     <service id=".service_locator.jIxfAsi.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\SousFamilleController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\SousFamilleController"/>
+      <argument>App\Controller\SousFamilleController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
@@ -7707,12 +7873,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.IsRIZLm"/>
+      <argument type="service" id=".service_locator.sOBJtr2"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.IsRIZLm"/>
+      <argument type="service" id=".service_locator.sOBJtr2"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -7741,7 +7907,14 @@
     </service>
     <service id=".errored..service_locator.bRdave9.Symfony\Component\HttpFoundation\Response" class="Symfony\Component\HttpFoundation\Response"/>
     <service id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.NyLbAvG.App\Entity\Article" class="App\Entity\Article"/>
+    <service id=".errored..service_locator.S51ENsP.App\Entity\Article" class="App\Entity\Article"/>
+    <service id=".errored..service_locator.QvxxghZ.App\Entity\Famille" class="App\Entity\Famille"/>
+    <service id=".errored..service_locator.DmfMTkQ.App\Entity\Famille" class="App\Entity\Famille"/>
+    <service id=".errored..service_locator.koswnwz.App\Entity\SousFamille" class="App\Entity\SousFamille"/>
+    <service id=".errored..service_locator.tCjhayM.App\Entity\SousFamille" class="App\Entity\SousFamille"/>
     <service id=".errored..service_locator.r5W7ygF.App\Entity\Utilisateur" class="App\Entity\Utilisateur"/>
+    <service id=".errored..service_locator.Qbz1V9E.App\Entity\Utilisateur" class="App\Entity\Utilisateur"/>
     <service id=".errored..service_locator.KzL3gdR.App\Entity\Utilisateur" class="App\Entity\Utilisateur"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -8679,7 +8852,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.IsRIZLm"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.sOBJtr2"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -8701,10 +8874,11 @@
     <service id=".service_locator.h8Jkkd2" alias="messenger.retry_strategy_locator"/>
     <service id=".service_locator.Mo0FXEU" alias="service_locator_EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.JSv_GHu" alias=".service_locator.1RhB0LO"/>
-    <service id=".service_locator.jWI1BpB" alias=".service_locator.IsRIZLm"/>
+    <service id=".service_locator.zxfMR2P" alias=".service_locator.IA2o2s2"/>
+    <service id=".service_locator.AQQNIwS" alias=".service_locator.Qbz1V9E"/>
+    <service id=".service_locator.Zgp17jI" alias=".service_locator.sOBJtr2"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.IrXt5rd" alias=".service_locator.UBzQeyu"/>
+    <service id=".service_locator.NmagUMA" alias=".service_locator.0WEqK.m"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
@@ -8756,10 +8930,20 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.FatRZu2" alias=".service_locator.bRdave9"/>
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
+    <service id=".service_locator.lQQ63Mn" alias=".service_locator.i9Y0h6B"/>
+    <service id=".service_locator.YTyy9X4" alias=".service_locator.NyLbAvG"/>
+    <service id=".service_locator.dww6otW" alias=".service_locator.S51ENsP"/>
+    <service id=".service_locator.ZqdXAKg" alias=".service_locator.nschQn0"/>
+    <service id=".service_locator.cshBCru" alias=".service_locator.QvxxghZ"/>
+    <service id=".service_locator.TQ48_c." alias=".service_locator.DmfMTkQ"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
-    <service id=".service_locator.D6f1tFW" alias=".service_locator.JMejbpE"/>
-    <service id=".service_locator.rLC_FsQ" alias=".service_locator.1RhB0LO"/>
+    <service id=".service_locator.wr8c3_Q" alias=".service_locator.ZOOfiqb"/>
+    <service id=".service_locator.kpwpNSz" alias=".service_locator.koswnwz"/>
+    <service id=".service_locator.8IegeIL" alias=".service_locator.tCjhayM"/>
+    <service id=".service_locator.gcpG1Ie" alias=".service_locator.VtuKRVc"/>
+    <service id=".service_locator.pMK0KgA" alias=".service_locator.IA2o2s2"/>
     <service id=".service_locator.hCNOtTs" alias=".service_locator.r5W7ygF"/>
+    <service id=".service_locator.KpfTMBC" alias=".service_locator.Qbz1V9E"/>
     <service id=".service_locator.7qMQ8j_" alias=".service_locator.KzL3gdR"/>
     <service id=".service_locator.eAaUVIw" alias=".service_locator.jIxfAsi"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
