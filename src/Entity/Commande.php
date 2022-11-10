@@ -22,7 +22,7 @@ class Commande
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE,nullable: true)]
     private ?\DateTimeInterface $dateSouhaite = null;
 
     #[ORM\Column]

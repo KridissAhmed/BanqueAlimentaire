@@ -21,7 +21,7 @@ class Famille
     #[ORM\Column(length: 255)]
     private ?string $libelleFamille = null;
 
-    #[ORM\OneToMany(mappedBy: 'famille', targetEntity: SousFamille::class)]
+    #[ORM\OneToMany(mappedBy: 'famille', targetEntity: SousFamille::class , orphanRemoval:true)]
     private Collection $sousFamilles;
 
     public function __construct()

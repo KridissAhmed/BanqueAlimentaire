@@ -33,7 +33,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
     protected function doGetParent(array $context)
     {
         // line 1
-        return "base.html.twig";
+        return "backend/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "backend/sous_famille/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "backend/sous_famille/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("backend/base.html.twig", "backend/sous_famille/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -65,7 +65,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "SousFamille index";
+        echo "Famille index";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -85,70 +85,98 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>SousFamille index</h1>
+        echo " 
+            <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
+                    </ol>
+                </div>
+            </div>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>CodeSF</th>
-                <th>LibelleSF</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        ";
-        // line 18
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    
+                    <!-- /# column -->
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"card-title\">
+                                    <h4>Table Hover</h4>
+                                </div>
+                                <div class=\"table-responsive\">
+                                    <table class=\"table table-hover\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Code</th>
+                                                <th>Libellé</th>
+                                                <th>Famille</th>
+                                                <th>Supprimer</th>
+                                                <th>Mofifier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        ";
+        // line 38
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["sous_familles"]) || array_key_exists("sous_familles", $context) ? $context["sous_familles"] : (function () { throw new RuntimeError('Variable "sous_familles" does not exist.', 18, $this->source); })()));
-        $context['_iterated'] = false;
-        foreach ($context['_seq'] as $context["_key"] => $context["sous_famille"]) {
-            // line 19
-            echo "            <tr>
-                <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["sous_famille"], "id", [], "any", false, false, false, 20), "html", null, true);
+        $context['_seq'] = twig_ensure_traversable((isset($context["sous_familles"]) || array_key_exists("sous_familles", $context) ? $context["sous_familles"] : (function () { throw new RuntimeError('Variable "sous_familles" does not exist.', 38, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
+            // line 39
+            echo "                                            <tr>
+                                                <td>";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "codeSF", [], "any", false, false, false, 40), "html", null, true);
             echo "</td>
-                <td>";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["sous_famille"], "codeSF", [], "any", false, false, false, 21), "html", null, true);
+                                                <td>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "libelleSF", [], "any", false, false, false, 41), "html", null, true);
             echo "</td>
-                <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["sous_famille"], "libelleSF", [], "any", false, false, false, 22), "html", null, true);
+                                                <td>";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "famille", [], "any", false, false, false, 42), "libelleFamille", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
-                <td>
-                    <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_show", ["id" => twig_get_attribute($this->env, $this->source, $context["sous_famille"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-            echo "\">show</a>
-                    <a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["sous_famille"], "id", [], "any", false, false, false, 25)]), "html", null, true);
-            echo "\">edit</a>
-                </td>
-            </tr>
-        ";
-            $context['_iterated'] = true;
-        }
-        if (!$context['_iterated']) {
-            // line 29
-            echo "            <tr>
-                <td colspan=\"4\">no records found</td>
-            </tr>
-        ";
+                                                <td>
+                                                 <form method=\"post\" action=\"";
+            // line 44
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 44)]), "html", null, true);
+            echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+                                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                                <input type=\"hidden\" name=\"_token\" value=\"";
+            // line 46
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 46))), "html", null, true);
+            echo "\">
+                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                            </form>
+                                                
+                                                </td>
+
+                                                
+                                                 
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+            // line 54
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 54)]), "html", null, true);
+            echo "\">modifier</a>
+                                                </td>
+                                                ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['sous_famille'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
-        echo "        </tbody>
-    </table>
-
-    <a href=\"";
-        // line 36
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_new");
-        echo "\">Create new</a>
+        // line 57
+        echo "                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                                    <!-- /# card -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- #/ container -->
+ 
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -170,48 +198,83 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  150 => 36,  145 => 33,  136 => 29,  127 => 25,  123 => 24,  118 => 22,  114 => 21,  110 => 20,  107 => 19,  102 => 18,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  167 => 57,  158 => 54,  147 => 46,  142 => 44,  137 => 42,  133 => 41,  129 => 40,  126 => 39,  122 => 38,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'backend/base.html.twig' %}
 
-{% block title %}SousFamille index{% endblock %}
+{% block title %}Famille index{% endblock %}
 
 {% block body %}
-    <h1>SousFamille index</h1>
+ 
+            <div class=\"row page-titles mx-0\">
+                <div class=\"col p-md-0\">
+                    <ol class=\"breadcrumb\">
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
+                    </ol>
+                </div>
+            </div>
 
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>CodeSF</th>
-                <th>LibelleSF</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for sous_famille in sous_familles %}
-            <tr>
-                <td>{{ sous_famille.id }}</td>
-                <td>{{ sous_famille.codeSF }}</td>
-                <td>{{ sous_famille.libelleSF }}</td>
-                <td>
-                    <a href=\"{{ path('app_sous_famille_show', {'id': sous_famille.id}) }}\">show</a>
-                    <a href=\"{{ path('app_sous_famille_edit', {'id': sous_famille.id}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"4\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <div class=\"container-fluid\">
+                <div class=\"row\">
+                    
+                    <!-- /# column -->
+                    <div class=\"col-lg-12\">
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"card-title\">
+                                    <h4>Table Hover</h4>
+                                </div>
+                                <div class=\"table-responsive\">
+                                    <table class=\"table table-hover\">
+                                        <thead>
+                                            <tr>
+                                                 <th>Code</th>
+                                                <th>Libellé</th>
+                                                <th>Famille</th>
+                                                <th>Supprimer</th>
+                                                <th>Mofifier</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for f in sous_familles %}
+                                            <tr>
+                                                <td>{{ f.codeSF }}</td>
+                                                <td>{{ f.libelleSF }}</td>
+                                                <td>{{ f.famille.libelleFamille }}</td>
+                                                <td>
+                                                 <form method=\"post\" action=\"{{ path('app_sous_famille_delete', {'id': f.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+                                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                                <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ f.id) }}\">
+                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                            </form>
+                                                
+                                                </td>
 
-    <a href=\"{{ path('app_sous_famille_new') }}\">Create new</a>
+                                                
+                                                 
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('app_sous_famille_edit', {'id': f.id}) }}\">modifier</a>
+                                                </td>
+                                                {% endfor %}
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                                    <!-- /# card -->
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- #/ container -->
+ 
 {% endblock %}
+
+
 ", "backend/sous_famille/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\sous_famille\\index.html.twig");
     }
 }

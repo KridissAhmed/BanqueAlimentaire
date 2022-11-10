@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-developement',
-        'version' => 'dev-developement',
-        'reference' => 'b13bed59d5fe39b505f7084567d9805cbabc7405',
+        'pretty_version' => 'dev-ahmedkridiss',
+        'version' => 'dev-ahmedkridiss',
+        'reference' => 'c1a3998bf647047631e1a3bb6659b8a62ffdf526',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-developement',
-            'version' => 'dev-developement',
-            'reference' => 'b13bed59d5fe39b505f7084567d9805cbabc7405',
+            'pretty_version' => 'dev-ahmedkridiss',
+            'version' => 'dev-ahmedkridiss',
+            'reference' => 'c1a3998bf647047631e1a3bb6659b8a62ffdf526',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -163,6 +163,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'dompdf/dompdf' => array(
+            'pretty_version' => 'v2.0.1',
+            'version' => '2.0.1.0',
+            'reference' => 'c5310df0e22c758c85ea5288175fc6cd777bc085',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../dompdf/dompdf',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'easycorp/easyadmin-bundle' => array(
             'pretty_version' => 'v4.4.0',
             'version' => '4.4.0.0',
@@ -206,7 +215,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../masterminds/html5',
             'aliases' => array(),
-            'dev_requirement' => true,
+            'dev_requirement' => false,
         ),
         'monolog/monolog' => array(
             'pretty_version' => '3.2.0',
@@ -258,6 +267,24 @@
             'install_path' => __DIR__ . '/../phar-io/version',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'phenx/php-font-lib' => array(
+            'pretty_version' => '0.5.4',
+            'version' => '0.5.4.0',
+            'reference' => 'dd448ad1ce34c63d09baccd05415e361300c35b4',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-font-lib',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'phenx/php-svg-lib' => array(
+            'pretty_version' => '0.5.0',
+            'version' => '0.5.0.0',
+            'reference' => '76876c6cf3080bcb6f249d7d59705108166a6685',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phenx/php-svg-lib',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'php-http/async-client-implementation' => array(
             'dev_requirement' => false,
@@ -448,6 +475,15 @@
             'provided' => array(
                 0 => '1.0|2.0|3.0',
             ),
+        ),
+        'sabberworm/php-css-parser' => array(
+            'pretty_version' => '8.4.0',
+            'version' => '8.4.0.0',
+            'reference' => 'e41d2140031d533348b2192a83f02d8dd8a71d30',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sabberworm/php-css-parser',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',
@@ -1242,9 +1278,9 @@
             'dev_requirement' => false,
         ),
         'symfony/validator' => array(
-            'pretty_version' => 'v6.1.5',
-            'version' => '6.1.5.0',
-            'reference' => '7d7724f550e0f657a591831a7c31e25678ff8779',
+            'pretty_version' => 'v6.1.7',
+            'version' => '6.1.7.0',
+            'reference' => '0cc147f2e4a0d78221db85545751cd8764bbc156',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/validator',
             'aliases' => array(),

@@ -29,6 +29,7 @@ class DetailCommandeRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+    
 
     public function remove(DetailCommande $entity, bool $flush = false): void
     {
@@ -39,20 +40,18 @@ class DetailCommandeRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return DetailCommande[] Returns an array of DetailCommande objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('d')
-//            ->andWhere('d.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('d.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+   /**
+    * @return DetailCommande[] Returns an array of DetailCommande objects
+    */
+   public function findByCommande($value): array
+   {
+       return $this->createQueryBuilder('d')
+           ->andWhere('d.commande = :val')
+           ->setParameter('val', $value)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 
 //    public function findOneBySomeField($value): ?DetailCommande
 //    {

@@ -8,7 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-
+ 
 #[ORM\Entity(repositoryClass: UtilisateurRepository::class)]
 class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 {
@@ -18,6 +18,7 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     private ?int $id = null;
 
     #[ORM\Column(length: 180, unique: true)]
+    
     private ?string $username = null;
 
     #[ORM\Column]
@@ -27,9 +28,12 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
      * @var string The hashed password
      */
     #[ORM\Column]
+ 
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
+    
+    
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
@@ -46,6 +50,9 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\ManyToMany(targetEntity: Classification::class, inversedBy: 'utilisateurs')]
     private Collection $classifications;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
 
     public function __construct()
     {
@@ -221,6 +228,18 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     public function removeClassification(Classification $classification): self
     {
         $this->classifications->removeElement($classification);
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

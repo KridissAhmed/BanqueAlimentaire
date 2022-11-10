@@ -96,26 +96,7 @@ class __TwigTemplate_8538404e408e974422558f22498b9f64 extends Template
             <!-- row -->
 
             <div class=\"container-fluid\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-                        <div class=\"card\">
-                            <div class=\"card-body\">
-                                <h4 class=\"card-title\">Input Style</h4>
-                                <p class=\"text-muted m-b-15 f-s-12\">Use the input classes on an <code>.input-default, input-flat, .input-rounded</code> for Default input.</p>
-                                <div class=\"basic-form\">
-                                    <form>
-                                        <div class=\"form-group\">
-                                            <input type=\"text\" class=\"form-control input-default\" placeholder=\"Input Default\">
-                                        </div>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
+               
             </div>
 
 ";
@@ -160,26 +141,7 @@ class __TwigTemplate_8538404e408e974422558f22498b9f64 extends Template
             <!-- row -->
 
             <div class=\"container-fluid\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12\">
-                        <div class=\"card\">
-                            <div class=\"card-body\">
-                                <h4 class=\"card-title\">Input Style</h4>
-                                <p class=\"text-muted m-b-15 f-s-12\">Use the input classes on an <code>.input-default, input-flat, .input-rounded</code> for Default input.</p>
-                                <div class=\"basic-form\">
-                                    <form>
-                                        <div class=\"form-group\">
-                                            <input type=\"text\" class=\"form-control input-default\" placeholder=\"Input Default\">
-                                        </div>
-                                        
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    
-                </div>
+               
             </div>
 
 {% endblock %}", "backend/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\index.html.twig");

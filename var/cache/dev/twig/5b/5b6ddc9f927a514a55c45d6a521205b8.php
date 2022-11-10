@@ -68,8 +68,8 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
         echo "     <div class=\"row page-titles mx-0\">
                 <div class=\"col p-md-0\">
                     <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille de produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une famille</a></li>
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Sous Famille de produit</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une sous famille</a></li>
                     </ol>
                 </div>
             </div>
@@ -80,7 +80,7 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
                     <div class=\"col-lg-12\">
                         <div class=\"card\">
                             <div class=\"card-body\">
-                                <h4 class=\"card-title\">Famille</h4>
+                                <h4 class=\"card-title\">Sous Famille</h4>
                                 <div class=\"basic-form\">
                                     
                                     ";
@@ -90,7 +90,7 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
                                     <form>
                                          <div class=\"form-row\">
                                             <div class=\"form-group col-md-6\">
-                                                <label>Code famille </label>
+                                                <label>Code sous famille </label>
                                                    
                                                  ";
         // line 29
@@ -98,7 +98,7 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
         echo "
                                             </div>
                                             <div class=\"form-group col-md-6\">
-                                                <label>Libellé famille</label>
+                                                <label>Libellé sous famille</label>
                                 ";
         // line 33
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 33, $this->source); })()), "libelleFamille", [], "any", false, false, false, 33), 'widget', ["attr" => ["class" => "form-control", "placeholder" => "Identifiant", "type" => "text"]]);
@@ -177,8 +177,8 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
      <div class=\"row page-titles mx-0\">
                 <div class=\"col p-md-0\">
                     <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille de produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une famille</a></li>
+                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Sous Famille de produit</a></li>
+                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une sous famille</a></li>
                     </ol>
                 </div>
             </div>
@@ -189,19 +189,19 @@ class __TwigTemplate_2bd7a7197dff7f5278f774c93224a756 extends Template
                     <div class=\"col-lg-12\">
                         <div class=\"card\">
                             <div class=\"card-body\">
-                                <h4 class=\"card-title\">Famille</h4>
+                                <h4 class=\"card-title\">Sous Famille</h4>
                                 <div class=\"basic-form\">
                                     
                                     {{ form_start(form) }}
                                     <form>
                                          <div class=\"form-row\">
                                             <div class=\"form-group col-md-6\">
-                                                <label>Code famille </label>
+                                                <label>Code sous famille </label>
                                                    
                                                  {{ form_widget(form.codeFamille, {'attr': {'class': 'form-control','type':\"text\"}}) }}
                                             </div>
                                             <div class=\"form-group col-md-6\">
-                                                <label>Libellé famille</label>
+                                                <label>Libellé sous famille</label>
                                 {{ form_widget(form.libelleFamille, {'attr': {'class': 'form-control','placeholder':'Identifiant','type':\"text\"}}) }}
 
                                                 {# <input type=\"text\" class=\"form-control\" placeholder=\"Identifiant\"> #}

@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/sous/famille')]
+#[Route('/admin/sous/famille')]
 class SousFamilleController extends AbstractController
 {
     #[Route('/', name: 'app_sous_famille_index', methods: ['GET'])]
@@ -44,7 +44,7 @@ class SousFamilleController extends AbstractController
     #[Route('/{id}', name: 'app_sous_famille_show', methods: ['GET'])]
     public function show(SousFamille $sousFamille): Response
     {
-        return $this->render('sous_famille/show.html.twig', [
+        return $this->render('backend/sous_famille/show.html.twig', [
             'sous_famille' => $sousFamille,
         ]);
     }
@@ -61,9 +61,10 @@ class SousFamilleController extends AbstractController
             return $this->redirectToRoute('app_sous_famille_index', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->renderForm('sous_famille/edit.html.twig', [
+        return $this->renderForm('backend/sous_famille/new.html.twig', [
             'sous_famille' => $sousFamille,
             'form' => $form,
+            'modifier' => true,
         ]);
     }
 

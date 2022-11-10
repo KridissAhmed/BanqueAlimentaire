@@ -12,8 +12,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Twig\Environment;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
-#[Route('/utilisateur')]
+#[Route('/admin/utilisateur')]
 class UtilisateurController extends AbstractController
 {
        
@@ -40,7 +43,7 @@ class UtilisateurController extends AbstractController
     }*/
 
     #[Route('/new', name: 'app_utilisateur_new', methods: ['GET', 'POST'])]
-    public function new(UserPasswordHasherInterface $userPasswordHasher,Request $request, UtilisateurRepository $utilisateurRepository,ClassificationRepository $classificationrepo): Response
+    public function new(UserPasswordHasherInterface $userPasswordHasher,Request $request, UtilisateurRepository $utilisateurRepository,ClassificationRepository $classificationrepo, SluggerInterface $slugger): Response
     {
         $utilisateur = new Utilisateur();
         $form = $this->createForm(UtilisateurType::class, $utilisateur);
@@ -54,6 +57,31 @@ class UtilisateurController extends AbstractController
                     $utilisateur->getPassword()
                 )
             );
+            $brochureFile = $form->get('imageFile')->getData();
+
+            // this condition is needed because the 'brochure' field is not required
+            // so the PDF file must be processed only when a file is uploaded
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('images_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $utilisateur->setImage($newFilename);
+               
+            }
             $utilisateurRepository->save($utilisateur, true);
 
             return $this->redirectToRoute('app_utilisateur_index', [], Response::HTTP_SEE_OTHER);
@@ -76,7 +104,7 @@ class UtilisateurController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_utilisateur_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Utilisateur $utilisateur, UtilisateurRepository $utilisateurRepository,UserPasswordHasherInterface $userPasswordHasher): Response
+    public function edit( SluggerInterface $slugger,Request $request, Utilisateur $utilisateur, UtilisateurRepository $utilisateurRepository,UserPasswordHasherInterface $userPasswordHasher): Response
     {
         $form = $this->createForm(UtilisateurType::class, $utilisateur);
         $form->handleRequest($request);
@@ -88,6 +116,31 @@ class UtilisateurController extends AbstractController
                     $utilisateur->getPassword()
                 )
             );
+            $brochureFile = $form->get('imageFile')->getData();
+
+            // this condition is needed because the 'brochure' field is not required
+            // so the PDF file must be processed only when a file is uploaded
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = $slugger->slug($originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('images_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $utilisateur->setImage($newFilename);
+               
+            }
             $utilisateurRepository->save($utilisateur, true);
 
             return $this->redirectToRoute('app_utilisateur_index', [], Response::HTTP_SEE_OTHER);
