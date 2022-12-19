@@ -19,6 +19,7 @@ return [
         '/admin/classification' => [[['_route' => 'app_classification_index', '_controller' => 'App\\Controller\\ClassificationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/classification/new' => [[['_route' => 'app_classification_new', '_controller' => 'App\\Controller\\ClassificationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/commande' => [[['_route' => 'app_commande_index', '_controller' => 'App\\Controller\\DetailCommandeController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/commande/recherche' => [[['_route' => 'app_commande_search', '_controller' => 'App\\Controller\\DetailCommandeController::recherche'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/commande/new' => [[['_route' => 'app_detail_commande_new', '_controller' => 'App\\Controller\\DetailCommandeController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/famille' => [[['_route' => 'app_famille_index', '_controller' => 'App\\Controller\\FamilleController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/famille/new' => [[['_route' => 'app_famille_new', '_controller' => 'App\\Controller\\FamilleController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -76,12 +77,13 @@ return [
                 .')'
                 .'|/commande/(?'
                     .'|pdf/([^/]++)(*:466)'
+                    .'|csv/([^/]++)(*:486)'
                     .'|([^/]++)(?'
-                        .'|(*:485)'
-                        .'|/edit(*:498)'
+                        .'|(*:505)'
+                        .'|/edit(*:518)'
                     .')'
-                    .'|delete/([^/]++)(*:522)'
-                    .'|([^/]++)/accepter(*:547)'
+                    .'|delete/([^/]++)(*:542)'
+                    .'|([^/]++)/accepter(*:567)'
                 .')'
             .')/?$}sDu',
     ],
@@ -109,10 +111,11 @@ return [
         423 => [[['_route' => 'app_utilisateur_edit', '_controller' => 'App\\Controller\\UtilisateurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         431 => [[['_route' => 'app_utilisateur_delete', '_controller' => 'App\\Controller\\UtilisateurController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         466 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\DetailCommandeController::pdf'], ['id'], ['GET' => 0], null, false, true, null]],
-        485 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\DetailCommandeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        498 => [[['_route' => 'app_detail_commande_edit', '_controller' => 'App\\Controller\\DetailCommandeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        522 => [[['_route' => 'app_commande_delete', '_controller' => 'App\\Controller\\DetailCommandeController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        547 => [
+        486 => [[['_route' => 'csv', '_controller' => 'App\\Controller\\DetailCommandeController::csv'], ['id'], ['GET' => 0], null, false, true, null]],
+        505 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\DetailCommandeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        518 => [[['_route' => 'app_detail_commande_edit', '_controller' => 'App\\Controller\\DetailCommandeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        542 => [[['_route' => 'app_commande_delete', '_controller' => 'App\\Controller\\DetailCommandeController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        567 => [
             [['_route' => 'accepter', '_controller' => 'App\\Controller\\DetailCommandeController::editcommande'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],

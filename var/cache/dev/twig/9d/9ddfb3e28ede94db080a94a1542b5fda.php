@@ -66,12 +66,7 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
 
         // line 5
         echo "     <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\"> produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter un produit</a></li>
-                    </ol>
-                </div>
+                 
             </div>
             <!-- row -->
 
@@ -84,8 +79,8 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                 <div class=\"basic-form\">
                                     
                                     ";
-        // line 23
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_start');
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
         echo "
                                     <form>
                                     
@@ -93,8 +88,8 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>codeArticle</label>
                                             ";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "codeArticle", [], "any", false, false, false, 29), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "codeArticle", [], "any", false, false, false, 24), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
@@ -103,8 +98,8 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>libelleArticle</label>
                                             ";
-        // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), "libelleArticle", [], "any", false, false, false, 36), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 31, $this->source); })()), "libelleArticle", [], "any", false, false, false, 31), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
@@ -113,8 +108,8 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>indice</label>
                                             ";
-        // line 43
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "indice", [], "any", false, false, false, 43), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 38
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), "indice", [], "any", false, false, false, 38), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
@@ -123,8 +118,8 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>sousFamille</label>
                                             ";
-        // line 50
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), "sousFamille", [], "any", false, false, false, 50), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "sousFamille", [], "any", false, false, false, 45), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
@@ -133,33 +128,43 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>classification</label>
                                             ";
-        // line 57
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 57, $this->source); })()), "classification", [], "any", false, false, false, 57), 'widget', ["attr" => ["class" => "form-control"]]);
+        // line 52
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 52, $this->source); })()), "classification", [], "any", false, false, false, 52), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo "
+                                            
+                                        </div>
+                                        </div>
+                                        <div class=\"form-row\">
+                                         <div class=\"form-group\">
+                                            <label>Publiable</label>
+                                            ";
+        // line 59
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 59, $this->source); })()), "publiable", [], "any", false, false, false, 59), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
                                         </div>
                                       
                                           ";
-        // line 62
-        if (((isset($context["modifier"]) || array_key_exists("modifier", $context) ? $context["modifier"] : (function () { throw new RuntimeError('Variable "modifier" does not exist.', 62, $this->source); })()) == false)) {
-            // line 63
+        // line 64
+        if (((isset($context["modifier"]) || array_key_exists("modifier", $context) ? $context["modifier"] : (function () { throw new RuntimeError('Variable "modifier" does not exist.', 64, $this->source); })()) == false)) {
+            // line 65
             echo "                                          <button type=\"submit\" class=\"btn mb-1 btn-primary\">ajouter</button>
                                           ";
         } else {
-            // line 65
+            // line 67
             echo "                                          <button type=\"submit\" class=\"btn mb-1 btn-primary\">modifier</button>
 
                                           ";
         }
-        // line 68
+        // line 70
         echo "                                         
                                        ";
-        // line 70
+        // line 72
         echo "                                        
                                         ";
-        // line 71
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 71, $this->source); })()), 'form_end');
+        // line 73
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 73, $this->source); })()), 'form_end');
         echo "
 
                                     </form>
@@ -196,7 +201,7 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
 
     public function getDebugInfo()
     {
-        return array (  162 => 71,  159 => 70,  156 => 68,  151 => 65,  147 => 63,  145 => 62,  137 => 57,  127 => 50,  117 => 43,  107 => 36,  97 => 29,  88 => 23,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  167 => 73,  164 => 72,  161 => 70,  156 => 67,  152 => 65,  150 => 64,  142 => 59,  132 => 52,  122 => 45,  112 => 38,  102 => 31,  92 => 24,  83 => 18,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -206,12 +211,7 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
  
 {% block body %}
      <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\"> produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter un produit</a></li>
-                    </ol>
-                </div>
+                 
             </div>
             <!-- row -->
 
@@ -258,6 +258,13 @@ class __TwigTemplate_2367aab20046eca5170ebc88db3f894c extends Template
                                          <div class=\"form-group\">
                                             <label>classification</label>
                                             {{ form_widget(form.classification, {'attr': {'class': 'form-control'  }}) }}
+                                            
+                                        </div>
+                                        </div>
+                                        <div class=\"form-row\">
+                                         <div class=\"form-group\">
+                                            <label>Publiable</label>
+                                            {{ form_widget(form.publiable, {'attr': {'class': 'form-control'  }}) }}
                                             
                                         </div>
                                         </div>

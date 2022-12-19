@@ -27,6 +27,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $this->parent = false;
 
         $this->blocks = [
+            'search' => [$this, 'block_search'],
             'body' => [$this, 'block_body'],
             'Js' => [$this, 'block_Js'],
         ];
@@ -104,7 +105,10 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"nav-header\">
             <div class=\"brand-logo\">
-                <a href=\"index.html\">
+                <a href=\"";
+        // line 48
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        echo "\">
                     <b class=\"logo-abbr\"><img src=\"";
         // line 49
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
@@ -135,74 +139,46 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                     </div>
                 </div>
                 <div class=\"header-left\">
-                    <div class=\"input-group icons\">
-                        <div class=\"input-group-prepend\">
-                            <span class=\"input-group-text bg-transparent border-0 pr-2 pr-sm-3\" id=\"basic-addon1\"><i class=\"mdi mdi-magnify\"></i></span>
-                        </div>
-                        <input type=\"search\" class=\"form-control\" placeholder=\"Search Dashboard\" aria-label=\"Search Dashboard\">
-                        <div class=\"drop-down animated flipInX d-md-none\">
-                            <form action=\"#\">
-                                <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                  ";
+        // line 73
+        $this->displayBlock('search', $context, $blocks);
+        // line 76
+        echo "                </div>
                 <div class=\"header-right\">
                     <ul class=\"clearfix\">
                         ";
-        // line 117
+        // line 109
         echo "                        ";
-        // line 171
+        // line 163
         echo "                        ";
-        // line 184
+        // line 176
         echo "                        <li class=\"icons dropdown\">
-                            <div class=\"user-img c-pointer position-relative\"   data-toggle=\"dropdown\">
-                                <span class=\"activity active\"></span>
-                                ";
-        // line 187
+                            <div >
+                                 ";
+        // line 178
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 188
-            echo "                            <img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("images/" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 188, $this->source); })()), "user", [], "any", false, false, false, 188), "image", [], "any", false, false, false, 188))), "html", null, true);
-            echo "\" height=\"40\" width=\"40\" alt=\"\">    
+            // line 179
+            echo "                           
+                             <span class=\"toggle-icon\">";
+            // line 180
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 180, $this->source); })()), "user", [], "any", false, false, false, 180), "username", [], "any", false, false, false, 180), "html", null, true);
+            echo "
+                                            <a href=\"";
+            // line 181
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\"><i class=\"icon-user\"></i>   se deconnecter </a>
+                                     </span>
                                             ";
         } else {
-            // line 190
-            echo "                            <img src=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/user/1.png"), "html", null, true);
-            echo "\" height=\"40\" width=\"40\" alt=\"\">   
-                                             ";
-        }
-        // line 192
-        echo "                            </div>
-                            <div class=\"drop-down dropdown-profile animated fadeIn dropdown-menu\">
-                                <div class=\"dropdown-content-body\">
-                                    <ul>
-                                        ";
-        // line 205
-        echo "                                        ";
-        // line 206
-        echo "                                        ";
-        // line 209
-        echo "                                         ";
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 210
-            echo "                                          <li><a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\"><i class=\"icon-key\"></i> <span>Logout</span></a></li>
-                    ";
-        } else {
-            // line 212
-            echo "                     <li><a href=\"";
+            // line 184
+            echo " <span class=\"toggle-icon\">  <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\"><i class=\"icon-key\"></i> <span>Login</span></a></li>
-                   ";
+            echo "\"><i class=\"icon-user\"></i>   se connecter </a>
+                                     </span>                                             ";
         }
-        // line 214
-        echo "                                       
-                                    </ul>
-                                </div>
-                            </div>
+        // line 186
+        echo "                            </div>
+                             
                         </li>
                     </ul>
                 </div>
@@ -212,9 +188,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Header end ti-comment-alt
         ***********************************-->
 ";
-        // line 226
-        $this->loadTemplate("backend/sidebar.html", "backend/base.html.twig", 226)->display($context);
-        // line 227
+        // line 196
+        $this->loadTemplate("backend/sidebar.html", "backend/base.html.twig", 196)->display($context);
+        // line 197
         echo "      
 
         <!--**********************************
@@ -222,9 +198,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"content-body\">
             ";
-        // line 233
+        // line 203
         $this->displayBlock('body', $context, $blocks);
-        // line 234
+        // line 204
         echo "          
         </div>
         <!--**********************************
@@ -247,9 +223,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     ***********************************-->
         
         ";
-        // line 255
+        // line 225
         $this->displayBlock('Js', $context, $blocks);
-        // line 287
+        // line 257
         echo "    </body>
 </html>
 ";
@@ -261,7 +237,28 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 233
+    // line 73
+    public function block_search($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
+
+        // line 74
+        echo "                   
+                      ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 203
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -279,7 +276,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 255
+    // line 225
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -289,86 +286,86 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 256
+        // line 226
         echo "  <!--**********************************
         Scripts
     ***********************************-->
     <script src=\"";
-        // line 259
+        // line 229
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 260
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 261
+        // line 231
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 262
+        // line 232
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 263
+        // line 233
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
-        echo "\"></\"></script>
+        echo "\"></script>
 
     <!-- Chartjs -->
     <script src=\"";
-        // line 266
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Circle progress -->
     <script src=\"";
-        // line 268
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Datamap -->
     <script src=\"";
-        // line 270
+        // line 240
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 271
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 272
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Morrisjs -->
     <script src=\"";
-        // line 274
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 275
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Pignose Calender -->
     <script src=\"";
-        // line 277
+        // line 247
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 278
+        // line 248
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
         echo "\"></script>
     <!-- ChartistJS -->
     <script src=\"";
-        // line 280
+        // line 250
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 281
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
     <script src=\"";
-        // line 285
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -392,7 +389,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     public function getDebugInfo()
     {
-        return array (  372 => 285,  365 => 281,  361 => 280,  356 => 278,  352 => 277,  347 => 275,  343 => 274,  338 => 272,  334 => 271,  330 => 270,  325 => 268,  320 => 266,  314 => 263,  310 => 262,  306 => 261,  302 => 260,  298 => 259,  293 => 256,  283 => 255,  265 => 233,  253 => 287,  251 => 255,  228 => 234,  226 => 233,  218 => 227,  216 => 226,  202 => 214,  196 => 212,  190 => 210,  187 => 209,  185 => 206,  183 => 205,  177 => 192,  171 => 190,  165 => 188,  163 => 187,  158 => 184,  156 => 171,  154 => 117,  114 => 50,  110 => 49,  76 => 18,  72 => 17,  67 => 15,  63 => 14,  58 => 12,  45 => 1,);
+        return array (  369 => 255,  362 => 251,  358 => 250,  353 => 248,  349 => 247,  344 => 245,  340 => 244,  335 => 242,  331 => 241,  327 => 240,  322 => 238,  317 => 236,  311 => 233,  307 => 232,  303 => 231,  299 => 230,  295 => 229,  290 => 226,  280 => 225,  262 => 203,  251 => 74,  241 => 73,  229 => 257,  227 => 225,  204 => 204,  202 => 203,  194 => 197,  192 => 196,  180 => 186,  174 => 184,  168 => 181,  164 => 180,  161 => 179,  159 => 178,  155 => 176,  153 => 163,  151 => 109,  146 => 76,  144 => 73,  118 => 50,  114 => 49,  110 => 48,  77 => 18,  73 => 17,  68 => 15,  64 => 14,  59 => 12,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -444,7 +441,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"nav-header\">
             <div class=\"brand-logo\">
-                <a href=\"index.html\">
+                <a href=\"{{ path('app_home') }}\">
                     <b class=\"logo-abbr\"><img src=\"{{ asset('images/logo.png') }}\" alt=\"\"> </b>
                     <span class=\"logo-compact\"><img src=\"{{ asset('images/logo-compact.png') }}\" alt=\"\"></span>
                     <span class=\"brand-title\">
@@ -469,17 +466,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                     </div>
                 </div>
                 <div class=\"header-left\">
-                    <div class=\"input-group icons\">
-                        <div class=\"input-group-prepend\">
-                            <span class=\"input-group-text bg-transparent border-0 pr-2 pr-sm-3\" id=\"basic-addon1\"><i class=\"mdi mdi-magnify\"></i></span>
-                        </div>
-                        <input type=\"search\" class=\"form-control\" placeholder=\"Search Dashboard\" aria-label=\"Search Dashboard\">
-                        <div class=\"drop-down animated flipInX d-md-none\">
-                            <form action=\"#\">
-                                <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-                            </form>
-                        </div>
-                    </div>
+                  {% block search %}
+                   
+                      {% endblock %}
                 </div>
                 <div class=\"header-right\">
                     <ul class=\"clearfix\">
@@ -581,39 +570,17 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                             </div>
                         </li> #}
                         <li class=\"icons dropdown\">
-                            <div class=\"user-img c-pointer position-relative\"   data-toggle=\"dropdown\">
-                                <span class=\"activity active\"></span>
-                                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                            <img src=\"{{asset('images/' ~ app.user.image)}}\" height=\"40\" width=\"40\" alt=\"\">    
+                            <div >
+                                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                           
+                             <span class=\"toggle-icon\">{{app.user.username}}
+                                            <a href=\"{{ path('app_logout') }}\"><i class=\"icon-user\"></i>   se deconnecter </a>
+                                     </span>
                                             {% else %}
-                            <img src=\"{{asset('images/user/1.png')}}\" height=\"40\" width=\"40\" alt=\"\">   
-                                             {% endif %}
+ <span class=\"toggle-icon\">  <a href=\"{{ path('app_login') }}\"><i class=\"icon-user\"></i>   se connecter </a>
+                                     </span>                                             {% endif %}
                             </div>
-                            <div class=\"drop-down dropdown-profile animated fadeIn dropdown-menu\">
-                                <div class=\"dropdown-content-body\">
-                                    <ul>
-                                        {# <li>
-                                            <a href=\"app-profile.html\"><i class=\"icon-user\"></i> <span>Login</span></a>
-                                        </li>
-                                        <li>
-                                            <a href=\"javascript:void()\">
-                                                <i class=\"icon-envelope-open\"></i> <span>Logout</span> <div class=\"badge gradient-3 badge-pill gradient-1\">3</div>
-                                            </a>
-                                        </li>
-                                         #}
-                                        {# <hr class=\"my-2\"> #}
-                                        {# <li>
-                                            <a href=\"page-lock.html\"><i class=\"icon-lock\"></i> <span>Lock Screen</span></a>
-                                        </li> #}
-                                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                                          <li><a href=\"{{ path('app_logout') }}\"><i class=\"icon-key\"></i> <span>Logout</span></a></li>
-                    {% else %}
-                     <li><a href=\"{{ path('app_login') }}\"><i class=\"icon-key\"></i> <span>Login</span></a></li>
-                   {% endif %}
-                                       
-                                    </ul>
-                                </div>
-                            </div>
+                             
                         </li>
                     </ul>
                 </div>
@@ -659,7 +626,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <script src=\"{{asset('js/custom.min.js')}}\"></script>
     <script src=\"{{asset('js/settings.js')}}\"></script>
     <script src=\"{{asset('js/gleek.js')}}\"></script>
-    <script src=\"{{asset('js/styleSwitcher.js')}}\"></\"></script>
+    <script src=\"{{asset('js/styleSwitcher.js')}}\"></script>
 
     <!-- Chartjs -->
     <script src=\"{{asset('plugins/chart.js/Chart.bundle.min.js')}}\"></script>

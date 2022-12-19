@@ -87,12 +87,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
         // line 6
         echo " 
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
-                    </ol>
-                </div>
+                
             </div>
 
             <div class=\"container-fluid\">
@@ -103,7 +98,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Table Hover</h4>
+                                    <h4>Aricles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">
@@ -112,7 +107,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                                 <th>CodeArticle</th>
                                                 <th>LibelleArticle</th>
                                                 <th>Indice</th>
-                                                 
+                                                 <th>Publiable</th>
                                                 <th>sous famille</th>
                                                 <th>classification</th>
                                                 <th>Supprimer</th>
@@ -121,26 +116,37 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                         </thead>
                                         <tbody>
                                         ";
-        // line 41
+        // line 36
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 41, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 36, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 42
+            // line 37
             echo "                                            <tr>
                                                 <td>";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "codeArticle", [], "any", false, false, false, 43), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "codeArticle", [], "any", false, false, false, 38), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "libelleArticle", [], "any", false, false, false, 44), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "libelleArticle", [], "any", false, false, false, 39), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "indice", [], "any", false, false, false, 45), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "indice", [], "any", false, false, false, 40), "html", null, true);
             echo "</td>
-                                                 <td>";
+                                                ";
+            // line 41
+            if (twig_get_attribute($this->env, $this->source, $context["article"], "publiable", [], "any", false, false, false, 41)) {
+                // line 42
+                echo "                                                <td>Publiable</td>
+                                                ";
+            } else {
+                // line 44
+                echo "                                                <td>Non Publiable</td>
+                                                 ";
+            }
             // line 46
+            echo "                                                 <td>";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "sousFamille", [], "any", false, false, false, 46), "libelleSF", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                                                 <td>";
@@ -209,7 +215,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
 
     public function getDebugInfo()
     {
-        return array (  178 => 62,  169 => 59,  158 => 51,  153 => 49,  148 => 47,  144 => 46,  140 => 45,  136 => 44,  132 => 43,  129 => 42,  125 => 41,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  184 => 62,  175 => 59,  164 => 51,  159 => 49,  154 => 47,  149 => 46,  145 => 44,  141 => 42,  139 => 41,  135 => 40,  131 => 39,  127 => 38,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -221,12 +227,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
 {% block body %}
  
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
-                    </ol>
-                </div>
+                
             </div>
 
             <div class=\"container-fluid\">
@@ -237,7 +238,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Table Hover</h4>
+                                    <h4>Aricles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">
@@ -246,7 +247,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                                 <th>CodeArticle</th>
                                                 <th>LibelleArticle</th>
                                                 <th>Indice</th>
-                                                 
+                                                 <th>Publiable</th>
                                                 <th>sous famille</th>
                                                 <th>classification</th>
                                                 <th>Supprimer</th>
@@ -259,6 +260,11 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                                 <td>{{ article.codeArticle }}</td>
                                                 <td>{{ article.libelleArticle }}</td>
                                                 <td>{{ article.indice }}</td>
+                                                {% if article.publiable %}
+                                                <td>Publiable</td>
+                                                {% else %}
+                                                <td>Non Publiable</td>
+                                                 {% endif %}
                                                  <td>{{ article.sousFamille.libelleSF }}</td>
                                                 <td>{{ article.classification.type}}</td>
                                                 <td>

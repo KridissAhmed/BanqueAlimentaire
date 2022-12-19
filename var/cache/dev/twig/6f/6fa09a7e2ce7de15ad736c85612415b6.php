@@ -87,12 +87,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
         // line 6
         echo " 
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Detail Commande</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des produits demandés</a></li>
-                    </ol>
-                </div>
+                 
             </div>
 
             <div class=\"container-fluid\">
@@ -118,48 +113,53 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                         </thead>
                                         <tbody>
                                         ";
-        // line 38
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 38, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 33, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
-            // line 39
+            // line 34
             echo "                                            <tr>
                                                 <td>";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 40), "sousFamille", [], "any", false, false, false, 40), "famille", [], "any", false, false, false, 40), "libelleFamille", [], "any", false, false, false, 40), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 35), "sousFamille", [], "any", false, false, false, 35), "famille", [], "any", false, false, false, 35), "libelleFamille", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 41), "sousFamille", [], "any", false, false, false, 41), "libelleSF", [], "any", false, false, false, 41), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 36), "sousFamille", [], "any", false, false, false, 36), "libelleSF", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 42), "libelleArticle", [], "any", false, false, false, 42), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 37), "libelleArticle", [], "any", false, false, false, 37), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "quantite", [], "any", false, false, false, 43), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "quantite", [], "any", false, false, false, 38), "html", null, true);
             echo "</td>
                                            
 
                                                 
                                                  
                                                 ";
-            // line 50
+            // line 45
             echo "                                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 46
         echo "
                                             
                                         </tbody>
                                     </table>
                                     <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
-        // line 55
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pdf", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 55, $this->source); })()), "id", [], "any", false, false, false, 55)]), "html", null, true);
+        // line 50
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pdf", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 50, $this->source); })()), "id", [], "any", false, false, false, 50)]), "html", null, true);
         echo "\">Telecharger PDF</a>
+                                                </td> 
+                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+        // line 52
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("csv", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 52, $this->source); })()), "id", [], "any", false, false, false, 52)]), "html", null, true);
+        echo "\">Telecharger Excel</a>
                                                 </td> 
                                 </div>
                             </div>
@@ -192,7 +192,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
 
     public function getDebugInfo()
     {
-        return array (  161 => 55,  155 => 51,  149 => 50,  141 => 43,  137 => 42,  133 => 41,  129 => 40,  126 => 39,  122 => 38,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  161 => 52,  156 => 50,  150 => 46,  144 => 45,  136 => 38,  132 => 37,  128 => 36,  124 => 35,  121 => 34,  117 => 33,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -204,12 +204,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
 {% block body %}
  
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Detail Commande</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des produits demandés</a></li>
-                    </ol>
-                </div>
+                 
             </div>
 
             <div class=\"container-fluid\">
@@ -252,6 +247,8 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                         </tbody>
                                     </table>
                                     <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('pdf', {'id': commande.id}) }}\">Telecharger PDF</a>
+                                                </td> 
+                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('csv', {'id': commande.id}) }}\">Telecharger Excel</a>
                                                 </td> 
                                 </div>
                             </div>

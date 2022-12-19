@@ -51,8 +51,11 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
             <div class=\"nk-nav-scroll\">
                 <ul class=\"metismenu\" id=\"menu\">
                      <li>
-                        <a   href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Dashboard</span>
+                        <a   href=\"";
+            // line 9
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+            echo "\" aria-expanded=\"false\">
+                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Accueil</span>
                         </a>
          
                     </li>
@@ -129,11 +132,11 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
                         <ul aria-expanded=\"false\">
                             <li><a href=\"";
             // line 61
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_new");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_new");
             echo "\">Ajouter Classification</a></li>
                             <li><a href=\"";
             // line 62
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_index");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_index");
             echo "\">Gerer les Classifications</a></li>
                             
                         </ul>
@@ -161,8 +164,11 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
             <div class=\"nk-nav-scroll\">
                 <ul class=\"metismenu\" id=\"menu\">
                      <li>
-                        <a   href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Dashboard</span>
+                        <a   href=\"";
+            // line 84
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+            echo "\" aria-expanded=\"false\">
+                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Accueil</span>
                         </a>
          
                     </li>
@@ -218,7 +224,7 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
 
     public function getDebugInfo()
     {
-        return array (  197 => 109,  182 => 97,  178 => 96,  160 => 80,  144 => 67,  136 => 62,  132 => 61,  120 => 52,  116 => 51,  104 => 42,  100 => 41,  88 => 32,  84 => 31,  72 => 22,  68 => 21,  50 => 5,  48 => 4,  43 => 1,);
+        return array (  203 => 109,  188 => 97,  184 => 96,  169 => 84,  163 => 80,  147 => 67,  139 => 62,  135 => 61,  123 => 52,  119 => 51,  107 => 42,  103 => 41,  91 => 32,  87 => 31,  75 => 22,  71 => 21,  56 => 9,  50 => 5,  48 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -231,8 +237,8 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
             <div class=\"nk-nav-scroll\">
                 <ul class=\"metismenu\" id=\"menu\">
                      <li>
-                        <a   href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Dashboard</span>
+                        <a   href=\"{{ path('app_home') }}\" aria-expanded=\"false\">
+                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Accueil</span>
                         </a>
          
                     </li>
@@ -283,8 +289,8 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
                             <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Classification</span>
                         </a>
                         <ul aria-expanded=\"false\">
-                            <li><a href=\"{{ path('app_sous_famille_new') }}\">Ajouter Classification</a></li>
-                            <li><a href=\"{{ path('app_sous_famille_index') }}\">Gerer les Classifications</a></li>
+                            <li><a href=\"{{ path('app_classification_new') }}\">Ajouter Classification</a></li>
+                            <li><a href=\"{{ path('app_classification_index') }}\">Gerer les Classifications</a></li>
                             
                         </ul>
                     </li>
@@ -306,8 +312,8 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
             <div class=\"nk-nav-scroll\">
                 <ul class=\"metismenu\" id=\"menu\">
                      <li>
-                        <a   href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Dashboard</span>
+                        <a   href=\"{{ path('app_home') }}\" aria-expanded=\"false\">
+                            <i class=\"icon-speedometer menu-icon\"></i><span class=\"nav-text\">Accueil</span>
                         </a>
          
                     </li>

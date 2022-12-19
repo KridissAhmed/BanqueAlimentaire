@@ -133,7 +133,7 @@ class __TwigTemplate_bc13efca468899b59046f9fd0e1859d8 extends Template
                                             <label>Image</label>
                                             ";
         // line 55
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 55, $this->source); })()), "image", [], "any", false, false, false, 55), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 55, $this->source); })()), "imageFile", [], "any", false, false, false, 55), 'widget', ["attr" => ["class" => "form-control"]]);
         echo "
                                             
                                         </div>
@@ -275,7 +275,7 @@ class __TwigTemplate_bc13efca468899b59046f9fd0e1859d8 extends Template
                                         </div>
                                         <div class=\"form-group\">
                                             <label>Image</label>
-                                            {{ form_widget(form.image, {'attr': {'class': 'form-control'}}) }}
+                                            {{ form_widget(form.imageFile, {'attr': {'class': 'form-control'}}) }}
                                             
                                         </div>
                                         <div class=\"form-group\">

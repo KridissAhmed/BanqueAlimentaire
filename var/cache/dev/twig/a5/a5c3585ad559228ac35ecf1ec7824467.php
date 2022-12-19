@@ -66,12 +66,7 @@ class __TwigTemplate_c1782c5d568bea25e62392ded4cd24e7 extends Template
 
         // line 5
         echo "     <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Classification de produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une Classification</a></li>
-                    </ol>
-                </div>
+                 
             </div>
             <!-- row -->
 
@@ -84,8 +79,8 @@ class __TwigTemplate_c1782c5d568bea25e62392ded4cd24e7 extends Template
                                 <div class=\"basic-form\">
                                     
                                     ";
-        // line 23
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), 'form_start');
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
         echo "
                                     <form>
                                          <div class=\"form-row\">
@@ -93,33 +88,33 @@ class __TwigTemplate_c1782c5d568bea25e62392ded4cd24e7 extends Template
                                                 <label>Type de classification </label>
                                                    
                                                  ";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 29, $this->source); })()), "type", [], "any", false, false, false, 29), 'widget', ["attr" => ["class" => "form-control", "type" => "text"]]);
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "type", [], "any", false, false, false, 24), 'widget', ["attr" => ["class" => "form-control", "type" => "text"]]);
         echo "
                                             </div>
                                             
                                         </div>
                                       
                                           ";
-        // line 34
-        if (((isset($context["modifier"]) || array_key_exists("modifier", $context) ? $context["modifier"] : (function () { throw new RuntimeError('Variable "modifier" does not exist.', 34, $this->source); })()) == false)) {
-            // line 35
+        // line 29
+        if (((isset($context["modifier"]) || array_key_exists("modifier", $context) ? $context["modifier"] : (function () { throw new RuntimeError('Variable "modifier" does not exist.', 29, $this->source); })()) == false)) {
+            // line 30
             echo "                                          <button type=\"submit\" class=\"btn mb-1 btn-primary\">ajouter</button>
                                           ";
         } else {
-            // line 37
+            // line 32
             echo "                                          <button type=\"submit\" class=\"btn mb-1 btn-primary\">modifier</button>
 
                                           ";
         }
-        // line 40
+        // line 35
         echo "                                         
                                        ";
-        // line 42
+        // line 37
         echo "                                        
                                         ";
-        // line 43
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), 'form_end');
+        // line 38
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 38, $this->source); })()), 'form_end');
         echo "
 
                                     </form>
@@ -156,7 +151,7 @@ class __TwigTemplate_c1782c5d568bea25e62392ded4cd24e7 extends Template
 
     public function getDebugInfo()
     {
-        return array (  122 => 43,  119 => 42,  116 => 40,  111 => 37,  107 => 35,  105 => 34,  97 => 29,  88 => 23,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  117 => 38,  114 => 37,  111 => 35,  106 => 32,  102 => 30,  100 => 29,  92 => 24,  83 => 18,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -166,12 +161,7 @@ class __TwigTemplate_c1782c5d568bea25e62392ded4cd24e7 extends Template
  
 {% block body %}
      <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Classification de produit</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">Ajouter une Classification</a></li>
-                    </ol>
-                </div>
+                 
             </div>
             <!-- row -->
 
