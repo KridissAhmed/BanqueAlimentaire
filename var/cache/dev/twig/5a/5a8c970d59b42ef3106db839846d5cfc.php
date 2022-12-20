@@ -87,12 +87,7 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
         // line 6
         echo " 
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
-                    </ol>
-                </div>
+                 
             </div>
 
             <div class=\"container-fluid\">
@@ -119,26 +114,26 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
                                         </thead>
                                         <tbody>
                                         ";
-        // line 39
+        // line 34
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["classifications"]) || array_key_exists("classifications", $context) ? $context["classifications"] : (function () { throw new RuntimeError('Variable "classifications" does not exist.', 39, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["classifications"]) || array_key_exists("classifications", $context) ? $context["classifications"] : (function () { throw new RuntimeError('Variable "classifications" does not exist.', 34, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
-            // line 40
+            // line 35
             echo "                                            <tr>
                                                 <td>";
-            // line 41
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "type", [], "any", false, false, false, 41), "html", null, true);
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "type", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                                                  
                                                 <td>
                                                  <form method=\"post\" action=\"";
-            // line 44
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 44)]), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 39)]), "html", null, true);
             echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 46
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 46))), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 41))), "html", null, true);
             echo "\">
                                                 <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
@@ -148,8 +143,8 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
                                                 
                                                  
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
-            // line 54
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 54)]), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             echo "\">modifier</a>
                                                 </td>
                                                 ";
@@ -157,7 +152,7 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
+        // line 52
         echo "                                            
                                         </tbody>
                                     </table>
@@ -192,7 +187,7 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  161 => 57,  152 => 54,  141 => 46,  136 => 44,  130 => 41,  127 => 40,  123 => 39,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  156 => 52,  147 => 49,  136 => 41,  131 => 39,  125 => 36,  122 => 35,  118 => 34,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -204,12 +199,7 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
 {% block body %}
  
             <div class=\"row page-titles mx-0\">
-                <div class=\"col p-md-0\">
-                    <ol class=\"breadcrumb\">
-                        <li class=\"breadcrumb-item\"><a href=\"javascript:void(0)\">Famille</a></li>
-                        <li class=\"breadcrumb-item active\"><a href=\"javascript:void(0)\">liste des Famille</a></li>
-                    </ol>
-                </div>
+                 
             </div>
 
             <div class=\"container-fluid\">
