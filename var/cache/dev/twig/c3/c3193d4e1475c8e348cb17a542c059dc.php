@@ -86,8 +86,8 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                 <div class=\"basic-form\">
                                     
                                      <form method=\"POST\" id =\"formulaire\">
-                                      <div id =\"xxx\"  >
-  <div class=\"form-row\" id=\"0\" >
+                                      <div id =\"xxx\">
+                                      <div class=\"form-row\" id=\"0\" >
                                             <div class=\"form-group col-md-6\">
                                                 <label>Article</label>
                                                   <select name=\"article[0]\" class=\"form-control\" id=\"article-select\" required>
@@ -111,9 +111,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 32
         echo "                                                    </select>
-                                                 ";
-        // line 34
-        echo "                                             </div>
+                                              </div>
                                               <div class=\"form-group col-md-6\">
                                                 <label>Quantite</label>
                                                <input type=\"number\" name=\"quantite[0]\" class=\"form-control\" required >  
@@ -182,7 +180,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
 
     }
 
-    // line 97
+    // line 96
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -192,45 +190,46 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 98
+        // line 97
         echo "
     <script>
     var counter=0;
     function add_more_commande(){
         counter++;
-      var  html='<div class=\"form-row\" >\\
-          <div class=\"form-group col-md-6\">\\
+      var  html='<div class=\"form-group col-md-6\">\\
           <label>Article</label>\\
  <select name=\"article['+counter+']\" class=\"form-control\" id=\"article-select\" required>\\
 <option value=\"\">--choisissez un produit--</option>\\
  ";
-        // line 108
+        // line 106
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 108, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 106, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
             echo "\\
 <option value=";
-            // line 109
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 109), "html", null, true);
+            // line 107
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 107), "html", null, true);
             echo ">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 109), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 107), "html", null, true);
             echo "</option>\\
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 110
+        // line 108
         echo "\\
          </select>\\
       </div>\\
        <div class=\"form-group col-md-6\">\\
    <label>Quantite</label>\\
   <input type=\"number\" name=\"quantite['+counter+']\" class=\"form-control\" required>\\
-    </div>\\
- </div>';
- var form = document.getElementById('xxx');
- form.innerHTML+=html;
+    </div>';
+ var container = document.createElement(\"div\");
+ container.classList.add('form-row');
+container.innerHTML += html;
+document.getElementById(\"xxx\").appendChild(container);
+  
     }
     
     </script>
@@ -336,7 +335,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
 
     public function getDebugInfo()
     {
-        return array (  316 => 152,  309 => 148,  305 => 147,  300 => 145,  296 => 144,  291 => 142,  287 => 141,  282 => 139,  278 => 138,  274 => 137,  269 => 135,  264 => 133,  258 => 130,  254 => 129,  250 => 128,  246 => 127,  242 => 126,  224 => 110,  214 => 109,  208 => 108,  196 => 98,  186 => 97,  116 => 34,  113 => 32,  101 => 29,  97 => 28,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  315 => 152,  308 => 148,  304 => 147,  299 => 145,  295 => 144,  290 => 142,  286 => 141,  281 => 139,  277 => 138,  273 => 137,  268 => 135,  263 => 133,  257 => 130,  253 => 129,  249 => 128,  245 => 127,  241 => 126,  221 => 108,  211 => 107,  205 => 106,  194 => 97,  184 => 96,  113 => 32,  101 => 29,  97 => 28,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -362,8 +361,8 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                 <div class=\"basic-form\">
                                     
                                      <form method=\"POST\" id =\"formulaire\">
-                                      <div id =\"xxx\"  >
-  <div class=\"form-row\" id=\"0\" >
+                                      <div id =\"xxx\">
+                                      <div class=\"form-row\" id=\"0\" >
                                             <div class=\"form-group col-md-6\">
                                                 <label>Article</label>
                                                   <select name=\"article[0]\" class=\"form-control\" id=\"article-select\" required>
@@ -373,8 +372,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                                 
                                                    {% endfor %}
                                                     </select>
-                                                 {# <input type=\"text\" name=\"article\" class=\"form-control\" placeholder=\"Identifiant\">  #}
-                                             </div>
+                                              </div>
                                               <div class=\"form-group col-md-6\">
                                                 <label>Quantite</label>
                                                <input type=\"number\" name=\"quantite[0]\" class=\"form-control\" required >  
@@ -443,8 +441,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
     var counter=0;
     function add_more_commande(){
         counter++;
-      var  html='<div class=\"form-row\" >\\
-          <div class=\"form-group col-md-6\">\\
+      var  html='<div class=\"form-group col-md-6\">\\
           <label>Article</label>\\
  <select name=\"article['+counter+']\" class=\"form-control\" id=\"article-select\" required>\\
 <option value=\"\">--choisissez un produit--</option>\\
@@ -456,10 +453,12 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
        <div class=\"form-group col-md-6\">\\
    <label>Quantite</label>\\
   <input type=\"number\" name=\"quantite['+counter+']\" class=\"form-control\" required>\\
-    </div>\\
- </div>';
- var form = document.getElementById('xxx');
- form.innerHTML+=html;
+    </div>';
+ var container = document.createElement(\"div\");
+ container.classList.add('form-row');
+container.innerHTML += html;
+document.getElementById(\"xxx\").appendChild(container);
+  
     }
     
     </script>

@@ -6964,6 +6964,13 @@
         <argument key="classificationRepository" type="service_closure" id="App\Repository\ClassificationRepository"/>
       </argument>
     </service>
+    <service id=".service_locator._8F.4ml" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commande" type="service_closure" id=".errored..service_locator._8F.4ml.App\Entity\Commande"/>
+        <argument key="cr" type="service_closure" id="App\Repository\DetailCommandeRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.XrHuo33" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -7097,7 +7104,7 @@
         <argument key="utilisateurRepository" type="service_closure" id="App\Repository\UtilisateurRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.HpGRZtC" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.QibK3wi" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccessDeniedHandler::handle" type="service_closure" id=".service_locator.O7Rd0qR"/>
@@ -7117,7 +7124,7 @@
         <argument key="App\Controller\DetailCommandeController::editcommande" type="service_closure" id=".service_locator.CsEY2JI"/>
         <argument key="App\Controller\DetailCommandeController::index" type="service_closure" id=".service_locator.qjg9GbA"/>
         <argument key="App\Controller\DetailCommandeController::new" type="service_closure" id=".service_locator.6i0gP86"/>
-        <argument key="App\Controller\DetailCommandeController::pdf" type="service_closure" id=".service_locator.XrHuo33"/>
+        <argument key="App\Controller\DetailCommandeController::pdf" type="service_closure" id=".service_locator._8F.4ml"/>
         <argument key="App\Controller\DetailCommandeController::recherche" type="service_closure" id=".service_locator.qjg9GbA"/>
         <argument key="App\Controller\DetailCommandeController::show" type="service_closure" id=".service_locator.0EpXvAv"/>
         <argument key="App\Controller\FamilleController::delete" type="service_closure" id=".service_locator.DmfMTkQ"/>
@@ -7159,7 +7166,7 @@
         <argument key="App\Controller\DetailCommandeController:editcommande" type="service_closure" id=".service_locator.CsEY2JI"/>
         <argument key="App\Controller\DetailCommandeController:index" type="service_closure" id=".service_locator.qjg9GbA"/>
         <argument key="App\Controller\DetailCommandeController:new" type="service_closure" id=".service_locator.6i0gP86"/>
-        <argument key="App\Controller\DetailCommandeController:pdf" type="service_closure" id=".service_locator.XrHuo33"/>
+        <argument key="App\Controller\DetailCommandeController:pdf" type="service_closure" id=".service_locator._8F.4ml"/>
         <argument key="App\Controller\DetailCommandeController:recherche" type="service_closure" id=".service_locator.qjg9GbA"/>
         <argument key="App\Controller\DetailCommandeController:show" type="service_closure" id=".service_locator.0EpXvAv"/>
         <argument key="App\Controller\FamilleController:delete" type="service_closure" id=".service_locator.DmfMTkQ"/>
@@ -8069,12 +8076,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.HpGRZtC"/>
+      <argument type="service" id=".service_locator.QibK3wi"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.HpGRZtC"/>
+      <argument type="service" id=".service_locator.QibK3wi"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8108,6 +8115,7 @@
     <service id=".errored..service_locator.S51ENsP.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".errored..service_locator.l9i_KJf.App\Entity\Classification" class="App\Entity\Classification"/>
     <service id=".errored..service_locator.co.2reK.App\Entity\Classification" class="App\Entity\Classification"/>
+    <service id=".errored..service_locator._8F.4ml.App\Entity\Commande" class="App\Entity\Commande"/>
     <service id=".errored..service_locator.XrHuo33.App\Entity\Commande" class="App\Entity\Commande"/>
     <service id=".errored..service_locator.0EpXvAv.App\Entity\Commande" class="App\Entity\Commande"/>
     <service id=".errored..service_locator.NVpfyTU.App\Entity\DetailCommande" class="App\Entity\DetailCommande"/>
@@ -9056,7 +9064,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.HpGRZtC"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.QibK3wi"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -9081,7 +9089,7 @@
     <service id=".service_locator.BxiTbUK" alias=".service_locator.6i0gP86"/>
     <service id=".service_locator.otxwcuF" alias=".service_locator.U_ouHBB"/>
     <service id=".service_locator._pXN6YI" alias=".service_locator.a_Hoold"/>
-    <service id=".service_locator.mPDWl7W" alias=".service_locator.HpGRZtC"/>
+    <service id=".service_locator.djhwfba" alias=".service_locator.QibK3wi"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.Tmkz5NI" alias=".service_locator.zpxUnqA"/>
     <service id=".service_locator.XW18Svm" alias=".service_locator.TcKhdzh"/>
@@ -9142,6 +9150,7 @@
     <service id=".service_locator.dAuMxqV" alias=".service_locator.3LLKPPa"/>
     <service id=".service_locator.i8l6HOY" alias=".service_locator.l9i_KJf"/>
     <service id=".service_locator.zqIwChf" alias=".service_locator.co.2reK"/>
+    <service id=".service_locator.jTrDFCa" alias=".service_locator._8F.4ml"/>
     <service id=".service_locator.zXLvxGQ" alias=".service_locator.XrHuo33"/>
     <service id=".service_locator.dXYZxE4" alias=".service_locator.qjg9GbA"/>
     <service id=".service_locator.SevfUUj" alias=".service_locator.6i0gP86"/>
