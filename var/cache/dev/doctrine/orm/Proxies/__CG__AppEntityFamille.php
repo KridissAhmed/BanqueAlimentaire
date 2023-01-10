@@ -67,10 +67,10 @@ class Famille extends \App\Entity\Famille implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'codeFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'libelleFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'sousFamilles'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'codeFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'libelleFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'articles'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'codeFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'libelleFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'sousFamilles'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'codeFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'libelleFamille', '' . "\0" . 'App\\Entity\\Famille' . "\0" . 'articles'];
     }
 
     /**
@@ -239,34 +239,34 @@ class Famille extends \App\Entity\Famille implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getSousFamilles(): \Doctrine\Common\Collections\Collection
+    public function getArticles(): \Doctrine\Common\Collections\Collection
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSousFamilles', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArticles', []);
 
-        return parent::getSousFamilles();
+        return parent::getArticles();
     }
 
     /**
      * {@inheritDoc}
      */
-    public function addSousFamille(\App\Entity\SousFamille $sousFamille): \App\Entity\Famille
+    public function addArticle(\App\Entity\Article $article): \App\Entity\Famille
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addSousFamille', [$sousFamille]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addArticle', [$article]);
 
-        return parent::addSousFamille($sousFamille);
+        return parent::addArticle($article);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function removeSousFamille(\App\Entity\SousFamille $sousFamille): \App\Entity\Famille
+    public function removeArticle(\App\Entity\Article $article): \App\Entity\Famille
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeSousFamille', [$sousFamille]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeArticle', [$article]);
 
-        return parent::removeSousFamille($sousFamille);
+        return parent::removeArticle($article);
     }
 
 }

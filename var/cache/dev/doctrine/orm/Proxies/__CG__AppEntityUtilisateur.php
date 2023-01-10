@@ -67,10 +67,10 @@ class Utilisateur extends \App\Entity\Utilisateur implements \Doctrine\ORM\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'username', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'nomAssociation', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'classifications', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'image'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'username', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'nomAssociation', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'classifications'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'username', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'nomAssociation', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'classifications', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'image'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'username', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'adresse', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'nomAssociation', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'telephone', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'commandes', '' . "\0" . 'App\\Entity\\Utilisateur' . "\0" . 'classifications'];
     }
 
     /**
@@ -432,28 +432,6 @@ class Utilisateur extends \App\Entity\Utilisateur implements \Doctrine\ORM\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeClassification', [$classification]);
 
         return parent::removeClassification($classification);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getImage(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImage', []);
-
-        return parent::getImage();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setImage(?string $image): \App\Entity\Utilisateur
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImage', [$image]);
-
-        return parent::setImage($image);
     }
 
 }

@@ -106,7 +106,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                             <tr>
                                                  <th>Code</th>
                                                 <th>Libellé</th>
-                                                <th>Famille</th>
+                                                
                                                 <th>Supprimer</th>
                                                 <th>Mofifier</th>
                                             </tr>
@@ -127,19 +127,15 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
             // line 36
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "libelleSF", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
-                                                <td>";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "famille", [], "any", false, false, false, 37), "libelleFamille", [], "any", false, false, false, 37), "html", null, true);
-            echo "</td>
-                                                <td>
+                                                 <td>
                                                  <form method=\"post\" action=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 38)]), "html", null, true);
             echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 41
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 41))), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 40))), "html", null, true);
             echo "\">
                                                 <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
@@ -149,8 +145,8 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                                 
                                                  
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 48)]), "html", null, true);
             echo "\">modifier</a>
                                                 </td>
                                                 ";
@@ -158,7 +154,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 52
+        // line 51
         echo "                                            
                                         </tbody>
                                     </table>
@@ -193,7 +189,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
 
     public function getDebugInfo()
     {
-        return array (  162 => 52,  153 => 49,  142 => 41,  137 => 39,  132 => 37,  128 => 36,  124 => 35,  121 => 34,  117 => 33,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 51,  149 => 48,  138 => 40,  133 => 38,  128 => 36,  124 => 35,  121 => 34,  117 => 33,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -224,7 +220,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                             <tr>
                                                  <th>Code</th>
                                                 <th>Libellé</th>
-                                                <th>Famille</th>
+                                                
                                                 <th>Supprimer</th>
                                                 <th>Mofifier</th>
                                             </tr>
@@ -234,8 +230,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                             <tr>
                                                 <td>{{ f.codeSF }}</td>
                                                 <td>{{ f.libelleSF }}</td>
-                                                <td>{{ f.famille.libelleFamille }}</td>
-                                                <td>
+                                                 <td>
                                                  <form method=\"post\" action=\"{{ path('app_sous_famille_delete', {'id': f.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ f.id) }}\">
