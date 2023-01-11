@@ -123,7 +123,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                             <div class=\"form-group col-md-12\">
                                                 <label>Commentaire pour un produit</label>
                                                    
-                                                 <input type=\"text\" maxlength=\"50\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
+                                                 <input type=\"text\" maxlength=\"25\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -135,7 +135,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                       </div>      
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Nombre de beneficiaire</label>
+                                                <label>Nombre de beneficiaires pour cette commande</label>
                                                    
                                                  <input type=\"number\" name=\"beneficiaire\" class=\"form-control\" > 
                                              </div>
@@ -165,9 +165,9 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                         </div>
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Commentaire </label>
+                                                <label>Remarque pour la commande </label>
                                                    
-                                                 <input type=\"text\"  maxlength=\"50\" name=\"commentaire\" class=\"form-control\" > 
+                                                 <input type=\"text\"  maxlength=\"25\" name=\"commentaire\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -253,7 +253,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
     </div>'
      var html2 =  ' \\
   <div class=\"form-group col-md-12\">\\
-    <label>Commentaire pour le produit</label><input  maxlength=\"50\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
+    <label>Commentaire pour le produit</label><input  maxlength=\"25\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
       </div>    ';
  var container = document.createElement(\"div\");
  container.classList.add('form-row');
@@ -419,7 +419,7 @@ document.getElementById(\"xxx\").appendChild(container2);
                                             <div class=\"form-group col-md-12\">
                                                 <label>Commentaire pour un produit</label>
                                                    
-                                                 <input type=\"text\" maxlength=\"50\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
+                                                 <input type=\"text\" maxlength=\"25\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -431,7 +431,7 @@ document.getElementById(\"xxx\").appendChild(container2);
                                       </div>      
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Nombre de beneficiaire</label>
+                                                <label>Nombre de beneficiaires pour cette commande</label>
                                                    
                                                  <input type=\"number\" name=\"beneficiaire\" class=\"form-control\" > 
                                              </div>
@@ -461,9 +461,9 @@ document.getElementById(\"xxx\").appendChild(container2);
                                         </div>
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Commentaire </label>
+                                                <label>Remarque pour la commande </label>
                                                    
-                                                 <input type=\"text\"  maxlength=\"50\" name=\"commentaire\" class=\"form-control\" > 
+                                                 <input type=\"text\"  maxlength=\"25\" name=\"commentaire\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -517,7 +517,7 @@ document.getElementById(\"xxx\").appendChild(container2);
     </div>'
      var html2 =  ' \\
   <div class=\"form-group col-md-12\">\\
-    <label>Commentaire pour le produit</label><input  maxlength=\"50\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
+    <label>Commentaire pour le produit</label><input  maxlength=\"25\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
       </div>    ';
  var container = document.createElement(\"div\");
  container.classList.add('form-row');
