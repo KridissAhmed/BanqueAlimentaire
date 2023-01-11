@@ -266,8 +266,8 @@ Date livraison : ";
   <th>QTE</th>
     <th>DESIGNATION</th>
        <th>COMMENTAIRE 25c</th>                                         
-        <th></th>
-        <th></th>
+        <th>&nbsp; &nbsp; &nbsp;</th>
+        <th>&nbsp; &nbsp; &nbsp;</th>
        
          
       </thead>
@@ -281,20 +281,22 @@ Date livraison : ";
             echo "                                            <tr>
                                             <td>";
             // line 220
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 220), "libelleArticle", [], "any", false, false, false, 220), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 220), "codeArticle", [], "any", false, false, false, 220), "html", null, true);
             echo "</td>
-                                                <td>";
+                                            <td>";
             // line 221
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "quantite", [], "any", false, false, false, 221), "html", null, true);
             echo "</td>
-                                                <td>";
+                                            <td>";
             // line 222
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 222), "sousFamille", [], "any", false, false, false, 222), "famille", [], "any", false, false, false, 222), "libelleFamille", [], "any", false, false, false, 222), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 222), "libelleArticle", [], "any", false, false, false, 222), "html", null, true);
             echo "</td>
+                                                
+                                                
                                                 <td>";
-            // line 223
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 223), "sousFamille", [], "any", false, false, false, 223), "libelleSF", [], "any", false, false, false, 223), "html", null, true);
-            echo "</td>
+            // line 225
+            echo twig_escape_filter($this->env, (((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 225)) > 25)) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 225), 0, 25) . "...")) : (twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 225))), "html", null, true);
+            echo " </td>
                                                 <td></td>
                                                  <td></td>
                                                 
@@ -304,7 +306,7 @@ Date livraison : ";
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 229
+        // line 231
         echo "      </tbody>
       
     </table>
@@ -338,7 +340,7 @@ Date livraison : ";
 
     public function getDebugInfo()
     {
-        return array (  308 => 229,  296 => 223,  292 => 222,  288 => 221,  284 => 220,  281 => 219,  277 => 218,  253 => 197,  249 => 196,  243 => 193,  239 => 192,  235 => 191,  43 => 1,);
+        return array (  310 => 231,  298 => 225,  292 => 222,  288 => 221,  284 => 220,  281 => 219,  277 => 218,  253 => 197,  249 => 196,  243 => 193,  239 => 192,  235 => 191,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -554,18 +556,20 @@ Date livraison : {{commande.dateSouhaite|date('d-m-Y H:i')}}<br/>
   <th>QTE</th>
     <th>DESIGNATION</th>
        <th>COMMENTAIRE 25c</th>                                         
-        <th></th>
-        <th></th>
+        <th>&nbsp; &nbsp; &nbsp;</th>
+        <th>&nbsp; &nbsp; &nbsp;</th>
        
          
       </thead>
       <tbody>
        {% for f in details %}
                                             <tr>
+                                            <td>{{ f.article.codeArticle }}</td>
+                                            <td>{{ f.quantite}}</td>
                                             <td>{{ f.article.libelleArticle  }}</td>
-                                                <td>{{ f.quantite}}</td>
-                                                <td>{{ f.article.sousFamille.famille.libelleFamille }}</td>
-                                                <td>{{ f.article.sousFamille.libelleSF}}</td>
+                                                
+                                                
+                                                <td>{{ f.commentaire|length > 25 ? f.commentaire|slice(0, 25) ~ '...' :  f.commentaire  }} </td>
                                                 <td></td>
                                                  <td></td>
                                                 

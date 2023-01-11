@@ -26,6 +26,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'search' => [$this, 'block_search'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -65,7 +66,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Famille index";
+        echo "Articles";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -74,7 +75,40 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
 
     }
 
-    // line 5
+    // line 4
+    public function block_search($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
+
+        // line 5
+        echo "        <div class=\"input-group icons\">
+                        <div class=\"input-group-prepend\">
+                            <span class=\"input-group-text bg-transparent border-0 pr-2 pr-sm-3\" id=\"basic-addon1\"><i class=\"mdi mdi-magnify\"></i></span>
+                        </div>
+                                                
+                        <form action=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_article_search");
+        echo "\", method=\"post\">
+                        <input type=\"text\"   name=\"search\" class=\"form-control\" placeholder=\"recherche par libelle\" aria-label=\"Search Dashboard\">
+                        </form>
+                      
+                    </div>  
+ ";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+    }
+
+    // line 16
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,7 +118,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 17
         echo " 
             <div class=\"row page-titles mx-0\">
                 
@@ -98,7 +132,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Aricles</h4>
+                                    <h4>Articles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">
@@ -116,52 +150,52 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                         </thead>
                                         <tbody>
                                         ";
-        // line 36
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 36, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 47, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 37
+            // line 48
             echo "                                            <tr>
                                                 <td>";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "codeArticle", [], "any", false, false, false, 38), "html", null, true);
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "codeArticle", [], "any", false, false, false, 49), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "libelleArticle", [], "any", false, false, false, 39), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "libelleArticle", [], "any", false, false, false, 50), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 40
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "indice", [], "any", false, false, false, 40), "html", null, true);
+            // line 51
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "indice", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
                                                 ";
-            // line 41
-            if (twig_get_attribute($this->env, $this->source, $context["article"], "publiable", [], "any", false, false, false, 41)) {
-                // line 42
+            // line 52
+            if (twig_get_attribute($this->env, $this->source, $context["article"], "publiable", [], "any", false, false, false, 52)) {
+                // line 53
                 echo "                                                <td>Publiable</td>
                                                 ";
             } else {
-                // line 44
+                // line 55
                 echo "                                                <td>Non Publiable</td>
                                                  ";
             }
-            // line 46
+            // line 57
             echo "                                                 <td>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "sousFamille", [], "any", false, false, false, 46), "libelleSF", [], "any", false, false, false, 46), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "sousFamille", [], "any", false, false, false, 57), "libelleSF", [], "any", false, false, false, 57), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "classification", [], "any", false, false, false, 47), "type", [], "any", false, false, false, 47), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "classification", [], "any", false, false, false, 58), "type", [], "any", false, false, false, 58), "html", null, true);
             echo "</td>
                                                 <td>
                                                  <form method=\"post\" action=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_article_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 60
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_article_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 60)]), "html", null, true);
             echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 51
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 51))), "html", null, true);
+            // line 62
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 62))), "html", null, true);
             echo "\">
                                                 <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
@@ -171,8 +205,8 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                                                 
                                                  
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
-            // line 59
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_article_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 59)]), "html", null, true);
+            // line 70
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_article_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["article"], "id", [], "any", false, false, false, 70)]), "html", null, true);
             echo "\">modifier</a>
                                                 </td>
                                                 ";
@@ -180,7 +214,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 62
+        // line 73
         echo "                                            
                                         </tbody>
                                     </table>
@@ -215,15 +249,26 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
 
     public function getDebugInfo()
     {
-        return array (  184 => 62,  175 => 59,  164 => 51,  159 => 49,  154 => 47,  149 => 46,  145 => 44,  141 => 42,  139 => 41,  135 => 40,  131 => 39,  127 => 38,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  218 => 73,  209 => 70,  198 => 62,  193 => 60,  188 => 58,  183 => 57,  179 => 55,  175 => 53,  173 => 52,  169 => 51,  165 => 50,  161 => 49,  158 => 48,  154 => 47,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'backend/base.html.twig' %}
 
-{% block title %}Famille index{% endblock %}
-
+{% block title %}Articles{% endblock %}
+{% block search %}
+        <div class=\"input-group icons\">
+                        <div class=\"input-group-prepend\">
+                            <span class=\"input-group-text bg-transparent border-0 pr-2 pr-sm-3\" id=\"basic-addon1\"><i class=\"mdi mdi-magnify\"></i></span>
+                        </div>
+                                                
+                        <form action=\"{{ path('app_article_search') }}\", method=\"post\">
+                        <input type=\"text\"   name=\"search\" class=\"form-control\" placeholder=\"recherche par libelle\" aria-label=\"Search Dashboard\">
+                        </form>
+                      
+                    </div>  
+ {% endblock %}
 {% block body %}
  
             <div class=\"row page-titles mx-0\">
@@ -238,7 +283,7 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Aricles</h4>
+                                    <h4>Articles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">

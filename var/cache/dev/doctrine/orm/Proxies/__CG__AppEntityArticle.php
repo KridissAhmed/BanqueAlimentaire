@@ -67,10 +67,10 @@ class Article extends \App\Entity\Article implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'codeArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'libelleArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'indice', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'sousFamille', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'classification', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'publiable'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'codeArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'libelleArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'indice', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'sousFamille', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'classification', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'publiable', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'famille'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'codeArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'libelleArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'indice', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'sousFamille', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'classification', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'publiable'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'codeArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'libelleArticle', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'indice', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'sousFamille', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'classification', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'publiable', '' . "\0" . 'App\\Entity\\Article' . "\0" . 'famille'];
     }
 
     /**
@@ -355,6 +355,28 @@ class Article extends \App\Entity\Article implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPubliable', [$publiable]);
 
         return parent::setPubliable($publiable);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getFamille(): ?\App\Entity\Famille
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFamille', []);
+
+        return parent::getFamille();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setFamille(?\App\Entity\Famille $famille): \App\Entity\Article
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setFamille', [$famille]);
+
+        return parent::setFamille($famille);
     }
 
 }

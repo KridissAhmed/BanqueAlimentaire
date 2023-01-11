@@ -119,7 +119,19 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                             
                                         
                                         </div>
-                                      
+                         <div class=\"form-row\"   >
+                                            <div class=\"form-group col-md-12\">
+                                                <label>Commentaire pour un produit</label>
+                                                   
+                                                 <input type=\"text\" maxlength=\"50\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
+                                             </div>
+                                                
+                                        </div>
+                                      </div>
+                                     
+
+                                     
+
                                       </div>      
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
@@ -139,9 +151,23 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                         </div>
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Commentaire</label>
+                                            <label>Souhaitez vous etre livré</label>
+                                                  <select name=\"livrable\" class=\"form-control\" id=\"livrable-select\" required>
+                                                     
+                                                 <option value=1>Oui</option>
+                                                <option value=0>Non</option>
+
+                                                
                                                    
-                                                 <input type=\"text\" name=\"commentaire\" class=\"form-control\" > 
+                                                    </select>
+                                             </div>
+                                                
+                                        </div>
+                                        <div class=\"form-row\"   >
+                                            <div class=\"form-group col-md-12\">
+                                                <label>Commentaire </label>
+                                                   
+                                                 <input type=\"text\"  maxlength=\"50\" name=\"commentaire\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -180,7 +206,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
 
     }
 
-    // line 96
+    // line 122
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -190,7 +216,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 97
+        // line 123
         echo "
     <script>
     var counter=0;
@@ -201,34 +227,43 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
  <select name=\"article['+counter+']\" class=\"form-control\" id=\"article-select\" required>\\
 <option value=\"\">--choisissez un produit--</option>\\
  ";
-        // line 106
+        // line 132
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 106, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 132, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
             echo "\\
 <option value=";
-            // line 107
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 107), "html", null, true);
+            // line 133
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 133), "html", null, true);
             echo ">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 107), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 133), "html", null, true);
             echo "</option>\\
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 108
+        // line 134
         echo "\\
          </select>\\
       </div>\\
        <div class=\"form-group col-md-6\">\\
    <label>Quantite</label>\\
   <input type=\"number\" name=\"quantite['+counter+']\" class=\"form-control\" required>\\
-    </div>';
+    </div>'
+     var html2 =  ' \\
+  <div class=\"form-group col-md-12\">\\
+    <label>Commentaire pour le produit</label><input  maxlength=\"50\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
+      </div>    ';
  var container = document.createElement(\"div\");
  container.classList.add('form-row');
+  var container2 = document.createElement(\"div\");
+ container2.classList.add('form-row');
 container.innerHTML += html;
+container2.innerHTML += html2;
 document.getElementById(\"xxx\").appendChild(container);
+document.getElementById(\"xxx\").appendChild(container2);
+ 
   
     }
     
@@ -237,81 +272,81 @@ document.getElementById(\"xxx\").appendChild(container);
         Scripts
     ***********************************-->
     <script src=\"";
-        // line 126
+        // line 161
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 127
+        // line 162
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 128
+        // line 163
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 129
+        // line 164
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 130
+        // line 165
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
         echo "\"></\"></script>
 
     <!-- Chartjs -->
     <script src=\"";
-        // line 133
+        // line 168
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Circle progress -->
     <script src=\"";
-        // line 135
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Datamap -->
     <script src=\"";
-        // line 137
+        // line 172
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 138
+        // line 173
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 139
+        // line 174
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Morrisjs -->
     <script src=\"";
-        // line 141
+        // line 176
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 142
+        // line 177
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Pignose Calender -->
     <script src=\"";
-        // line 144
+        // line 179
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 145
+        // line 180
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
         echo "\"></script>
     <!-- ChartistJS -->
     <script src=\"";
-        // line 147
+        // line 182
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 148
+        // line 183
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
     <script src=\"";
-        // line 152
+        // line 187
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -335,7 +370,7 @@ document.getElementById(\"xxx\").appendChild(container);
 
     public function getDebugInfo()
     {
-        return array (  315 => 152,  308 => 148,  304 => 147,  299 => 145,  295 => 144,  290 => 142,  286 => 141,  281 => 139,  277 => 138,  273 => 137,  268 => 135,  263 => 133,  257 => 130,  253 => 129,  249 => 128,  245 => 127,  241 => 126,  221 => 108,  211 => 107,  205 => 106,  194 => 97,  184 => 96,  113 => 32,  101 => 29,  97 => 28,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  350 => 187,  343 => 183,  339 => 182,  334 => 180,  330 => 179,  325 => 177,  321 => 176,  316 => 174,  312 => 173,  308 => 172,  303 => 170,  298 => 168,  292 => 165,  288 => 164,  284 => 163,  280 => 162,  276 => 161,  247 => 134,  237 => 133,  231 => 132,  220 => 123,  210 => 122,  113 => 32,  101 => 29,  97 => 28,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -380,7 +415,19 @@ document.getElementById(\"xxx\").appendChild(container);
                                             
                                         
                                         </div>
-                                      
+                         <div class=\"form-row\"   >
+                                            <div class=\"form-group col-md-12\">
+                                                <label>Commentaire pour un produit</label>
+                                                   
+                                                 <input type=\"text\" maxlength=\"50\" name=\"commentaireProduit[0]\" class=\"form-control\" > 
+                                             </div>
+                                                
+                                        </div>
+                                      </div>
+                                     
+
+                                     
+
                                       </div>      
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
@@ -400,9 +447,23 @@ document.getElementById(\"xxx\").appendChild(container);
                                         </div>
                                         <div class=\"form-row\"   >
                                             <div class=\"form-group col-md-12\">
-                                                <label>Commentaire</label>
+                                            <label>Souhaitez vous etre livré</label>
+                                                  <select name=\"livrable\" class=\"form-control\" id=\"livrable-select\" required>
+                                                     
+                                                 <option value=1>Oui</option>
+                                                <option value=0>Non</option>
+
+                                                
                                                    
-                                                 <input type=\"text\" name=\"commentaire\" class=\"form-control\" > 
+                                                    </select>
+                                             </div>
+                                                
+                                        </div>
+                                        <div class=\"form-row\"   >
+                                            <div class=\"form-group col-md-12\">
+                                                <label>Commentaire </label>
+                                                   
+                                                 <input type=\"text\"  maxlength=\"50\" name=\"commentaire\" class=\"form-control\" > 
                                              </div>
                                                 
                                         </div>
@@ -453,11 +514,20 @@ document.getElementById(\"xxx\").appendChild(container);
        <div class=\"form-group col-md-6\">\\
    <label>Quantite</label>\\
   <input type=\"number\" name=\"quantite['+counter+']\" class=\"form-control\" required>\\
-    </div>';
+    </div>'
+     var html2 =  ' \\
+  <div class=\"form-group col-md-12\">\\
+    <label>Commentaire pour le produit</label><input  maxlength=\"50\" type=\"text\" name=\"commentaireProduit['+counter+']\" class=\"form-control\">\\
+      </div>    ';
  var container = document.createElement(\"div\");
  container.classList.add('form-row');
+  var container2 = document.createElement(\"div\");
+ container2.classList.add('form-row');
 container.innerHTML += html;
+container2.innerHTML += html2;
 document.getElementById(\"xxx\").appendChild(container);
+document.getElementById(\"xxx\").appendChild(container2);
+ 
   
     }
     
