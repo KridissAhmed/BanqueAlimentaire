@@ -67,10 +67,10 @@ class Commande extends \App\Entity\Commande implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'codeCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateSouhaite', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etat', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'utilisateur', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'commentaire'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'codeCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateSouhaite', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etat', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'utilisateur', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'commentaire', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'beneficiaire', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'livrable'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'codeCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateSouhaite', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etat', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'utilisateur', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'commentaire'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'codeCommande', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'date', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'dateSouhaite', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'etat', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'utilisateur', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'detailCommandes', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'commentaire', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'beneficiaire', '' . "\0" . 'App\\Entity\\Commande' . "\0" . 'livrable'];
     }
 
     /**
@@ -355,6 +355,50 @@ class Commande extends \App\Entity\Commande implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCommentaire', [$commentaire]);
 
         return parent::setCommentaire($commentaire);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getBeneficiaire(): ?int
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getBeneficiaire', []);
+
+        return parent::getBeneficiaire();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setBeneficiaire(?int $beneficiaire): \App\Entity\Commande
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setBeneficiaire', [$beneficiaire]);
+
+        return parent::setBeneficiaire($beneficiaire);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isLivrable(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isLivrable', []);
+
+        return parent::isLivrable();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLivrable(?bool $livrable): \App\Entity\Commande
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLivrable', [$livrable]);
+
+        return parent::setLivrable($livrable);
     }
 
 }

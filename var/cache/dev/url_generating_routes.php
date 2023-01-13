@@ -49,6 +49,7 @@ return [
     'app_sous_famille_edit' => [['id'], ['_controller' => 'App\\Controller\\SousFamilleController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/sous/famille']], [], [], []],
     'app_sous_famille_delete' => [['id'], ['_controller' => 'App\\Controller\\SousFamilleController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/sous/famille']], [], [], []],
     'app_utilisateur_index' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::index'], [], [['text', '/admin/utilisateur/']], [], [], []],
+    'app_user_search' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::recherche'], [], [['text', '/admin/utilisateur/recherche']], [], [], []],
     'app_utilisateur_new' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::new'], [], [['text', '/admin/utilisateur/new']], [], [], []],
     'app_utilisateur_show' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],
     'app_utilisateur_edit' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],

@@ -30,6 +30,7 @@ return [
         '/admin/sous/famille' => [[['_route' => 'app_sous_famille_index', '_controller' => 'App\\Controller\\SousFamilleController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/sous/famille/new' => [[['_route' => 'app_sous_famille_new', '_controller' => 'App\\Controller\\SousFamilleController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/utilisateur' => [[['_route' => 'app_utilisateur_index', '_controller' => 'App\\Controller\\UtilisateurController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/admin/utilisateur/recherche' => [[['_route' => 'app_user_search', '_controller' => 'App\\Controller\\UtilisateurController::recherche'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/utilisateur/new' => [[['_route' => 'app_utilisateur_new', '_controller' => 'App\\Controller\\UtilisateurController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList

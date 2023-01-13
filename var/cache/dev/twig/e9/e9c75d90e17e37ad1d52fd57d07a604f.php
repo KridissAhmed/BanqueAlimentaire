@@ -222,6 +222,8 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                             </div>
                         </div>
                                     <!-- /# card -->
+
+                          
                     </div>
                     
                 </div>
@@ -333,6 +335,8 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
                             </div>
                         </div>
                                     <!-- /# card -->
+
+                          
                     </div>
                     
                 </div>
@@ -341,46 +345,6 @@ class __TwigTemplate_6b8c16c920fb63d7cb6aa01b7354e99f extends Template
  
 {% endblock %}
 
-{# 
-{% extends 'base.html.twig' %}
-
-{% block title %}Article index{% endblock %}
-
-{% block body %}
-    <h1>Article index</h1>
-
-    <table class=\"table\">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>CodeArticle</th>
-                <th>LibelleArticle</th>
-                <th>Indice</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td>{{ article.codeArticle }}</td>
-                <td>{{ article.libelleArticle }}</td>
-                <td>{{ article.indice }}</td>
-                <td>
-                    <a href=\"{{ path('app_article_show', {'id': article.id}) }}\">show</a>
-                    <a href=\"{{ path('app_article_edit', {'id': article.id}) }}\">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan=\"5\">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href=\"{{ path('app_article_new') }}\">Create new</a>
-{% endblock %} #}
-", "backend/article/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\article\\index.html.twig");
+ ", "backend/article/index.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\article\\index.html.twig");
     }
 }

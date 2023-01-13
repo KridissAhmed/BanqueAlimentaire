@@ -163,6 +163,86 @@ class __TwigTemplate_ef59eba45f4f4d3d7f95815d516ade45 extends Template
                             </div>
                         </div>
                                     <!-- /# card -->
+
+                                                                             <!-- /# pagination -->
+                        <div class=\"card\" >
+                            <div class=\"card-body\" >
+                                 <div class=\"bootstrap-pagination\">
+                                    <nav>
+                                        <ul class=\"pagination\">
+                                            <li class=\"page-item\">
+                                            
+                                              ";
+        // line 68
+        if (((isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 68, $this->source); })()) >= 0)) {
+            // line 69
+            echo "            <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => (isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 69, $this->source); })())]), "html", null, true);
+            echo "\" class=\"page-link\">Previous</a>
+       ";
+        }
+        // line 71
+        echo "                                           
+                                            </li>
+                                            ";
+        // line 73
+        if ((twig_length_filter($this->env, (isset($context["familles"]) || array_key_exists("familles", $context) ? $context["familles"] : (function () { throw new RuntimeError('Variable "familles" does not exist.', 73, $this->source); })())) > (isset($context["PAGINATOR_PER_PAGE"]) || array_key_exists("PAGINATOR_PER_PAGE", $context) ? $context["PAGINATOR_PER_PAGE"] : (function () { throw new RuntimeError('Variable "PAGINATOR_PER_PAGE" does not exist.', 73, $this->source); })()))) {
+            // line 74
+            echo "                                            ";
+            $context["j"] = 0;
+            // line 75
+            echo "                                              ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(0, twig_length_filter($this->env, (isset($context["familles"]) || array_key_exists("familles", $context) ? $context["familles"] : (function () { throw new RuntimeError('Variable "familles" does not exist.', 75, $this->source); })())), (isset($context["PAGINATOR_PER_PAGE"]) || array_key_exists("PAGINATOR_PER_PAGE", $context) ? $context["PAGINATOR_PER_PAGE"] : (function () { throw new RuntimeError('Variable "PAGINATOR_PER_PAGE" does not exist.', 75, $this->source); })())));
+            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+                // line 76
+                echo "                                        ";
+                $context["j"] = ((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 76, $this->source); })()) + 1);
+                // line 77
+                echo "                                              
+                                           ";
+                // line 78
+                if ((((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 78, $this->source); })()) < (((isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 78, $this->source); })()) / (isset($context["PAGINATOR_PER_PAGE"]) || array_key_exists("PAGINATOR_PER_PAGE", $context) ? $context["PAGINATOR_PER_PAGE"] : (function () { throw new RuntimeError('Variable "PAGINATOR_PER_PAGE" does not exist.', 78, $this->source); })())) + 5)) && ((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 78, $this->source); })()) > (((isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 78, $this->source); })()) / (isset($context["PAGINATOR_PER_PAGE"]) || array_key_exists("PAGINATOR_PER_PAGE", $context) ? $context["PAGINATOR_PER_PAGE"] : (function () { throw new RuntimeError('Variable "PAGINATOR_PER_PAGE" does not exist.', 78, $this->source); })())) - 5)))) {
+                    // line 79
+                    echo "
+                                             <li class=\"page-item\"><a class=\"page-link\"href=\"";
+                    // line 80
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_famille_index", ["offset" => $context["i"]]), "html", null, true);
+                    echo "\">";
+                    echo twig_escape_filter($this->env, (isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 80, $this->source); })()), "html", null, true);
+                    echo "</a>
+                                            </li>
+                                            ";
+                }
+                // line 83
+                echo "                                              ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 84
+            echo "                                              ";
+        }
+        // line 85
+        echo "                                            <li class=\"page-item\">";
+        if (((isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 85, $this->source); })()) < twig_length_filter($this->env, (isset($context["familles"]) || array_key_exists("familles", $context) ? $context["familles"] : (function () { throw new RuntimeError('Variable "familles" does not exist.', 85, $this->source); })())))) {
+            // line 86
+            echo "           <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_famille_index", ["offset" => (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 86, $this->source); })())]), "html", null, true);
+            echo "\"  class=\"page-link\" >Next</a>
+       ";
+        }
+        // line 88
+        echo "                                            </li>
+                                        </ul> 
+                                        
+       
+          
+                                     </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /#  end pagination -->
                     </div>
                     
                 </div>
@@ -190,7 +270,7 @@ class __TwigTemplate_ef59eba45f4f4d3d7f95815d516ade45 extends Template
 
     public function getDebugInfo()
     {
-        return array (  159 => 52,  150 => 49,  139 => 41,  134 => 39,  128 => 36,  124 => 35,  121 => 34,  117 => 33,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  236 => 88,  230 => 86,  227 => 85,  224 => 84,  218 => 83,  210 => 80,  207 => 79,  205 => 78,  202 => 77,  199 => 76,  194 => 75,  191 => 74,  189 => 73,  185 => 71,  179 => 69,  177 => 68,  159 => 52,  150 => 49,  139 => 41,  134 => 39,  128 => 36,  124 => 35,  121 => 34,  117 => 33,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -253,6 +333,45 @@ class __TwigTemplate_ef59eba45f4f4d3d7f95815d516ade45 extends Template
                             </div>
                         </div>
                                     <!-- /# card -->
+
+                                                                             <!-- /# pagination -->
+                        <div class=\"card\" >
+                            <div class=\"card-body\" >
+                                 <div class=\"bootstrap-pagination\">
+                                    <nav>
+                                        <ul class=\"pagination\">
+                                            <li class=\"page-item\">
+                                            
+                                              {% if previous >= 0 %}
+            <a href=\"{{ path('app_utilisateur_index', {  offset: previous }) }}\" class=\"page-link\">Previous</a>
+       {% endif %}
+                                           
+                                            </li>
+                                            {% if familles|length > PAGINATOR_PER_PAGE %}
+                                            {% set j = 0 %}
+                                              {% for i  in range (0,familles|length, PAGINATOR_PER_PAGE) %}
+                                        {% set j = j + 1 %}
+                                              
+                                           {% if j < ( next / PAGINATOR_PER_PAGE ) + 5   and  j > ( previous / PAGINATOR_PER_PAGE) -5   %}
+
+                                             <li class=\"page-item\"><a class=\"page-link\"href=\"{{ path('app_famille_index', {   offset: i  }) }}\">{{j}}</a>
+                                            </li>
+                                            {% endif %}
+                                              {% endfor %}
+                                              {% endif %}
+                                            <li class=\"page-item\">{% if next < familles|length %}
+           <a href=\"{{ path('app_famille_index', {   offset: next }) }}\"  class=\"page-link\" >Next</a>
+       {% endif %}
+                                            </li>
+                                        </ul> 
+                                        
+       
+          
+                                     </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /#  end pagination -->
                     </div>
                     
                 </div>
