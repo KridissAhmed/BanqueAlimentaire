@@ -25,7 +25,7 @@ class DetailCommandeController extends AbstractController
     {
         $html =  $this->renderView('backend/detail_commande/pdf.html.twig', [
             "intitule" => "".$commande->getUtilisateur()->getUsername()
-            .str_pad((date("z",strtotime($commande->getDate()->format('d-m-y')))+ 1), 3, '0', STR_PAD_LEFT ),
+            .str_pad((date("z",strtotime($commande->getDate()->format('y-m-d')))+ 1), 3, '0', STR_PAD_LEFT ),
             'details' => $cr->findByCommande($commande),
             'commande' => $commande,
         ]);
@@ -36,7 +36,7 @@ class DetailCommandeController extends AbstractController
          
         return new Response (
             $dompdf->stream("".$commande->getUtilisateur()->getUsername()
-            .str_pad((date("z",strtotime($commande->getDate()->format('d-m-y')))+ 1), 3, '0', STR_PAD_LEFT ), ["Attachment" => true]),
+            .str_pad((date("z",strtotime($commande->getDate()->format('y-m-d')))+ 1), 3, '0', STR_PAD_LEFT ), ["Attachment" => true]),
             Response::HTTP_OK,
             ['Content-Type' => 'application/pdf']
         );
@@ -46,12 +46,12 @@ class DetailCommandeController extends AbstractController
 
     
     #[Route('/csv/{id}', name: 'csv', methods: ['GET'])]
-    public function csv(Commande $Commande,DetailCommandeRepository $cr): Response
+    public function csv(Commande $Commande,DetailCommandeRepository $cr ,CommandeRepository $commandeRepository): Response
     {
      
     $myVariableCSV = "E;".
     $Commande->getUtilisateur()->getUsername()
-              .str_pad((date("z",strtotime($Commande->getDate()->format('d-m-y')))+ 1), 3, '0', STR_PAD_LEFT )
+              .str_pad((date("z",strtotime($Commande->getDate()->format('y-m-d')))+ 1), 3, '0', STR_PAD_LEFT )
               .";".$Commande->getUtilisateur()->getUsername().";01;87;".$Commande->getDateSouhaite()->format('d/m/Y')
               .";".$Commande->getDate()->format('d/m/Y')
               .";".$Commande->getCommentaire().str_repeat(";",33)
@@ -63,6 +63,9 @@ class DetailCommandeController extends AbstractController
         $myVariableCSV .= "L;".strval($key+1).";".$value->getArticle()->getCodeArticle().";".number_format(round($value->getQuantite()), 3, ',', '').";KG;".$value->getCommentaire().str_repeat(";",14)."\n";
 
     }
+
+    $Commande->setEtat(true);
+    $commandeRepository->save($Commande, true);
     
 
     return new Response(
@@ -71,7 +74,7 @@ class DetailCommandeController extends AbstractController
            [
               'Content-Type' => 'application/vnd.ms-excel',
               "Content-disposition" => "attachment; filename=".$Commande->getUtilisateur()->getUsername()
-              .str_pad((date("z",strtotime($Commande->getDate()->format('d-m-y')))+ 1), 3, '0', STR_PAD_LEFT )
+              .str_pad((date("z",strtotime($Commande->getDate()->format('y-m-d')))+ 1), 3, '0', STR_PAD_LEFT )
               .".csv"
           ]
     );

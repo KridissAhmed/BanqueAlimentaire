@@ -247,11 +247,11 @@ table.proposedWork td.description{text-align:left}
 
 Commandé le : ";
         // line 194
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 194, $this->source); })()), "date", [], "any", false, false, false, 194), "d-m-Y H:i"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 194, $this->source); })()), "date", [], "any", false, false, false, 194), "d-m-Y"), "html", null, true);
         echo "  <br/>
 Livraison le : ";
         // line 195
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "dateSouhaite", [], "any", false, false, false, 195), "d-m-Y H:i"), "html", null, true);
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "dateSouhaite", [], "any", false, false, false, 195), "d-m-Y"), "html", null, true);
         echo " ";
         if ((twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "livrable", [], "any", false, false, false, 195) == true)) {
             echo "A LIVRER";
@@ -274,7 +274,7 @@ Livraison le : ";
  <th> ART</th>
   <th>QTE</th>
     <th>DESIGNATION</th>
-       <th>COMMENTAIRE 35c</th>                                         
+       <th>COMMENTAIRE</th>                                         
         <th>&nbsp; &nbsp; &nbsp;</th>
         <th>&nbsp; &nbsp; &nbsp;</th>
        
@@ -547,8 +547,8 @@ table.proposedWork td.description{text-align:left}
           <td contenteditable=\"true\" style=\"width:50%\">
                       Remarque : {{commande.commentaire}}<br/><br/><br/>
 
-Commandé le : {{commande.date|date('d-m-Y H:i')}}  <br/>
-Livraison le : {{commande.dateSouhaite|date('d-m-Y H:i')}} {% if(commande.livrable==true) %}A LIVRER{% endif %} {% if(commande.livrable==false) %}Sur Place{% endif %}<br/>
+Commandé le : {{commande.date|date('d-m-Y')}}  <br/>
+Livraison le : {{commande.dateSouhaite|date('d-m-Y')}} {% if(commande.livrable==true) %}A LIVRER{% endif %} {% if(commande.livrable==false) %}Sur Place{% endif %}<br/>
           </td>
         </tr>
       </tbody>
@@ -562,7 +562,7 @@ Livraison le : {{commande.dateSouhaite|date('d-m-Y H:i')}} {% if(commande.livrab
  <th> ART</th>
   <th>QTE</th>
     <th>DESIGNATION</th>
-       <th>COMMENTAIRE 35c</th>                                         
+       <th>COMMENTAIRE</th>                                         
         <th>&nbsp; &nbsp; &nbsp;</th>
         <th>&nbsp; &nbsp; &nbsp;</th>
        

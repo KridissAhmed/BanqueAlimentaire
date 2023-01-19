@@ -191,8 +191,8 @@ table.proposedWork td.description{text-align:left}
           <td contenteditable="true" style="width:50%">
                       Remarque : {{commande.commentaire}}<br/><br/><br/>
 
-Commandé le : {{commande.date|date('d-m-Y H:i')}}  <br/>
-Livraison le : {{commande.dateSouhaite|date('d-m-Y H:i')}} {% if(commande.livrable==true) %}A LIVRER{% endif %} {% if(commande.livrable==false) %}Sur Place{% endif %}<br/>
+Commandé le : {{commande.date|date('d-m-Y')}}  <br/>
+Livraison le : {{commande.dateSouhaite|date('d-m-Y')}} {% if(commande.livrable==true) %}A LIVRER{% endif %} {% if(commande.livrable==false) %}Sur Place{% endif %}<br/>
           </td>
         </tr>
       </tbody>
@@ -206,7 +206,7 @@ Livraison le : {{commande.dateSouhaite|date('d-m-Y H:i')}} {% if(commande.livrab
  <th> ART</th>
   <th>QTE</th>
     <th>DESIGNATION</th>
-       <th>COMMENTAIRE 35c</th>                                         
+       <th>COMMENTAIRE</th>                                         
         <th>&nbsp; &nbsp; &nbsp;</th>
         <th>&nbsp; &nbsp; &nbsp;</th>
        

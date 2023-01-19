@@ -150,7 +150,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
             // line 43
             echo "                                                <th>supprimer</th>
                                                 
-                                                <th>Accepter</th>
+                                                 
                                                 
                                                 ";
         }
@@ -183,7 +183,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
             // line 58
             if ((twig_get_attribute($this->env, $this->source, $context["c"], "etat", [], "any", false, false, false, 58) == true)) {
                 // line 59
-                echo "                                                <td> Acceptée</td>
+                echo "                                                <td>Traitée</td>
                                                 ";
             }
             // line 60
@@ -243,21 +243,13 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 
                                                 </td>
 
-                                                
-                                                 
-                                                
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
-                // line 89
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accepter", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 89)]), "html", null, true);
-                echo "\">accepter</a>
-                                                </td>
                                                  ";
             }
-            // line 92
+            // line 87
             echo "                                                
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info btn-sm\" href=\"";
-            // line 93
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detail", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 93)]), "html", null, true);
+            // line 88
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detail", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 88)]), "html", null, true);
             echo "\"> Détail </a>
                                                 </td>
                                                 ";
@@ -265,7 +257,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 96
+        // line 91
         echo "                                            
                                         </tbody>
                                     </table>
@@ -300,7 +292,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
 
     public function getDebugInfo()
     {
-        return array (  269 => 96,  260 => 93,  257 => 92,  251 => 89,  238 => 79,  233 => 77,  227 => 73,  225 => 72,  221 => 70,  217 => 69,  215 => 68,  212 => 67,  208 => 66,  206 => 65,  202 => 64,  199 => 63,  195 => 62,  193 => 61,  190 => 60,  186 => 59,  184 => 58,  179 => 56,  175 => 55,  171 => 54,  168 => 53,  164 => 52,  158 => 48,  151 => 43,  149 => 42,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  261 => 91,  252 => 88,  249 => 87,  238 => 79,  233 => 77,  227 => 73,  225 => 72,  221 => 70,  217 => 69,  215 => 68,  212 => 67,  208 => 66,  206 => 65,  202 => 64,  199 => 63,  195 => 62,  193 => 61,  190 => 60,  186 => 59,  184 => 58,  179 => 56,  175 => 55,  171 => 54,  168 => 53,  164 => 52,  158 => 48,  151 => 43,  149 => 42,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -349,7 +341,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                  {% if is_granted('ROLE_ADMIN') %}
                                                 <th>supprimer</th>
                                                 
-                                                <th>Accepter</th>
+                                                 
                                                 
                                                 {% endif %}
                                                 <th>Détail</th>
@@ -363,7 +355,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 <td>{{ c.date|date('d-m-Y')}}</td>
                                                 
                                                 {% if(c.etat==true) %}
-                                                <td> Acceptée</td>
+                                                <td>Traitée</td>
                                                 {% endif %} 
                                                 {% if(c.etat==false) %}
                                                 <td>En cours de traitement</td>
@@ -390,11 +382,6 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 
                                                 </td>
 
-                                                
-                                                 
-                                                
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('accepter', {'id': c.id}) }}\">accepter</a>
-                                                </td>
                                                  {% endif %}
                                                 
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info btn-sm\" href=\"{{ path('detail', {'id': c.id}) }}\"> Détail </a>

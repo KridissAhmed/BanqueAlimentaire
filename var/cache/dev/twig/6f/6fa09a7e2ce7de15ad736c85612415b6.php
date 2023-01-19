@@ -105,10 +105,10 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                         <thead>
                                             <tr>
                                              <th>code produit</th>
-                                                <th>libelle produit</th>
-                                                <th>quantite</th>
+                                                <th>libellé produit</th>
+                                                <th>quantité</th>
                                                  <th>famille</th>
-                                                <th>sous famille</th>
+                                                <th>sous-famille</th>
                                                 
                                                 
                                                  <th>commentaire</th>
@@ -166,7 +166,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                     <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
         // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pdf", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 56, $this->source); })()), "id", [], "any", false, false, false, 56)]), "html", null, true);
-        echo "\">Telecharger PDF</a>
+        echo "\">Télécharger PDF</a>
                                                 </td> 
                                                 ";
         // line 58
@@ -174,7 +174,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
             // line 59
             echo "                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("csv", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 59, $this->source); })()), "id", [], "any", false, false, false, 59)]), "html", null, true);
-            echo "\">Telecharger VIF</a>
+            echo "\">Télécharger VIF</a>
                                                 </td> ";
         }
         // line 61
@@ -239,10 +239,10 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                         <thead>
                                             <tr>
                                              <th>code produit</th>
-                                                <th>libelle produit</th>
-                                                <th>quantite</th>
+                                                <th>libellé produit</th>
+                                                <th>quantité</th>
                                                  <th>famille</th>
-                                                <th>sous famille</th>
+                                                <th>sous-famille</th>
                                                 
                                                 
                                                  <th>commentaire</th>
@@ -269,10 +269,10 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                             
                                         </tbody>
                                     </table>
-                                    <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('pdf', {'id': commande.id}) }}\">Telecharger PDF</a>
+                                    <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('pdf', {'id': commande.id}) }}\">Télécharger PDF</a>
                                                 </td> 
                                                 {% if is_granted('ROLE_ADMIN') %}
-                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('csv', {'id': commande.id}) }}\">Telecharger VIF</a>
+                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('csv', {'id': commande.id}) }}\">Télécharger VIF</a>
                                                 </td> {% endif %}
                                 </div>
                             </div>

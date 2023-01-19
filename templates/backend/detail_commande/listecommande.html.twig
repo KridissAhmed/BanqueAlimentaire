@@ -42,7 +42,7 @@
                                                  {% if is_granted('ROLE_ADMIN') %}
                                                 <th>supprimer</th>
                                                 
-                                                <th>Accepter</th>
+                                                 
                                                 
                                                 {% endif %}
                                                 <th>Détail</th>
@@ -56,7 +56,7 @@
                                                 <td>{{ c.date|date('d-m-Y')}}</td>
                                                 
                                                 {% if(c.etat==true) %}
-                                                <td> Acceptée</td>
+                                                <td>Traitée</td>
                                                 {% endif %} 
                                                 {% if(c.etat==false) %}
                                                 <td>En cours de traitement</td>
@@ -83,11 +83,6 @@
                                                 
                                                 </td>
 
-                                                
-                                                 
-                                                
-                                                <td><a type="button" class="btn mb-1 btn-rounded btn-success btn-sm" href="{{ path('accepter', {'id': c.id}) }}">accepter</a>
-                                                </td>
                                                  {% endif %}
                                                 
                                                 <td><a type="button" class="btn mb-1 btn-rounded btn-info btn-sm" href="{{ path('detail', {'id': c.id}) }}"> Détail </a>
