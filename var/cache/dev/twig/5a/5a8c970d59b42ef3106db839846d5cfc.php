@@ -135,14 +135,14 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
             // line 41
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 41))), "html", null, true);
             echo "\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
             // line 49
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classification_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 49)]), "html", null, true);
             echo "\">modifier</a>
@@ -233,14 +233,14 @@ class __TwigTemplate_309b9a5e846e98a890ed09dd94dfa0f3 extends Template
                                                  <form method=\"post\" action=\"{{ path('app_classification_delete', {'id': f.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ f.id) }}\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('app_classification_edit', {'id': f.id}) }}\">modifier</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('app_classification_edit', {'id': f.id}) }}\">modifier</a>
                                                 </td>
                                                 {% endfor %}
                                             

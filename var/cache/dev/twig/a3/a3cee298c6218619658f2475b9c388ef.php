@@ -222,40 +222,44 @@ table.proposedWork td.description{text-align:left}
     
     <table class=\"shipToFrom\">
       <thead style=\"font-weight:bold\">
-        <tr>
-          <th>A l'association</th>
-          <th>Dates</th>
-        </tr>
-      </thead>
+        
       <tbody>
         <tr>
           <td contenteditable=\"true\" style=\"width:50%\">
+            Commande : ";
+        // line 187
+        echo twig_escape_filter($this->env, (isset($context["intitule"]) || array_key_exists("intitule", $context) ? $context["intitule"] : (function () { throw new RuntimeError('Variable "intitule" does not exist.', 187, $this->source); })()), "html", null, true);
+        echo "<br/><br/><br/>
             Nom : ";
-        // line 191
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 191, $this->source); })()), "utilisateur", [], "any", false, false, false, 191), "nomAssociation", [], "any", false, false, false, 191), "html", null, true);
+        // line 188
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 188, $this->source); })()), "utilisateur", [], "any", false, false, false, 188), "nomAssociation", [], "any", false, false, false, 188), "html", null, true);
         echo "<br/>
-            Code : ";
-        // line 192
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 192, $this->source); })()), "utilisateur", [], "any", false, false, false, 192), "username", [], "any", false, false, false, 192), "html", null, true);
-        echo "<br/>
-            Nombre des beneficiaires : ";
-        // line 193
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 193, $this->source); })()), "beneficiaire", [], "any", false, false, false, 193), "html", null, true);
+            Nombre des bénéficiaires : ";
+        // line 189
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 189, $this->source); })()), "beneficiaire", [], "any", false, false, false, 189), "html", null, true);
         echo "
           </td>
           <td contenteditable=\"true\" style=\"width:50%\">
                       Remarque : ";
-        // line 196
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 196, $this->source); })()), "commentaire", [], "any", false, false, false, 196), "html", null, true);
-        echo "<br/>
+        // line 192
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 192, $this->source); })()), "commentaire", [], "any", false, false, false, 192), "html", null, true);
+        echo "<br/><br/><br/>
 
-Date commande : ";
-        // line 198
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 198, $this->source); })()), "date", [], "any", false, false, false, 198), "d-m-Y H:i"), "html", null, true);
-        echo " <br/>
-Date livraison : ";
-        // line 199
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 199, $this->source); })()), "dateSouhaite", [], "any", false, false, false, 199), "d-m-Y H:i"), "html", null, true);
+Commandé le : ";
+        // line 194
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 194, $this->source); })()), "date", [], "any", false, false, false, 194), "d-m-Y H:i"), "html", null, true);
+        echo "  <br/>
+Livraison le : ";
+        // line 195
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "dateSouhaite", [], "any", false, false, false, 195), "d-m-Y H:i"), "html", null, true);
+        echo " ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "livrable", [], "any", false, false, false, 195) == true)) {
+            echo "A LIVRER";
+        }
+        echo " ";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 195, $this->source); })()), "livrable", [], "any", false, false, false, 195) == false)) {
+            echo "Sur Place";
+        }
         echo "<br/>
           </td>
         </tr>
@@ -270,7 +274,7 @@ Date livraison : ";
  <th> ART</th>
   <th>QTE</th>
     <th>DESIGNATION</th>
-       <th>COMMENTAIRE 25c</th>                                         
+       <th>COMMENTAIRE 35c</th>                                         
         <th>&nbsp; &nbsp; &nbsp;</th>
         <th>&nbsp; &nbsp; &nbsp;</th>
        
@@ -278,29 +282,29 @@ Date livraison : ";
       </thead>
       <tbody>
        ";
-        // line 220
+        // line 216
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 220, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["details"]) || array_key_exists("details", $context) ? $context["details"] : (function () { throw new RuntimeError('Variable "details" does not exist.', 216, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["f"]) {
-            // line 221
+            // line 217
             echo "                                            <tr>
                                             <td>";
-            // line 222
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 222), "codeArticle", [], "any", false, false, false, 222), "html", null, true);
+            // line 218
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 218), "codeArticle", [], "any", false, false, false, 218), "html", null, true);
             echo "</td>
                                             <td>";
+            // line 219
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "quantite", [], "any", false, false, false, 219), "html", null, true);
+            echo "</td>
+                                            <td style=\"text-align: left;\">";
+            // line 220
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 220), "libelleArticle", [], "any", false, false, false, 220), "html", null, true);
+            echo "</td>
+                                                
+                                                
+                                                <td  style=\"text-align: left;\">";
             // line 223
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "quantite", [], "any", false, false, false, 223), "html", null, true);
-            echo "</td>
-                                            <td>";
-            // line 224
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["f"], "article", [], "any", false, false, false, 224), "libelleArticle", [], "any", false, false, false, 224), "html", null, true);
-            echo "</td>
-                                                
-                                                
-                                                <td>";
-            // line 227
-            echo twig_escape_filter($this->env, (((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 227)) > 25)) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 227), 0, 25) . "...")) : (twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 227))), "html", null, true);
+            echo twig_escape_filter($this->env, (((twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 223)) > 35)) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 223), 0, 35) . "...")) : (twig_get_attribute($this->env, $this->source, $context["f"], "commentaire", [], "any", false, false, false, 223))), "html", null, true);
             echo " </td>
                                                 <td></td>
                                                  <td></td>
@@ -311,7 +315,7 @@ Date livraison : ";
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['f'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 233
+        // line 229
         echo "      </tbody>
       
     </table>
@@ -345,7 +349,7 @@ Date livraison : ";
 
     public function getDebugInfo()
     {
-        return array (  315 => 233,  303 => 227,  297 => 224,  293 => 223,  289 => 222,  286 => 221,  282 => 220,  258 => 199,  254 => 198,  249 => 196,  243 => 193,  239 => 192,  235 => 191,  43 => 1,);
+        return array (  319 => 229,  307 => 223,  301 => 220,  297 => 219,  293 => 218,  290 => 217,  286 => 216,  254 => 195,  250 => 194,  245 => 192,  239 => 189,  235 => 188,  231 => 187,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -532,23 +536,19 @@ table.proposedWork td.description{text-align:left}
     
     <table class=\"shipToFrom\">
       <thead style=\"font-weight:bold\">
-        <tr>
-          <th>A l'association</th>
-          <th>Dates</th>
-        </tr>
-      </thead>
+        
       <tbody>
         <tr>
           <td contenteditable=\"true\" style=\"width:50%\">
+            Commande : {{intitule}}<br/><br/><br/>
             Nom : {{commande.utilisateur.nomAssociation}}<br/>
-            Code : {{commande.utilisateur.username}}<br/>
-            Nombre des beneficiaires : {{commande.beneficiaire}}
+            Nombre des bénéficiaires : {{commande.beneficiaire}}
           </td>
           <td contenteditable=\"true\" style=\"width:50%\">
-                      Remarque : {{commande.commentaire}}<br/>
+                      Remarque : {{commande.commentaire}}<br/><br/><br/>
 
-Date commande : {{commande.date|date('d-m-Y H:i')}} <br/>
-Date livraison : {{commande.dateSouhaite|date('d-m-Y H:i')}}<br/>
+Commandé le : {{commande.date|date('d-m-Y H:i')}}  <br/>
+Livraison le : {{commande.dateSouhaite|date('d-m-Y H:i')}} {% if(commande.livrable==true) %}A LIVRER{% endif %} {% if(commande.livrable==false) %}Sur Place{% endif %}<br/>
           </td>
         </tr>
       </tbody>
@@ -562,7 +562,7 @@ Date livraison : {{commande.dateSouhaite|date('d-m-Y H:i')}}<br/>
  <th> ART</th>
   <th>QTE</th>
     <th>DESIGNATION</th>
-       <th>COMMENTAIRE 25c</th>                                         
+       <th>COMMENTAIRE 35c</th>                                         
         <th>&nbsp; &nbsp; &nbsp;</th>
         <th>&nbsp; &nbsp; &nbsp;</th>
        
@@ -573,10 +573,10 @@ Date livraison : {{commande.dateSouhaite|date('d-m-Y H:i')}}<br/>
                                             <tr>
                                             <td>{{ f.article.codeArticle }}</td>
                                             <td>{{ f.quantite}}</td>
-                                            <td>{{ f.article.libelleArticle  }}</td>
+                                            <td style=\"text-align: left;\">{{ f.article.libelleArticle  }}</td>
                                                 
                                                 
-                                                <td>{{ f.commentaire|length > 25 ? f.commentaire|slice(0, 25) ~ '...' :  f.commentaire  }} </td>
+                                                <td  style=\"text-align: left;\">{{ f.commentaire|length > 35 ? f.commentaire|slice(0, 35) ~ '...' :  f.commentaire  }} </td>
                                                 <td></td>
                                                  <td></td>
                                                 

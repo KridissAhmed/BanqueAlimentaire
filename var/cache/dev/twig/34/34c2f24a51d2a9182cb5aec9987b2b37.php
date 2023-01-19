@@ -145,7 +145,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
                                                 <th>Adresse</th>
                                                 <th>Telephone</th>
                                                 <th>Supprimer</th>
-                                                <th>Mofifier</th>
+                                                <th>Modifier</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -186,24 +186,29 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
             // line 57
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 57))), "html", null, true);
             echo "\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
             // line 65
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 65)]), "html", null, true);
             echo "\">modifier</a>
+                                                </td>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
+            // line 67
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_editmdp", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 67)]), "html", null, true);
+            echo "\">modifier mot de passe</a>
                                                 </td>
                                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['utilisateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 70
         echo "                                            
                                         </tbody>
                                     </table>
@@ -213,85 +218,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
 
 
 
-                        <!-- /# pagination -->
-                        <div class=\"card\" >
-                            <div class=\"card-body\" >
-                                 <div class=\"bootstrap-pagination\">
-                                    <nav>
-                                        <ul class=\"pagination\">
-                                            <li class=\"page-item\">
-                                            
-                                              ";
-        // line 85
-        if (((isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 85, $this->source); })()) >= 0)) {
-            // line 86
-            echo "            <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => (isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 86, $this->source); })())]), "html", null, true);
-            echo "\" class=\"page-link\">Previous</a>
-       ";
-        }
-        // line 88
-        echo "                                           
-                                            </li>
-                                            ";
-        // line 90
-        if ((twig_length_filter($this->env, (isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 90, $this->source); })())) > 10)) {
-            // line 91
-            echo "                                            ";
-            $context["j"] = 0;
-            // line 92
-            echo "                                              ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(range(0, twig_length_filter($this->env, (isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 92, $this->source); })())), 10));
-            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                // line 93
-                echo "                                        ";
-                $context["j"] = ((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 93, $this->source); })()) + 1);
-                // line 94
-                echo "                                              
-                                           ";
-                // line 95
-                if ((((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 95, $this->source); })()) < (((isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 95, $this->source); })()) / 10) + 5)) && ((isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 95, $this->source); })()) > (((isset($context["previous"]) || array_key_exists("previous", $context) ? $context["previous"] : (function () { throw new RuntimeError('Variable "previous" does not exist.', 95, $this->source); })()) / 10) - 5)))) {
-                    // line 96
-                    echo "
-                                             <li class=\"page-item\"><a class=\"page-link\"href=\"";
-                    // line 97
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => $context["i"]]), "html", null, true);
-                    echo "\">";
-                    echo twig_escape_filter($this->env, (isset($context["j"]) || array_key_exists("j", $context) ? $context["j"] : (function () { throw new RuntimeError('Variable "j" does not exist.', 97, $this->source); })()), "html", null, true);
-                    echo "</a>
-                                            </li>
-                                            ";
-                }
-                // line 100
-                echo "                                              ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 101
-            echo "                                              ";
-        }
-        // line 102
-        echo "                                            <li class=\"page-item\">";
-        if (((isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 102, $this->source); })()) < twig_length_filter($this->env, (isset($context["utilisateurs"]) || array_key_exists("utilisateurs", $context) ? $context["utilisateurs"] : (function () { throw new RuntimeError('Variable "utilisateurs" does not exist.', 102, $this->source); })())))) {
-            // line 103
-            echo "           <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_index", ["offset" => (isset($context["next"]) || array_key_exists("next", $context) ? $context["next"] : (function () { throw new RuntimeError('Variable "next" does not exist.', 103, $this->source); })())]), "html", null, true);
-            echo "\"  class=\"page-link\" >Next</a>
-       ";
-        }
-        // line 105
-        echo "                                            </li>
-                                        </ul> 
-                                        
-       
-          
-                                     </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /#  end pagination -->
+                      
                     </div>
                     
                 </div>
@@ -319,7 +246,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
 
     public function getDebugInfo()
     {
-        return array (  285 => 105,  279 => 103,  276 => 102,  273 => 101,  267 => 100,  259 => 97,  256 => 96,  254 => 95,  251 => 94,  248 => 93,  243 => 92,  240 => 91,  238 => 90,  234 => 88,  228 => 86,  226 => 85,  207 => 68,  198 => 65,  187 => 57,  182 => 55,  177 => 53,  173 => 52,  169 => 51,  165 => 50,  161 => 49,  158 => 48,  154 => 47,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  212 => 70,  203 => 67,  198 => 65,  187 => 57,  182 => 55,  177 => 53,  173 => 52,  169 => 51,  165 => 50,  161 => 49,  158 => 48,  154 => 47,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -366,7 +293,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
                                                 <th>Adresse</th>
                                                 <th>Telephone</th>
                                                 <th>Supprimer</th>
-                                                <th>Mofifier</th>
+                                                <th>Modifier</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -381,14 +308,16 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
                                                  <form method=\"post\" action=\"{{ path('app_utilisateur_delete', {'id': utilisateur.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ utilisateur.id) }}\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}\">modifier</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}\">modifier</a>
+                                                </td>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('app_utilisateur_editmdp', {'id': utilisateur.id}) }}\">modifier mot de passe</a>
                                                 </td>
                                                 {% endfor %}
                                             
@@ -400,44 +329,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
 
 
 
-                        <!-- /# pagination -->
-                        <div class=\"card\" >
-                            <div class=\"card-body\" >
-                                 <div class=\"bootstrap-pagination\">
-                                    <nav>
-                                        <ul class=\"pagination\">
-                                            <li class=\"page-item\">
-                                            
-                                              {% if previous >= 0 %}
-            <a href=\"{{ path('app_utilisateur_index', {  offset: previous }) }}\" class=\"page-link\">Previous</a>
-       {% endif %}
-                                           
-                                            </li>
-                                            {% if utilisateurs|length > 10 %}
-                                            {% set j = 0 %}
-                                              {% for i  in range (0,utilisateurs|length, 10) %}
-                                        {% set j = j + 1 %}
-                                              
-                                           {% if j < ( next / 10 ) + 5   and  j > ( previous / 10 ) -5   %}
-
-                                             <li class=\"page-item\"><a class=\"page-link\"href=\"{{ path('app_utilisateur_index', {   offset: i  }) }}\">{{j}}</a>
-                                            </li>
-                                            {% endif %}
-                                              {% endfor %}
-                                              {% endif %}
-                                            <li class=\"page-item\">{% if next < utilisateurs|length %}
-           <a href=\"{{ path('app_utilisateur_index', {   offset: next }) }}\"  class=\"page-link\" >Next</a>
-       {% endif %}
-                                            </li>
-                                        </ul> 
-                                        
-       
-          
-                                     </nav>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /#  end pagination -->
+                      
                     </div>
                     
                 </div>

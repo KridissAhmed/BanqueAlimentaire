@@ -55,8 +55,9 @@
                                     </table>
                                     <td><a type="button" class="btn mb-1 btn-rounded btn-success" href="{{ path('pdf', {'id': commande.id}) }}">Telecharger PDF</a>
                                                 </td> 
+                                                {% if is_granted('ROLE_ADMIN') %}
                                                  <td><a type="button" class="btn mb-1 btn-rounded btn-success" href="{{ path('csv', {'id': commande.id}) }}">Telecharger VIF</a>
-                                                </td> 
+                                                </td> {% endif %}
                                 </div>
                             </div>
                         </div>

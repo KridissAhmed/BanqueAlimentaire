@@ -72,19 +72,22 @@ return [
                     .')'
                     .'|utilisateur/([^/]++)(?'
                         .'|(*:402)'
-                        .'|/edit(*:415)'
-                        .'|(*:423)'
+                        .'|/edit(?'
+                            .'|(*:418)'
+                            .'|mdp(*:429)'
+                        .')'
+                        .'|(*:438)'
                     .')'
                 .')'
                 .'|/commande/(?'
-                    .'|pdf/([^/]++)(*:458)'
-                    .'|csv/([^/]++)(*:478)'
+                    .'|pdf/([^/]++)(*:473)'
+                    .'|csv/([^/]++)(*:493)'
                     .'|([^/]++)(?'
-                        .'|(*:497)'
-                        .'|/edit(*:510)'
+                        .'|(*:512)'
+                        .'|/edit(*:525)'
                     .')'
-                    .'|delete/([^/]++)(*:534)'
-                    .'|([^/]++)/accepter(*:559)'
+                    .'|delete/([^/]++)(*:549)'
+                    .'|([^/]++)/accepter(*:574)'
                 .')'
             .')/?$}sDu',
     ],
@@ -108,14 +111,15 @@ return [
         362 => [[['_route' => 'app_sous_famille_edit', '_controller' => 'App\\Controller\\SousFamilleController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         370 => [[['_route' => 'app_sous_famille_delete', '_controller' => 'App\\Controller\\SousFamilleController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         402 => [[['_route' => 'app_utilisateur_show', '_controller' => 'App\\Controller\\UtilisateurController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        415 => [[['_route' => 'app_utilisateur_edit', '_controller' => 'App\\Controller\\UtilisateurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        423 => [[['_route' => 'app_utilisateur_delete', '_controller' => 'App\\Controller\\UtilisateurController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        458 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\DetailCommandeController::pdf'], ['id'], ['GET' => 0], null, false, true, null]],
-        478 => [[['_route' => 'csv', '_controller' => 'App\\Controller\\DetailCommandeController::csv'], ['id'], ['GET' => 0], null, false, true, null]],
-        497 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\DetailCommandeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        510 => [[['_route' => 'app_detail_commande_edit', '_controller' => 'App\\Controller\\DetailCommandeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        534 => [[['_route' => 'app_commande_delete', '_controller' => 'App\\Controller\\DetailCommandeController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        559 => [
+        418 => [[['_route' => 'app_utilisateur_edit', '_controller' => 'App\\Controller\\UtilisateurController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        429 => [[['_route' => 'app_utilisateur_editmdp', '_controller' => 'App\\Controller\\UtilisateurController::editmdp'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        438 => [[['_route' => 'app_utilisateur_delete', '_controller' => 'App\\Controller\\UtilisateurController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        473 => [[['_route' => 'pdf', '_controller' => 'App\\Controller\\DetailCommandeController::pdf'], ['id'], ['GET' => 0], null, false, true, null]],
+        493 => [[['_route' => 'csv', '_controller' => 'App\\Controller\\DetailCommandeController::csv'], ['id'], ['GET' => 0], null, false, true, null]],
+        512 => [[['_route' => 'detail', '_controller' => 'App\\Controller\\DetailCommandeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        525 => [[['_route' => 'app_detail_commande_edit', '_controller' => 'App\\Controller\\DetailCommandeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        549 => [[['_route' => 'app_commande_delete', '_controller' => 'App\\Controller\\DetailCommandeController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        574 => [
             [['_route' => 'accepter', '_controller' => 'App\\Controller\\DetailCommandeController::editcommande'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],

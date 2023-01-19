@@ -111,17 +111,17 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
                     </li>
                     <li class=\"mega-menu mega-menu-sm\">
                         <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Sous Famille</span>
+                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Sous-Famille</span>
                         </a>
                         <ul aria-expanded=\"false\">
                             <li><a href=\"";
             // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_new");
-            echo "\">Ajouter sous famille</a></li>
+            echo "\">Ajouter sous-famille</a></li>
                             <li><a href=\"";
             // line 52
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_index");
-            echo "\">Gerer les sous familles</a></li>
+            echo "\">Gerer les sous-familles</a></li>
                             
                         </ul>
                     </li>
@@ -276,11 +276,11 @@ class __TwigTemplate_97e9bc9c0065b9dc91eaa46229fb9287 extends Template
                     </li>
                     <li class=\"mega-menu mega-menu-sm\">
                         <a class=\"has-arrow\" href=\"javascript:void()\" aria-expanded=\"false\">
-                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Sous Famille</span>
+                            <i class=\"icon-menu menu-icon\"></i><span class=\"nav-text\">Sous-Famille</span>
                         </a>
                         <ul aria-expanded=\"false\">
-                            <li><a href=\"{{ path('app_sous_famille_new') }}\">Ajouter sous famille</a></li>
-                            <li><a href=\"{{ path('app_sous_famille_index') }}\">Gerer les sous familles</a></li>
+                            <li><a href=\"{{ path('app_sous_famille_new') }}\">Ajouter sous-famille</a></li>
+                            <li><a href=\"{{ path('app_sous_famille_index') }}\">Gerer les sous-familles</a></li>
                             
                         </ul>
                     </li>

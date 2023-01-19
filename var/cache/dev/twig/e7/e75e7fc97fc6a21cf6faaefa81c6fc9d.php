@@ -128,8 +128,7 @@ class __TwigTemplate_7d127f9c18dd15e583fb01b3a2aed305 extends Template
                                     </div>
                                     <button class=\"btn login-form__btn submit w-100\">se connecter</button>
                                 </form>
-                                <p class=\"mt-5 login-form__footer\">vous n'avez pas de compte? <a href=\"page-register.html\" class=\"text-primary\">S'inscrire</a> maintenant</p>
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -158,7 +157,7 @@ class __TwigTemplate_7d127f9c18dd15e583fb01b3a2aed305 extends Template
 
  
 ";
-        // line 128
+        // line 127
         echo " 
 ";
         
@@ -181,7 +180,7 @@ class __TwigTemplate_7d127f9c18dd15e583fb01b3a2aed305 extends Template
 
     public function getDebugInfo()
     {
-        return array (  162 => 128,  125 => 62,  116 => 56,  113 => 55,  105 => 52,  102 => 51,  99 => 50,  93 => 48,  91 => 47,  43 => 1,);
+        return array (  161 => 127,  125 => 62,  116 => 56,  113 => 55,  105 => 52,  102 => 51,  99 => 50,  93 => 48,  91 => 47,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -252,8 +251,7 @@ class __TwigTemplate_7d127f9c18dd15e583fb01b3a2aed305 extends Template
                                     </div>
                                     <button class=\"btn login-form__btn submit w-100\">se connecter</button>
                                 </form>
-                                <p class=\"mt-5 login-form__footer\">vous n'avez pas de compte? <a href=\"page-register.html\" class=\"text-primary\">S'inscrire</a> maintenant</p>
-                            </div>
+                             </div>
                         </div>
                     </div>
                 </div>

@@ -168,12 +168,17 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pdf", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 56, $this->source); })()), "id", [], "any", false, false, false, 56)]), "html", null, true);
         echo "\">Telecharger PDF</a>
                                                 </td> 
-                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+                                                ";
         // line 58
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("csv", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 58, $this->source); })()), "id", [], "any", false, false, false, 58)]), "html", null, true);
-        echo "\">Telecharger VIF</a>
-                                                </td> 
-                                </div>
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 59
+            echo "                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("csv", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["commande"]) || array_key_exists("commande", $context) ? $context["commande"] : (function () { throw new RuntimeError('Variable "commande" does not exist.', 59, $this->source); })()), "id", [], "any", false, false, false, 59)]), "html", null, true);
+            echo "\">Telecharger VIF</a>
+                                                </td> ";
+        }
+        // line 61
+        echo "                                </div>
                             </div>
                         </div>
                                     <!-- /# card -->
@@ -204,7 +209,7 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
 
     public function getDebugInfo()
     {
-        return array (  173 => 58,  168 => 56,  162 => 52,  156 => 51,  148 => 44,  143 => 42,  139 => 41,  135 => 40,  131 => 39,  127 => 38,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  181 => 61,  175 => 59,  173 => 58,  168 => 56,  162 => 52,  156 => 51,  148 => 44,  143 => 42,  139 => 41,  135 => 40,  131 => 39,  127 => 38,  124 => 37,  120 => 36,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -266,8 +271,9 @@ class __TwigTemplate_096d5b9695dafb04e4cebf44e7b54d9e extends Template
                                     </table>
                                     <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('pdf', {'id': commande.id}) }}\">Telecharger PDF</a>
                                                 </td> 
+                                                {% if is_granted('ROLE_ADMIN') %}
                                                  <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('csv', {'id': commande.id}) }}\">Telecharger VIF</a>
-                                                </td> 
+                                                </td> {% endif %}
                                 </div>
                             </div>
                         </div>

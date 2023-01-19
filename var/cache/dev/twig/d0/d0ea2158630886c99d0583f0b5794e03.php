@@ -98,7 +98,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Sous Familles</h4>
+                                    <h4>Sous-Familles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">
@@ -108,7 +108,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                                 <th>Libellé</th>
                                                 
                                                 <th>Supprimer</th>
-                                                <th>Mofifier</th>
+                                                <th>Modifier</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -137,17 +137,17 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
             // line 40
             echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 40))), "html", null, true);
             echo "\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
             // line 48
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_sous_famille_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["f"], "id", [], "any", false, false, false, 48)]), "html", null, true);
-            echo "\">modifier</a>
+            echo "\">Modifier</a>
                                                 </td>
                                                 ";
         }
@@ -215,7 +215,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"card-title\">
-                                    <h4>Sous Familles</h4>
+                                    <h4>Sous-Familles</h4>
                                 </div>
                                 <div class=\"table-responsive\">
                                     <table class=\"table table-hover\">
@@ -225,7 +225,7 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                                 <th>Libellé</th>
                                                 
                                                 <th>Supprimer</th>
-                                                <th>Mofifier</th>
+                                                <th>Modifier</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -237,14 +237,14 @@ class __TwigTemplate_3843918874742905e524c9aa7597f2f5 extends Template
                                                  <form method=\"post\" action=\"{{ path('app_sous_famille_delete', {'id': f.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ f.id) }}\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
                                                 
                                                 </td>
 
                                                 
                                                  
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('app_sous_famille_edit', {'id': f.id}) }}\">modifier</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('app_sous_famille_edit', {'id': f.id}) }}\">Modifier</a>
                                                 </td>
                                                 {% endfor %}
                                             

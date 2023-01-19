@@ -53,5 +53,6 @@ return [
     'app_utilisateur_new' => [[], ['_controller' => 'App\\Controller\\UtilisateurController::new'], [], [['text', '/admin/utilisateur/new']], [], [], []],
     'app_utilisateur_show' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],
     'app_utilisateur_edit' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],
+    'app_utilisateur_editmdp' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::editmdp'], [], [['text', '/editmdp'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],
     'app_utilisateur_delete' => [['id'], ['_controller' => 'App\\Controller\\UtilisateurController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/utilisateur']], [], [], []],
 ];

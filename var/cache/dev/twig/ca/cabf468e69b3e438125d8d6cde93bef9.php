@@ -139,110 +139,105 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                         <thead>
                                             <tr>
                                                 <th>Utilisateur</th>
-                                                <th>nom d'association</th>
+                                                <th>Nom de l’association</th>
                                                 <th>Date</th>
-                                                <th>Etat</th>
-                                                <th>date souhaité</th>
-                                                <th>commentaire</th>
-                                                <th>Avec livraison</th>
+                                                <th>État</th>
+                                                <th>Date de livraison souhaitée</th>
+                                                 <th>Avec livraison</th>
                                                  ";
-        // line 43
+        // line 42
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 44
+            // line 43
             echo "                                                <th>supprimer</th>
                                                 
                                                 <th>Accepter</th>
                                                 
                                                 ";
         }
-        // line 49
-        echo "                                                <th>Detail</th>
+        // line 48
+        echo "                                                <th>Détail</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         ";
-        // line 53
+        // line 52
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 53, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["commandes"]) || array_key_exists("commandes", $context) ? $context["commandes"] : (function () { throw new RuntimeError('Variable "commandes" does not exist.', 52, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 54
+            // line 53
             echo "                                            <tr>
                                                 <td>";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["c"], "Utilisateur", [], "any", false, false, false, 55), "Username", [], "any", false, false, false, 55), "html", null, true);
+            // line 54
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["c"], "Utilisateur", [], "any", false, false, false, 54), "Username", [], "any", false, false, false, 54), "html", null, true);
             echo "</td>
                                                   <td>";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["c"], "Utilisateur", [], "any", false, false, false, 56), "nomAssociation", [], "any", false, false, false, 56), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["c"], "Utilisateur", [], "any", false, false, false, 55), "nomAssociation", [], "any", false, false, false, 55), "html", null, true);
             echo "</td>
                                                 <td>";
-            // line 57
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "date", [], "any", false, false, false, 57), "d-m-Y"), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "date", [], "any", false, false, false, 56), "d-m-Y"), "html", null, true);
             echo "</td>
                                                 
                                                 ";
-            // line 59
-            if ((twig_get_attribute($this->env, $this->source, $context["c"], "etat", [], "any", false, false, false, 59) == true)) {
-                // line 60
+            // line 58
+            if ((twig_get_attribute($this->env, $this->source, $context["c"], "etat", [], "any", false, false, false, 58) == true)) {
+                // line 59
                 echo "                                                <td> Acceptée</td>
                                                 ";
             }
-            // line 61
+            // line 60
             echo " 
                                                 ";
-            // line 62
-            if ((twig_get_attribute($this->env, $this->source, $context["c"], "etat", [], "any", false, false, false, 62) == false)) {
-                // line 63
+            // line 61
+            if ((twig_get_attribute($this->env, $this->source, $context["c"], "etat", [], "any", false, false, false, 61) == false)) {
+                // line 62
                 echo "                                                <td>En cours de traitement</td>
                                                 ";
             }
-            // line 64
+            // line 63
             echo " 
                                                 <td>";
+            // line 64
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "datesouhaite", [], "any", false, false, false, 64), "d-m-Y"), "html", null, true);
+            echo "</td>
+                                                     ";
             // line 65
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "datesouhaite", [], "any", false, false, false, 65), "d-m-Y"), "html", null, true);
-            echo "</td>
-                                                   <td>";
-            // line 66
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["c"], "commentaire", [], "any", false, false, false, 66), "html", null, true);
-            echo "</td>
-                                                    ";
-            // line 67
-            if ((twig_get_attribute($this->env, $this->source, $context["c"], "livrable", [], "any", false, false, false, 67) == true)) {
-                // line 68
-                echo "                                                <td>Livraison</td>
+            if ((twig_get_attribute($this->env, $this->source, $context["c"], "livrable", [], "any", false, false, false, 65) == true)) {
+                // line 66
+                echo "                                                <td>A LIVRER</td>
                                                 ";
             }
-            // line 69
+            // line 67
             echo " 
                                                 ";
-            // line 70
-            if ((twig_get_attribute($this->env, $this->source, $context["c"], "livrable", [], "any", false, false, false, 70) == false)) {
-                // line 71
-                echo "                                                  <td>Sans Livraison</td>
+            // line 68
+            if ((twig_get_attribute($this->env, $this->source, $context["c"], "livrable", [], "any", false, false, false, 68) == false)) {
+                // line 69
+                echo "                                                  <td>Sur Place</td>
                                                   ";
             }
-            // line 72
+            // line 70
             echo " 
                                               
                                                  ";
-            // line 74
+            // line 72
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 75
+                // line 73
                 echo "                                                  
                                                 <td>
                                                 
 
                                                  <form method=\"post\" action=\"";
-                // line 79
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_commande_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 79)]), "html", null, true);
+                // line 77
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_commande_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 77)]), "html", null, true);
                 echo "\" onsubmit=\"return confirm('voulez vous supprimer cette commande?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"";
-                // line 81
-                echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 81))), "html", null, true);
+                // line 79
+                echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 79))), "html", null, true);
                 echo "\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                            
                                             </form>
                                                 
@@ -251,26 +246,26 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 
                                                  
                                                 
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"";
-                // line 91
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accepter", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 91)]), "html", null, true);
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
+                // line 89
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accepter", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 89)]), "html", null, true);
                 echo "\">accepter</a>
                                                 </td>
                                                  ";
             }
-            // line 94
+            // line 92
             echo "                                                
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info\" href=\"";
-            // line 95
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detail", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 95)]), "html", null, true);
-            echo "\">Detail</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info btn-sm\" href=\"";
+            // line 93
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detail", ["id" => twig_get_attribute($this->env, $this->source, $context["c"], "id", [], "any", false, false, false, 93)]), "html", null, true);
+            echo "\"> Détail </a>
                                                 </td>
                                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 98
+        // line 96
         echo "                                            
                                         </tbody>
                                     </table>
@@ -305,7 +300,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
 
     public function getDebugInfo()
     {
-        return array (  274 => 98,  265 => 95,  262 => 94,  256 => 91,  243 => 81,  238 => 79,  232 => 75,  230 => 74,  226 => 72,  222 => 71,  220 => 70,  217 => 69,  213 => 68,  211 => 67,  207 => 66,  203 => 65,  200 => 64,  196 => 63,  194 => 62,  191 => 61,  187 => 60,  185 => 59,  180 => 57,  176 => 56,  172 => 55,  169 => 54,  165 => 53,  159 => 49,  152 => 44,  150 => 43,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  269 => 96,  260 => 93,  257 => 92,  251 => 89,  238 => 79,  233 => 77,  227 => 73,  225 => 72,  221 => 70,  217 => 69,  215 => 68,  212 => 67,  208 => 66,  206 => 65,  202 => 64,  199 => 63,  195 => 62,  193 => 61,  190 => 60,  186 => 59,  184 => 58,  179 => 56,  175 => 55,  171 => 54,  168 => 53,  164 => 52,  158 => 48,  151 => 43,  149 => 42,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -346,19 +341,18 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                         <thead>
                                             <tr>
                                                 <th>Utilisateur</th>
-                                                <th>nom d'association</th>
+                                                <th>Nom de l’association</th>
                                                 <th>Date</th>
-                                                <th>Etat</th>
-                                                <th>date souhaité</th>
-                                                <th>commentaire</th>
-                                                <th>Avec livraison</th>
+                                                <th>État</th>
+                                                <th>Date de livraison souhaitée</th>
+                                                 <th>Avec livraison</th>
                                                  {% if is_granted('ROLE_ADMIN') %}
                                                 <th>supprimer</th>
                                                 
                                                 <th>Accepter</th>
                                                 
                                                 {% endif %}
-                                                <th>Detail</th>
+                                                <th>Détail</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -375,12 +369,11 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 <td>En cours de traitement</td>
                                                 {% endif %} 
                                                 <td>{{ c.datesouhaite|date('d-m-Y')}}</td>
-                                                   <td>{{ c.commentaire }}</td>
-                                                    {% if(c.livrable==true) %}
-                                                <td>Livraison</td>
+                                                     {% if(c.livrable==true) %}
+                                                <td>A LIVRER</td>
                                                 {% endif %} 
                                                 {% if(c.livrable==false) %}
-                                                  <td>Sans Livraison</td>
+                                                  <td>Sur Place</td>
                                                   {% endif %} 
                                               
                                                  {% if is_granted('ROLE_ADMIN') %}
@@ -391,7 +384,7 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                  <form method=\"post\" action=\"{{ path('app_commande_delete', {'id': c.id}) }}\" onsubmit=\"return confirm('voulez vous supprimer cette commande?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ c.id) }}\">
-                                                <a class=\"btn mb-1 btn-rounded btn-danger\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
+                                                <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                            
                                             </form>
                                                 
@@ -400,11 +393,11 @@ class __TwigTemplate_1717efbc3b1864c352dfbf80525282fa extends Template
                                                 
                                                  
                                                 
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success\" href=\"{{ path('accepter', {'id': c.id}) }}\">accepter</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"{{ path('accepter', {'id': c.id}) }}\">accepter</a>
                                                 </td>
                                                  {% endif %}
                                                 
-                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info\" href=\"{{ path('detail', {'id': c.id}) }}\">Detail</a>
+                                                <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-info btn-sm\" href=\"{{ path('detail', {'id': c.id}) }}\"> Détail </a>
                                                 </td>
                                                 {% endfor %}
                                             
