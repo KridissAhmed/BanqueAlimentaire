@@ -52,7 +52,10 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">
     <title>Banque alimentaire</title>
     <!-- Favicon icon -->
-    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"images/favicon.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"";
+        // line 10
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
+        echo "\">
     <!-- Pignose Calender -->
     <link href=\"";
         // line 12
@@ -104,24 +107,15 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Nav header start
         ***********************************-->
         <div class=\"nav-header\">
-            <div class=\"brand-logo\">
-                <a href=\"";
-        // line 48
+             <a href=\"";
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         echo "\">
-                    <b class=\"logo-abbr\"><img src=\"";
-        // line 49
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo.png"), "html", null, true);
-        echo "\" alt=\"\"> </b>
-                    <span class=\"logo-compact\"><img src=\"";
-        // line 50
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/logo-compact.png"), "html", null, true);
-        echo "\" alt=\"\"></span>
-                    <span class=\"brand-title\">
-                        Banque Alimentaire
-                    </span>
+                    <img src=\"";
+        // line 48
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/banquealimentaire.png"), "html", null, true);
+        echo "\" width=\"180\" height=\"70\" alt=\"logo du site\" class=\"mx-1\" />
                 </a>
-            </div>
         </div>
         <!--**********************************
             Nav header end
@@ -140,43 +134,43 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
                 </div>
                 <div class=\"header-left\">
                   ";
-        // line 73
+        // line 67
         $this->displayBlock('search', $context, $blocks);
-        // line 76
+        // line 70
         echo "                </div>
                 <div class=\"header-right\">
                     <ul class=\"clearfix\">
                         ";
-        // line 109
+        // line 103
         echo "                        ";
-        // line 163
+        // line 157
         echo "                        ";
-        // line 176
+        // line 170
         echo "                        <li class=\"icons dropdown\">
                             <div >
                                  ";
-        // line 178
+        // line 172
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 179
+            // line 173
             echo "                           
                              <span class=\"toggle-icon\">";
-            // line 180
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 180, $this->source); })()), "user", [], "any", false, false, false, 180), "username", [], "any", false, false, false, 180), "html", null, true);
+            // line 174
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 174, $this->source); })()), "user", [], "any", false, false, false, 174), "username", [], "any", false, false, false, 174), "html", null, true);
             echo "
                                             <a href=\"";
-            // line 181
+            // line 175
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><i class=\"icon-user\"></i>   se deconnecter </a>
                                      </span>
                                             ";
         } else {
-            // line 184
+            // line 178
             echo " <span class=\"toggle-icon\">  <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"><i class=\"icon-user\"></i>   se connecter </a>
                                      </span>                                             ";
         }
-        // line 186
+        // line 180
         echo "                            </div>
                              
                         </li>
@@ -188,9 +182,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Header end ti-comment-alt
         ***********************************-->
 ";
-        // line 196
-        $this->loadTemplate("backend/sidebar.html", "backend/base.html.twig", 196)->display($context);
-        // line 197
+        // line 190
+        $this->loadTemplate("backend/sidebar.html", "backend/base.html.twig", 190)->display($context);
+        // line 191
         echo "      
 
         <!--**********************************
@@ -198,9 +192,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         ***********************************-->
         <div class=\"content-body\">
             ";
-        // line 203
+        // line 197
         $this->displayBlock('body', $context, $blocks);
-        // line 204
+        // line 198
         echo "          
         </div>
         <!--**********************************
@@ -223,12 +217,12 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     ***********************************-->
         
         ";
-        // line 225
+        // line 219
         $this->displayBlock('Js', $context, $blocks);
-        // line 257
+        // line 265
         echo "    </body>
-</html>
-";
+
+</html>";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -237,7 +231,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 73
+    // line 67
     public function block_search($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -247,7 +241,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "search"));
 
-        // line 74
+        // line 68
         echo "                   
                       ";
         
@@ -258,7 +252,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 203
+    // line 197
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -276,7 +270,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     }
 
-    // line 225
+    // line 219
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -286,88 +280,102 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 226
+        // line 220
         echo "  <!--**********************************
         Scripts
     ***********************************-->
     <script src=\"";
-        // line 229
+        // line 223
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 230
+        // line 224
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 231
+        // line 225
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 232
+        // line 226
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 233
+        // line 227
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
         echo "\"></script>
 
     <!-- Chartjs -->
     <script src=\"";
-        // line 236
+        // line 230
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Circle progress -->
     <script src=\"";
-        // line 238
+        // line 232
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Datamap -->
     <script src=\"";
-        // line 240
+        // line 234
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 241
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 242
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Morrisjs -->
     <script src=\"";
-        // line 244
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 245
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Pignose Calender -->
     <script src=\"";
-        // line 247
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 248
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
         echo "\"></script>
     <!-- ChartistJS -->
     <script src=\"";
-        // line 250
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 251
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
     <script src=\"";
-        // line 255
+        // line 249
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
         echo "\"></script>
+     <style>
+      .h1{
+        font-size: 54px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bolder;
+        color: coral;
+        text-shadow: 0 0 15px rgba(255,255,255), 0 0 15px rgba(255,255,255);
+      }
+      .p{
+        font-size: 20px;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
         ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -389,7 +397,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
     public function getDebugInfo()
     {
-        return array (  369 => 255,  362 => 251,  358 => 250,  353 => 248,  349 => 247,  344 => 245,  340 => 244,  335 => 242,  331 => 241,  327 => 240,  322 => 238,  317 => 236,  311 => 233,  307 => 232,  303 => 231,  299 => 230,  295 => 229,  290 => 226,  280 => 225,  262 => 203,  251 => 74,  241 => 73,  229 => 257,  227 => 225,  204 => 204,  202 => 203,  194 => 197,  192 => 196,  180 => 186,  174 => 184,  168 => 181,  164 => 180,  161 => 179,  159 => 178,  155 => 176,  153 => 163,  151 => 109,  146 => 76,  144 => 73,  118 => 50,  114 => 49,  110 => 48,  77 => 18,  73 => 17,  68 => 15,  64 => 14,  59 => 12,  46 => 1,);
+        return array (  363 => 249,  356 => 245,  352 => 244,  347 => 242,  343 => 241,  338 => 239,  334 => 238,  329 => 236,  325 => 235,  321 => 234,  316 => 232,  311 => 230,  305 => 227,  301 => 226,  297 => 225,  293 => 224,  289 => 223,  284 => 220,  274 => 219,  256 => 197,  245 => 68,  235 => 67,  223 => 265,  221 => 219,  198 => 198,  196 => 197,  188 => 191,  186 => 190,  174 => 180,  168 => 178,  162 => 175,  158 => 174,  155 => 173,  153 => 172,  149 => 170,  147 => 157,  145 => 103,  140 => 70,  138 => 67,  116 => 48,  112 => 47,  80 => 18,  76 => 17,  71 => 15,  67 => 14,  62 => 12,  57 => 10,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -403,7 +411,7 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
     <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">
     <title>Banque alimentaire</title>
     <!-- Favicon icon -->
-    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"images/favicon.png\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{asset('images/logo.png')}}\">
     <!-- Pignose Calender -->
     <link href=\"{{ asset('plugins/pg-calendar/css/pignose.calendar.min.css')}}\" rel=\"stylesheet\">
     <!-- Chartist -->
@@ -440,15 +448,9 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
             Nav header start
         ***********************************-->
         <div class=\"nav-header\">
-            <div class=\"brand-logo\">
-                <a href=\"{{ path('app_home') }}\">
-                    <b class=\"logo-abbr\"><img src=\"{{ asset('images/logo.png') }}\" alt=\"\"> </b>
-                    <span class=\"logo-compact\"><img src=\"{{ asset('images/logo-compact.png') }}\" alt=\"\"></span>
-                    <span class=\"brand-title\">
-                        Banque Alimentaire
-                    </span>
+             <a href=\"{{ path('app_home') }}\">
+                    <img src=\"{{asset('images/banquealimentaire.png')}}\" width=\"180\" height=\"70\" alt=\"logo du site\" class=\"mx-1\" />
                 </a>
-            </div>
         </div>
         <!--**********************************
             Nav header end
@@ -649,9 +651,23 @@ class __TwigTemplate_f3ca0b6da82efd96bd240c3fa89bb146 extends Template
 
 
     <script src=\"{{asset('js/dashboard/dashboard-1.js')}}\"></script>
+     <style>
+      .h1{
+        font-size: 54px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight: bolder;
+        color: coral;
+        text-shadow: 0 0 15px rgba(255,255,255), 0 0 15px rgba(255,255,255);
+      }
+      .p{
+        font-size: 20px;
+        color: black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+    </style>
         {% endblock %}
     </body>
-</html>
-", "backend/base.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\base.html.twig");
+
+</html>", "backend/base.html.twig", "C:\\Users\\AK47\\Desktop\\BanqueAlimentaire\\templates\\backend\\base.html.twig");
     }
 }
