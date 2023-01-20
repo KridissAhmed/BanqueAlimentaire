@@ -228,6 +228,17 @@ class Utilisateur extends \App\Entity\Utilisateur implements \Doctrine\ORM\Proxy
     /**
      * {@inheritDoc}
      */
+    public function isAdmin(): bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isAdmin', []);
+
+        return parent::isAdmin();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getRoles(): array
     {
 

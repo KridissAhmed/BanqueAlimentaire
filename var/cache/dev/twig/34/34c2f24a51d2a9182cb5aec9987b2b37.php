@@ -177,30 +177,36 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["utilisateur"], "telephone", [], "any", false, false, false, 53), "html", null, true);
             echo "</td>
                                                 <td>
-                                                 <form method=\"post\" action=\"";
+                                                ";
             // line 55
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 55)]), "html", null, true);
-            echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+            if ( !twig_get_attribute($this->env, $this->source, $context["utilisateur"], "isAdmin", [], "any", false, false, false, 55)) {
+                // line 56
+                echo "                                                 <form method=\"post\" action=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 56)]), "html", null, true);
+                echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"";
-            // line 57
-            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 57))), "html", null, true);
-            echo "\">
+                // line 58
+                echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 58))), "html", null, true);
+                echo "\">
                                                 <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
-                                                
+                                            ";
+            }
+            // line 62
+            echo "                                                
                                                 </td>
 
                                                 
                                                  
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
-            // line 65
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 65)]), "html", null, true);
+            // line 67
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 67)]), "html", null, true);
             echo "\">modifier</a>
                                                 </td>
                                                 <td><a type=\"button\" class=\"btn mb-1 btn-rounded btn-success btn-sm\" href=\"";
-            // line 67
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_editmdp", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 67)]), "html", null, true);
+            // line 69
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_utilisateur_editmdp", ["id" => twig_get_attribute($this->env, $this->source, $context["utilisateur"], "id", [], "any", false, false, false, 69)]), "html", null, true);
             echo "\">modifier mot de passe</a>
                                                 </td>
                                                 ";
@@ -208,7 +214,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['utilisateur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 72
         echo "                                            
                                         </tbody>
                                     </table>
@@ -246,7 +252,7 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
 
     public function getDebugInfo()
     {
-        return array (  212 => 70,  203 => 67,  198 => 65,  187 => 57,  182 => 55,  177 => 53,  173 => 52,  169 => 51,  165 => 50,  161 => 49,  158 => 48,  154 => 47,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  218 => 72,  209 => 69,  204 => 67,  197 => 62,  190 => 58,  184 => 56,  182 => 55,  177 => 53,  173 => 52,  169 => 51,  165 => 50,  161 => 49,  158 => 48,  154 => 47,  122 => 17,  112 => 16,  96 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -305,11 +311,13 @@ class __TwigTemplate_5779a5a99b5e9d0b4c2baeb5338ae735 extends Template
                                                 <td>{{ utilisateur.adresse }}</td>
                                                  <td>{{ utilisateur.telephone }}</td>
                                                 <td>
+                                                {% if not utilisateur.isAdmin %}
                                                  <form method=\"post\" action=\"{{ path('app_utilisateur_delete', {'id': utilisateur.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
                                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                                 <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ utilisateur.id) }}\">
                                                 <a class=\"btn mb-1 btn-rounded btn-danger btn-sm\" style=\"color:white;\" href=\"#\" onclick=\"\$(this).closest('form').submit()\">supprimer</a>
                                             </form>
+                                            {% endif %}
                                                 
                                                 </td>
 
