@@ -129,18 +129,19 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
                                       <div class=\"form-row\" id=\"0\" >
                                             <div class=\"form-group col-md-6\">
                                                 <label>Article</label>
-                                                  <select name=\"article[0]\" class=\"form-control\" id=\"article-select\" required>
+                                                
+                                                  <select name=\"article[0]\"  class=\"form-control\" id=\"article-select\" required>
                                                   <option value=\"\">--choisissez un produit--</option>
                                                    ";
-        // line 67
+        // line 68
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 67, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 68, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
-            // line 68
+            // line 69
             echo "                                                 <option value=";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 68), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 69), "html", null, true);
             echo ">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 68), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 69), "html", null, true);
             echo "</option>
                                                 
                                                    ";
@@ -148,7 +149,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 71
+        // line 72
         echo "                                                    </select>
                                               </div>
                                               <div class=\"form-group col-md-6\">
@@ -216,7 +217,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
 
     }
 
-    // line 132
+    // line 133
     public function block_Js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -226,7 +227,7 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "Js"));
 
-        // line 133
+        // line 134
         echo "  
     <script>
     var counter=0;
@@ -237,23 +238,23 @@ class __TwigTemplate_7a01412ccdab78c4d7beccc449b74eed extends Template
  <select name=\"article['+counter+']\" class=\"form-control\" id=\"article-select\" required>\\
 <option value=\"\">--choisissez un produit--</option>\\
  ";
-        // line 142
+        // line 143
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 142, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) || array_key_exists("articles", $context) ? $context["articles"] : (function () { throw new RuntimeError('Variable "articles" does not exist.', 143, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["a"]) {
             echo "\\
 <option value=";
-            // line 143
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 143), "html", null, true);
+            // line 144
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "id", [], "any", false, false, false, 144), "html", null, true);
             echo ">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 143), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["a"], "libelleArticle", [], "any", false, false, false, 144), "html", null, true);
             echo "</option>\\
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['a'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 144
+        // line 145
         echo "\\
          </select>\\
       </div>\\
@@ -282,81 +283,81 @@ document.getElementById(\"xxx\").appendChild(container2);
         Scripts
     ***********************************-->
     <script src=\"";
-        // line 171
+        // line 172
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/common/common.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 172
+        // line 173
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/custom.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 173
+        // line 174
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/settings.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 174
+        // line 175
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gleek.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 175
+        // line 176
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/styleSwitcher.js"), "html", null, true);
-        echo "\"></\"></script>
-
+        echo "\"></script>
+  
     <!-- Chartjs -->
     <script src=\"";
-        // line 178
+        // line 179
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chart.js/Chart.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Circle progress -->
     <script src=\"";
-        // line 180
+        // line 181
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/circle-progress/circle-progress.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Datamap -->
     <script src=\"";
-        // line 182
+        // line 183
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/d3v3/index.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 183
+        // line 184
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/topojson/topojson.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 184
+        // line 185
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/datamaps/datamaps.world.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Morrisjs -->
     <script src=\"";
-        // line 186
+        // line 187
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/raphael/raphael.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 187
+        // line 188
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>
     <!-- Pignose Calender -->
     <script src=\"";
-        // line 189
+        // line 190
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/moment/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 190
+        // line 191
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/pg-calendar/js/pignose.calendar.min.js"), "html", null, true);
         echo "\"></script>
     <!-- ChartistJS -->
     <script src=\"";
-        // line 192
+        // line 193
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 193
+        // line 194
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
     <script src=\"";
-        // line 197
+        // line 198
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/dashboard/dashboard-1.js"), "html", null, true);
         echo "\"></script>
         ";
@@ -380,7 +381,7 @@ document.getElementById(\"xxx\").appendChild(container2);
 
     public function getDebugInfo()
     {
-        return array (  360 => 197,  353 => 193,  349 => 192,  344 => 190,  340 => 189,  335 => 187,  331 => 186,  326 => 184,  322 => 183,  318 => 182,  313 => 180,  308 => 178,  302 => 175,  298 => 174,  294 => 173,  290 => 172,  286 => 171,  257 => 144,  247 => 143,  241 => 142,  230 => 133,  220 => 132,  152 => 71,  140 => 68,  136 => 67,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
+        return array (  361 => 198,  354 => 194,  350 => 193,  345 => 191,  341 => 190,  336 => 188,  332 => 187,  327 => 185,  323 => 184,  319 => 183,  314 => 181,  309 => 179,  303 => 176,  299 => 175,  295 => 174,  291 => 173,  287 => 172,  258 => 145,  248 => 144,  242 => 143,  231 => 134,  221 => 133,  153 => 72,  141 => 69,  137 => 68,  82 => 16,  69 => 5,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -449,7 +450,8 @@ document.getElementById(\"xxx\").appendChild(container2);
                                       <div class=\"form-row\" id=\"0\" >
                                             <div class=\"form-group col-md-6\">
                                                 <label>Article</label>
-                                                  <select name=\"article[0]\" class=\"form-control\" id=\"article-select\" required>
+                                                
+                                                  <select name=\"article[0]\"  class=\"form-control\" id=\"article-select\" required>
                                                   <option value=\"\">--choisissez un produit--</option>
                                                    {% for a in articles %}
                                                  <option value={{a.id}}>{{a.libelleArticle}}</option>
@@ -559,8 +561,8 @@ document.getElementById(\"xxx\").appendChild(container2);
     <script src=\"{{asset('js/custom.min.js')}}\"></script>
     <script src=\"{{asset('js/settings.js')}}\"></script>
     <script src=\"{{asset('js/gleek.js')}}\"></script>
-    <script src=\"{{asset('js/styleSwitcher.js')}}\"></\"></script>
-
+    <script src=\"{{asset('js/styleSwitcher.js')}}\"></script>
+  
     <!-- Chartjs -->
     <script src=\"{{asset('plugins/chart.js/Chart.bundle.min.js')}}\"></script>
     <!-- Circle progress -->

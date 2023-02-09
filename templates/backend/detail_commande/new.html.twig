@@ -62,7 +62,8 @@
                                       <div class="form-row" id="0" >
                                             <div class="form-group col-md-6">
                                                 <label>Article</label>
-                                                  <select name="article[0]" class="form-control" id="article-select" required>
+                                                
+                                                  <select name="article[0]"  class="form-control" id="article-select" required>
                                                   <option value="">--choisissez un produit--</option>
                                                    {% for a in articles %}
                                                  <option value={{a.id}}>{{a.libelleArticle}}</option>
@@ -172,8 +173,8 @@ document.getElementById("xxx").appendChild(container2);
     <script src="{{asset('js/custom.min.js')}}"></script>
     <script src="{{asset('js/settings.js')}}"></script>
     <script src="{{asset('js/gleek.js')}}"></script>
-    <script src="{{asset('js/styleSwitcher.js')}}"></"></script>
-
+    <script src="{{asset('js/styleSwitcher.js')}}"></script>
+  
     <!-- Chartjs -->
     <script src="{{asset('plugins/chart.js/Chart.bundle.min.js')}}"></script>
     <!-- Circle progress -->
